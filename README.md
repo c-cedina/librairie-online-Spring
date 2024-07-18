@@ -1,4 +1,4 @@
-## Body attendu pour mangaka
+## Body attendu pour create mangaka
 ```
 {
   "id": {

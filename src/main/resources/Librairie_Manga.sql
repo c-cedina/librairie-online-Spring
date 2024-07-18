@@ -64,7 +64,7 @@ create table Anime (
 
 create table Genre (
 	Type varchar (255),
-    primary key (type) 
+    primary key (Type) 
 );
 
 create table Classe (
@@ -77,23 +77,25 @@ create table Classe (
 
  
 create table Achete ( 
+    Id int AUTO_INCREMENT, 
 	Nadherent int not null,
 	NSerie int not null, 
     Date date,
     Prix decimal(9,2),
-    primary key (Nadherent, NSerie),
+    primary key (Id),
     foreign key (NSerie) references Manga(NSerie),
 	foreign key (NAdherent) references Client (NAdherent)
 );
 
 create table Loue (
+    Id int AUTO_INCREMENT, 
 	NAdherent int, 
     NSerie int,
     Date date, 
     DateRetour date,
     DateMaximale date ,
     Prix decimal(9,2),
-    primary key (NAdherent, NSerie),
+    primary key (Id),
     foreign key (NAdherent) references Client (NAdherent),
     foreign key (NSerie) references Anime (NSerie)
 );
