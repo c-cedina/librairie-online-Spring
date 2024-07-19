@@ -21,7 +21,7 @@ import com.example.librairie_online.service.FournisseurService;
 @RequestMapping(path = "Fournisseur")
 @RestController
 public class FournisseurController {
-
+    // Injection dépendance
     private FournisseurService fournisseurService;
 
     public FournisseurController(FournisseurService fournisseurService) {

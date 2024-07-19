@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+
 import com.example.librairie_online.entity.Mangaka;
 import com.example.librairie_online.entity.Mangaka.MangakaId;
 import com.example.librairie_online.service.MangakaService;
@@ -21,9 +23,9 @@ import com.example.librairie_online.service.MangakaService;
 @RestController
 @RequestMapping(path = "Mangaka")
 public class MangakaController {
+    // Injection dépendance
     MangakaService mangakaService;
 
-    // Injection dépendance
     public MangakaController(MangakaService mangakaService) {
         this.mangakaService = mangakaService;
     }
@@ -41,19 +43,42 @@ public class MangakaController {
         return this.mangakaService.read();
     }
 
-    // Update
-    @ResponseStatus(HttpStatus.OK)
-    @PutMapping(path = "{nom}/{prenom}", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public void update(@PathVariable String nom, @PathVariable String prenom, @RequestBody Mangaka mangaka) {
+    @GetMapping(path = "{nom}/{prenom}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Mangaka> ReadById(@PathVariable String nom, @PathVariable String prenom) {
         MangakaId id = new MangakaId(nom, prenom);
-        this.mangakaService.update(id, mangaka);
+        Mangaka mangaka = this.mangakaService.readById(id);
+        if (mangaka != null) {
+            return new ResponseEntity<>(mangaka, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+
+    // Update
+
+    @PutMapping(path = "{nom}/{prenom}", consumes = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Mangaka> update(@PathVariable String nom, @PathVariable String prenom,
+            @RequestBody Mangaka mangakaBody) {
+        MangakaId id = new MangakaId(nom, prenom);
+        Mangaka mangaka = this.mangakaService.readById(id);
+        if (mangaka != null) {
+            this.mangakaService.update(id, mangakaBody);
+            return new ResponseEntity<>(HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
 
     // Delete
-    @ResponseStatus(HttpStatus.NO_CONTENT)
     @DeleteMapping(path = "{nom}/{prenom}")
-    public void delete(@PathVariable String nom, @PathVariable String prenom) {
+    public ResponseEntity<Mangaka> delete(@PathVariable String nom, @PathVariable String prenom) {
         MangakaId id = new MangakaId(nom, prenom);
-        this.mangakaService.delete(id);
+        Mangaka mangaka = this.mangakaService.readById(id);
+        if (mangaka != null) {
+            this.mangakaService.delete(id);
+            return new ResponseEntity<>(HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
 }

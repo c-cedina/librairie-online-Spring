@@ -1,8 +1,10 @@
 package com.example.librairie_online.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
+
 import com.example.librairie_online.entity.Mangaka;
 import com.example.librairie_online.entity.Mangaka.MangakaId;
 import com.example.librairie_online.repository.MangakaRepository;
@@ -27,13 +29,17 @@ public class MangakaService {
         return this.mangakaRepository.findAll();
     }
 
-    public Mangaka ReadById(MangakaId id) {
-        return this.mangakaRepository.findById(id).get();
+    public Mangaka readById(MangakaId id) {
+        Optional<Mangaka> optionalMangaka = this.mangakaRepository.findById(id);
+        if (optionalMangaka.isPresent()) {
+            return optionalMangaka.get();
+        }
+        return null;
     }
 
     // Update
     public void update(MangakaId id, Mangaka mangaka) {
-        Mangaka DbMangaka = ReadById(id);
+        Mangaka DbMangaka = readById(id);
         DbMangaka.setNationalite(mangaka.getNationalite());
         DbMangaka.setSexe(mangaka.getSexe());
         this.mangakaRepository.save(DbMangaka);
