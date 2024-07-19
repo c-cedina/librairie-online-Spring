@@ -52,14 +52,18 @@ public class FournisseurController {
     }
 
     // Update
-    @ResponseStatus(value = HttpStatus.OK)
     @PutMapping(path = "{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public void update(@PathVariable String id, @RequestBody Fournisseur fournisseur) {
-        this.fournisseurService.update(id, fournisseur);
+    public ResponseEntity<Fournisseur> update(@PathVariable String id, @RequestBody Fournisseur fournisseurBody) {
+        Fournisseur fournisseur = this.fournisseurService.readById(id);
+        if (fournisseur != null) {
+            this.fournisseurService.update(id, fournisseurBody);
+            return new ResponseEntity<>(HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
 
     // Delete
-
     @DeleteMapping(path = "{id}")
     public ResponseEntity<Fournisseur> delete(@PathVariable String id) {
         Fournisseur fournisseur = this.fournisseurService.readById(id);
