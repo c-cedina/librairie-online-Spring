@@ -378,3 +378,62 @@ java.util.NoSuchElementException: Fournisseur with id 'exempl' not found
 2024-07-19T17:37:10.087+02:00  INFO 73541 --- [librairie-online] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2024-07-19T17:37:10.088+02:00  INFO 73541 --- [librairie-online] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 2024-07-19T17:37:10.214+02:00 DEBUG 73541 --- [librairie-online] [http-nio-8080-exec-1] org.hibernate.SQL                        : select f1_0.nom,f1_0.ville from Fournisseur f1_0 where f1_0.nom=?
+2024-07-19T17:51:51.647+02:00  INFO 78667 --- [librairie-online] [main] c.e.l.LibrairieOnlineApplication         : Starting LibrairieOnlineApplication using Java 22.0.1 with PID 78667 (/Users/cedinacoelho/Documents/src/librairie-online-Spring/target/classes started by cedinacoelho in /Users/cedinacoelho/Documents/src/librairie-online-Spring)
+2024-07-19T17:51:51.649+02:00  INFO 78667 --- [librairie-online] [main] c.e.l.LibrairieOnlineApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-07-19T17:51:52.242+02:00  INFO 78667 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-19T17:51:52.307+02:00  INFO 78667 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 2 JPA repository interfaces.
+2024-07-19T17:51:52.823+02:00  INFO 78667 --- [librairie-online] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-07-19T17:51:52.836+02:00  INFO 78667 --- [librairie-online] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-19T17:51:52.836+02:00  INFO 78667 --- [librairie-online] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-19T17:51:52.890+02:00  INFO 78667 --- [librairie-online] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-19T17:51:52.890+02:00  INFO 78667 --- [librairie-online] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1194 ms
+2024-07-19T17:51:53.042+02:00  INFO 78667 --- [librairie-online] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-19T17:51:53.085+02:00  INFO 78667 --- [librairie-online] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-19T17:51:53.112+02:00  INFO 78667 --- [librairie-online] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-19T17:51:53.417+02:00  INFO 78667 --- [librairie-online] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-19T17:51:53.447+02:00  INFO 78667 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-19T17:51:53.842+02:00  INFO 78667 --- [librairie-online] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5aab5b31
+2024-07-19T17:51:53.844+02:00  INFO 78667 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-19T17:51:54.856+02:00  INFO 78667 --- [librairie-online] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-19T17:51:54.924+02:00  INFO 78667 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-19T17:51:55.724+02:00  INFO 78667 --- [librairie-online] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-07-19T17:51:55.735+02:00  INFO 78667 --- [librairie-online] [main] c.e.l.LibrairieOnlineApplication         : Started LibrairieOnlineApplication in 4.625 seconds (process running for 5.12)
+2024-07-19T17:52:08.175+02:00  INFO 78667 --- [librairie-online] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-19T17:52:08.175+02:00  INFO 78667 --- [librairie-online] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-19T17:52:08.177+02:00  INFO 78667 --- [librairie-online] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-07-19T17:52:08.285+02:00 DEBUG 78667 --- [librairie-online] [http-nio-8080-exec-2] org.hibernate.SQL                        : select f1_0.nom,f1_0.ville from Fournisseur f1_0 where f1_0.nom=?
+2024-07-19T17:52:14.226+02:00 DEBUG 78667 --- [librairie-online] [http-nio-8080-exec-3] org.hibernate.SQL                        : select f1_0.nom,f1_0.ville from Fournisseur f1_0 where f1_0.nom=?
+2024-07-19T18:08:12.917+02:00  INFO 78667 --- [librairie-online] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-19T18:08:12.920+02:00  INFO 78667 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-19T18:08:12.933+02:00  INFO 78667 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-07-19T18:08:14.607+02:00  INFO 86457 --- [librairie-online] [main] c.e.l.LibrairieOnlineApplication         : Starting LibrairieOnlineApplication using Java 22.0.1 with PID 86457 (/Users/cedinacoelho/Documents/src/librairie-online-Spring/target/classes started by cedinacoelho in /Users/cedinacoelho/Documents/src/librairie-online-Spring)
+2024-07-19T18:08:14.609+02:00  INFO 86457 --- [librairie-online] [main] c.e.l.LibrairieOnlineApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-07-19T18:08:15.207+02:00  INFO 86457 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-19T18:08:15.283+02:00  INFO 86457 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 2 JPA repository interfaces.
+2024-07-19T18:08:15.782+02:00  INFO 86457 --- [librairie-online] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-07-19T18:08:15.798+02:00  INFO 86457 --- [librairie-online] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-19T18:08:15.798+02:00  INFO 86457 --- [librairie-online] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-19T18:08:15.854+02:00  INFO 86457 --- [librairie-online] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-19T18:08:15.854+02:00  INFO 86457 --- [librairie-online] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1197 ms
+2024-07-19T18:08:16.030+02:00  INFO 86457 --- [librairie-online] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-19T18:08:16.076+02:00  INFO 86457 --- [librairie-online] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-19T18:08:16.105+02:00  INFO 86457 --- [librairie-online] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-19T18:08:16.391+02:00  INFO 86457 --- [librairie-online] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-19T18:08:16.413+02:00  INFO 86457 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-19T18:08:16.760+02:00  INFO 86457 --- [librairie-online] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@77e9dca8
+2024-07-19T18:08:16.762+02:00  INFO 86457 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-19T18:08:17.566+02:00  INFO 86457 --- [librairie-online] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-19T18:08:17.613+02:00  INFO 86457 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-19T18:08:18.187+02:00  INFO 86457 --- [librairie-online] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-07-19T18:08:18.196+02:00  INFO 86457 --- [librairie-online] [main] c.e.l.LibrairieOnlineApplication         : Started LibrairieOnlineApplication in 4.267 seconds (process running for 4.701)
+2024-07-19T18:08:45.569+02:00  INFO 86457 --- [librairie-online] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-19T18:08:45.571+02:00  INFO 86457 --- [librairie-online] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-19T18:08:45.574+02:00  INFO 86457 --- [librairie-online] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-07-19T18:08:45.839+02:00 DEBUG 86457 --- [librairie-online] [http-nio-8080-exec-2] org.hibernate.SQL                        : select f1_0.nom,f1_0.ville from Fournisseur f1_0
+2024-07-19T18:08:55.029+02:00 DEBUG 86457 --- [librairie-online] [http-nio-8080-exec-3] org.hibernate.SQL                        : select f1_0.nom,f1_0.ville from Fournisseur f1_0 where f1_0.nom=?
+2024-07-19T18:08:55.040+02:00 DEBUG 86457 --- [librairie-online] [http-nio-8080-exec-3] org.hibernate.SQL                        : select f1_0.nom,f1_0.ville from Fournisseur f1_0 where f1_0.nom=?
+2024-07-19T18:08:55.072+02:00 DEBUG 86457 --- [librairie-online] [http-nio-8080-exec-3] org.hibernate.SQL                        : delete from Fournisseur where nom=?
+2024-07-19T18:09:01.255+02:00 DEBUG 86457 --- [librairie-online] [http-nio-8080-exec-4] org.hibernate.SQL                        : select f1_0.nom,f1_0.ville from Fournisseur f1_0 where f1_0.nom=?
+2024-07-19T18:09:07.321+02:00 DEBUG 86457 --- [librairie-online] [http-nio-8080-exec-5] org.hibernate.SQL                        : select f1_0.nom,f1_0.ville from Fournisseur f1_0
+2024-07-19T18:09:11.311+02:00 DEBUG 86457 --- [librairie-online] [http-nio-8080-exec-6] org.hibernate.SQL                        : select f1_0.nom,f1_0.ville from Fournisseur f1_0 where f1_0.nom=?
+2024-07-19T18:09:11.321+02:00 DEBUG 86457 --- [librairie-online] [http-nio-8080-exec-6] org.hibernate.SQL                        : insert into Fournisseur (ville,nom) values (?,?)

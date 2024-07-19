@@ -36,7 +36,7 @@ public class FournisseurService {
         if (optionalFournisseur.isPresent()) {
             return optionalFournisseur.get();
         }
-        throw new NoSuchElementException("Fournisseur with id '" + id + "' not found");
+        return null;
 
     }
 

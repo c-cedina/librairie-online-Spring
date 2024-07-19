@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
@@ -41,8 +42,13 @@ public class FournisseurController {
     }
 
     @GetMapping(path = "{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Fournisseur ReadById(@PathVariable String id) {
-        return this.fournisseurService.readById(id);
+    public ResponseEntity<Fournisseur> ReadById(@PathVariable String id) {
+        Fournisseur fournisseur = this.fournisseurService.readById(id);
+        if (fournisseur != null) {
+            return new ResponseEntity<>(fournisseur, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
 
     // Update
@@ -53,10 +59,17 @@ public class FournisseurController {
     }
 
     // Delete
-    @ResponseStatus(HttpStatus.NO_CONTENT)
+
     @DeleteMapping(path = "{id}")
-    public void delete(@PathVariable String id) {
-        this.fournisseurService.delete(id);
+    public ResponseEntity<Fournisseur> delete(@PathVariable String id) {
+        Fournisseur fournisseur = this.fournisseurService.readById(id);
+        if (fournisseur != null) {
+            this.fournisseurService.delete(id);
+            return new ResponseEntity<>(HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+
     }
 
 }
