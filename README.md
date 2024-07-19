@@ -1,4 +1,4 @@
-## Body attendu pour create mangaka
+## Body attendu pour créer mangaka
 ```
 {
   "id": {
@@ -7,5 +7,12 @@
   },
   "sexe": "exemple",
   "nationalite": "exemple"
+}
+```
+## Body attendu pour créer fournisseur
+```
+{
+    "nom": "exemple",
+    "ville" : "exemple"
 }
 ```

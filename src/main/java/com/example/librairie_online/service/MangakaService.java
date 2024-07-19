@@ -34,7 +34,6 @@ public class MangakaService {
     // Update
     public void update(MangakaId id, Mangaka mangaka) {
         Mangaka DbMangaka = ReadById(id);
-        // DbMangaka.setId(mangaka.getId());
         DbMangaka.setNationalite(mangaka.getNationalite());
         DbMangaka.setSexe(mangaka.getSexe());
         this.mangakaRepository.save(DbMangaka);
