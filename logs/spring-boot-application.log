@@ -458,3 +458,6 @@ Consider defining a bean of type 'com.example.librairie_online.service.MangaServ
 2024-07-21T14:14:23.992+02:00 DEBUG 48676 --- [librairie-online] [http-nio-8080-exec-2] org.hibernate.SQL                        : select m1_0.nom,m1_0.prenom,m1_0.nationalite,m1_0.sexe from Mangaka m1_0 where (m1_0.nom,m1_0.prenom) in ((?,?))
 2024-07-21T14:14:23.999+02:00 DEBUG 48676 --- [librairie-online] [http-nio-8080-exec-2] org.hibernate.SQL                        : select m1_0.nom,m1_0.prenom,m1_0.nationalite,m1_0.sexe from Mangaka m1_0 where (m1_0.nom,m1_0.prenom) in ((?,?))
 2024-07-21T14:29:17.168+02:00  WARN 48676 --- [librairie-online] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=57s131ms).
+2024-07-21T14:43:42.498+02:00  INFO 48676 --- [librairie-online] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-21T14:43:42.502+02:00  INFO 48676 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-21T14:43:42.516+02:00  INFO 48676 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

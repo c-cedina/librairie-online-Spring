@@ -19,7 +19,7 @@ create table Fournisseur (
 );
 
 create table Manga (
-	NSerie int not null, 
+	NSerie int AUTO_INCREMENT, 
     Nom varchar (255) not null, 
     Date_parution int not null,
     Tome int not null,
@@ -33,7 +33,7 @@ create table Manga (
 );
 
 create table Client (
-	NAdherent int not null, 
+	NAdherent int AUTO_INCREMENT, 
     Nom varchar (255), 
     Prenom varchar (255), 
     Sexe varchar(30), 
@@ -52,7 +52,7 @@ create table Studio (
 );
 
 create table Anime (
-	NSerie int not null, 
+	NSerie int AUTO_INCREMENT, 
     Nom varchar (255) not null, 
     Date int not null,
     NSerieM int, 
@@ -68,7 +68,7 @@ create table Genre (
 );
 
 create table Classe (
-	NSerie int not null, 
+	NSerie int , 
     Type varchar (255),
     primary key (NSerie, Type),
     foreign key (NSerie) references Manga(NSerie),
