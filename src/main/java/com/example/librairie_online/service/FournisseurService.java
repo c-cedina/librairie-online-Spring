@@ -1,16 +1,12 @@
 package com.example.librairie_online.service;
 
 import java.util.List;
-import java.util.NoSuchElementException;
 import java.util.Optional;
 
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import com.example.librairie_online.entity.Fournisseur;
 import com.example.librairie_online.repository.FournisseurRepository;
-
-import java.util.NoSuchElementException;
 
 @Service
 public class FournisseurService {
