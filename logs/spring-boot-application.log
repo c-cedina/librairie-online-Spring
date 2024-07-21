@@ -280,3 +280,180 @@ Caused by: org.hibernate.MappingException: Column 'nomMangaka' is duplicated in 
 2024-07-21T13:21:39.948+02:00  INFO 29549 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
 2024-07-21T13:21:40.565+02:00  INFO 29549 --- [librairie-online] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
 2024-07-21T13:21:40.574+02:00  INFO 29549 --- [librairie-online] [main] c.e.l.LibrairieOnlineApplication         : Started LibrairieOnlineApplication in 4.674 seconds (process running for 5.133)
+2024-07-21T13:33:48.468+02:00  INFO 29549 --- [librairie-online] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-21T13:33:48.493+02:00  INFO 29549 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-21T13:33:48.538+02:00  INFO 29549 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-07-21T13:33:49.918+02:00  INFO 33802 --- [librairie-online] [main] c.e.l.LibrairieOnlineApplication         : Starting LibrairieOnlineApplication using Java 22.0.1 with PID 33802 (/Users/cedinacoelho/Documents/src/librairie-online-Spring/target/classes started by cedinacoelho in /Users/cedinacoelho/Documents/src/librairie-online-Spring)
+2024-07-21T13:33:49.921+02:00  INFO 33802 --- [librairie-online] [main] c.e.l.LibrairieOnlineApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-07-21T13:33:50.491+02:00  INFO 33802 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-21T13:33:50.554+02:00  INFO 33802 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 3 JPA repository interfaces.
+2024-07-21T13:33:51.030+02:00  INFO 33802 --- [librairie-online] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-07-21T13:33:51.045+02:00  INFO 33802 --- [librairie-online] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-21T13:33:51.046+02:00  INFO 33802 --- [librairie-online] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-21T13:33:51.128+02:00  INFO 33802 --- [librairie-online] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-21T13:33:51.128+02:00  INFO 33802 --- [librairie-online] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1153 ms
+2024-07-21T13:33:51.294+02:00  INFO 33802 --- [librairie-online] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-21T13:33:51.342+02:00  INFO 33802 --- [librairie-online] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-21T13:33:51.370+02:00  INFO 33802 --- [librairie-online] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-21T13:33:51.650+02:00  INFO 33802 --- [librairie-online] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-21T13:33:51.675+02:00  INFO 33802 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-21T13:33:52.007+02:00  INFO 33802 --- [librairie-online] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@bd273b2
+2024-07-21T13:33:52.009+02:00  INFO 33802 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-21T13:33:52.807+02:00  INFO 33802 --- [librairie-online] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-21T13:33:52.898+02:00  INFO 33802 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-21T13:33:53.137+02:00  WARN 33802 --- [librairie-online] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'mangaController' defined in file [/Users/cedinacoelho/Documents/src/librairie-online-Spring/target/classes/com/example/librairie_online/controller/MangaController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.example.librairie_online.service.MangaService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-07-21T13:33:53.138+02:00  INFO 33802 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-21T13:33:53.139+02:00  INFO 33802 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-21T13:33:53.154+02:00  INFO 33802 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-07-21T13:33:53.156+02:00  INFO 33802 --- [librairie-online] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-07-21T13:33:53.172+02:00  INFO 33802 --- [librairie-online] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-07-21T13:33:53.201+02:00 ERROR 33802 --- [librairie-online] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.example.librairie_online.controller.MangaController required a bean of type 'com.example.librairie_online.service.MangaService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.example.librairie_online.service.MangaService' in your configuration.
+
+2024-07-21T13:50:41.065+02:00  INFO 37598 --- [librairie-online] [main] c.e.l.LibrairieOnlineApplication         : Starting LibrairieOnlineApplication using Java 22.0.1 with PID 37598 (/Users/cedinacoelho/Documents/src/librairie-online-Spring/target/classes started by cedinacoelho in /Users/cedinacoelho/Documents/src/librairie-online-Spring)
+2024-07-21T13:50:41.068+02:00  INFO 37598 --- [librairie-online] [main] c.e.l.LibrairieOnlineApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-07-21T13:50:41.611+02:00  INFO 37598 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-21T13:50:41.675+02:00  INFO 37598 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 3 JPA repository interfaces.
+2024-07-21T13:50:42.140+02:00  INFO 37598 --- [librairie-online] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-07-21T13:50:42.154+02:00  INFO 37598 --- [librairie-online] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-21T13:50:42.155+02:00  INFO 37598 --- [librairie-online] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-21T13:50:42.233+02:00  INFO 37598 --- [librairie-online] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-21T13:50:42.233+02:00  INFO 37598 --- [librairie-online] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1109 ms
+2024-07-21T13:50:42.380+02:00  INFO 37598 --- [librairie-online] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-21T13:50:42.432+02:00  INFO 37598 --- [librairie-online] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-21T13:50:42.464+02:00  INFO 37598 --- [librairie-online] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-21T13:50:42.729+02:00  INFO 37598 --- [librairie-online] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-21T13:50:42.752+02:00  INFO 37598 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-21T13:50:43.100+02:00  INFO 37598 --- [librairie-online] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3c488b34
+2024-07-21T13:50:43.102+02:00  INFO 37598 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-21T13:50:43.933+02:00  INFO 37598 --- [librairie-online] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-21T13:50:44.009+02:00  INFO 37598 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-21T13:50:44.213+02:00  WARN 37598 --- [librairie-online] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'mangaController' defined in file [/Users/cedinacoelho/Documents/src/librairie-online-Spring/target/classes/com/example/librairie_online/controller/MangaController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.example.librairie_online.service.MangaService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-07-21T13:50:44.213+02:00  INFO 37598 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-21T13:50:44.215+02:00  INFO 37598 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-21T13:50:44.228+02:00  INFO 37598 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-07-21T13:50:44.231+02:00  INFO 37598 --- [librairie-online] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-07-21T13:50:44.247+02:00  INFO 37598 --- [librairie-online] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-07-21T13:50:44.277+02:00 ERROR 37598 --- [librairie-online] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.example.librairie_online.controller.MangaController required a bean of type 'com.example.librairie_online.service.MangaService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.example.librairie_online.service.MangaService' in your configuration.
+
+2024-07-21T13:52:02.648+02:00  INFO 38062 --- [librairie-online] [main] c.e.l.LibrairieOnlineApplication         : Starting LibrairieOnlineApplication using Java 22.0.1 with PID 38062 (/Users/cedinacoelho/Documents/src/librairie-online-Spring/target/classes started by cedinacoelho in /Users/cedinacoelho/Documents/src/librairie-online-Spring)
+2024-07-21T13:52:02.650+02:00  INFO 38062 --- [librairie-online] [main] c.e.l.LibrairieOnlineApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-07-21T13:52:03.190+02:00  INFO 38062 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-21T13:52:03.248+02:00  INFO 38062 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 3 JPA repository interfaces.
+2024-07-21T13:52:03.772+02:00  INFO 38062 --- [librairie-online] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-07-21T13:52:03.787+02:00  INFO 38062 --- [librairie-online] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-21T13:52:03.787+02:00  INFO 38062 --- [librairie-online] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-21T13:52:03.845+02:00  INFO 38062 --- [librairie-online] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-21T13:52:03.846+02:00  INFO 38062 --- [librairie-online] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1148 ms
+2024-07-21T13:52:03.995+02:00  INFO 38062 --- [librairie-online] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-21T13:52:04.041+02:00  INFO 38062 --- [librairie-online] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-21T13:52:04.073+02:00  INFO 38062 --- [librairie-online] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-21T13:52:04.343+02:00  INFO 38062 --- [librairie-online] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-21T13:52:04.372+02:00  INFO 38062 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-21T13:52:04.755+02:00  INFO 38062 --- [librairie-online] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@bd273b2
+2024-07-21T13:52:04.756+02:00  INFO 38062 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-21T13:52:05.570+02:00  INFO 38062 --- [librairie-online] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-21T13:52:05.679+02:00  INFO 38062 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-21T13:52:06.425+02:00  INFO 38062 --- [librairie-online] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-07-21T13:52:06.436+02:00  INFO 38062 --- [librairie-online] [main] c.e.l.LibrairieOnlineApplication         : Started LibrairieOnlineApplication in 4.238 seconds (process running for 4.567)
+2024-07-21T13:52:36.855+02:00  INFO 38062 --- [librairie-online] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-21T13:52:36.855+02:00  INFO 38062 --- [librairie-online] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-21T13:52:36.858+02:00  INFO 38062 --- [librairie-online] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-07-21T13:52:36.885+02:00  WARN 38062 --- [librairie-online] [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type is not supported]
+2024-07-21T13:53:19.321+02:00  INFO 38062 --- [librairie-online] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-21T13:53:19.324+02:00  INFO 38062 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-21T13:53:19.339+02:00  INFO 38062 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-07-21T13:53:20.950+02:00  INFO 38729 --- [librairie-online] [main] c.e.l.LibrairieOnlineApplication         : Starting LibrairieOnlineApplication using Java 22.0.1 with PID 38729 (/Users/cedinacoelho/Documents/src/librairie-online-Spring/target/classes started by cedinacoelho in /Users/cedinacoelho/Documents/src/librairie-online-Spring)
+2024-07-21T13:53:20.953+02:00  INFO 38729 --- [librairie-online] [main] c.e.l.LibrairieOnlineApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-07-21T13:53:21.577+02:00  INFO 38729 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-21T13:53:21.717+02:00  INFO 38729 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 131 ms. Found 3 JPA repository interfaces.
+2024-07-21T13:53:22.369+02:00  INFO 38729 --- [librairie-online] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-07-21T13:53:22.384+02:00  INFO 38729 --- [librairie-online] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-21T13:53:22.384+02:00  INFO 38729 --- [librairie-online] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-21T13:53:22.459+02:00  INFO 38729 --- [librairie-online] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-21T13:53:22.459+02:00  INFO 38729 --- [librairie-online] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1455 ms
+2024-07-21T13:53:22.646+02:00  INFO 38729 --- [librairie-online] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-21T13:53:22.709+02:00  INFO 38729 --- [librairie-online] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-21T13:53:22.742+02:00  INFO 38729 --- [librairie-online] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-21T13:53:23.013+02:00  INFO 38729 --- [librairie-online] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-21T13:53:23.039+02:00  INFO 38729 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-21T13:53:23.381+02:00  INFO 38729 --- [librairie-online] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5408d4b3
+2024-07-21T13:53:23.382+02:00  INFO 38729 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-21T13:53:24.269+02:00  INFO 38729 --- [librairie-online] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-21T13:53:24.368+02:00  INFO 38729 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-21T13:53:25.086+02:00  INFO 38729 --- [librairie-online] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-07-21T13:53:25.095+02:00  INFO 38729 --- [librairie-online] [main] c.e.l.LibrairieOnlineApplication         : Started LibrairieOnlineApplication in 4.719 seconds (process running for 5.185)
+2024-07-21T13:53:29.259+02:00  INFO 38729 --- [librairie-online] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-21T13:53:29.260+02:00  INFO 38729 --- [librairie-online] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-21T13:53:29.261+02:00  INFO 38729 --- [librairie-online] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-07-21T13:53:29.453+02:00 DEBUG 38729 --- [librairie-online] [http-nio-8080-exec-1] org.hibernate.SQL                        : select m1_0.nserie,m1_0.date_parution,m1_0.nomFournisseur,m1_0.nomMangaka,m1_0.prenomMangaka,m1_0.nbExemplaire,m1_0.nom,m1_0.tome from Manga m1_0
+2024-07-21T13:53:29.576+02:00  WARN 38729 --- [librairie-online] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: could not initialize proxy [com.example.librairie_online.entity.Mangaka#com.example.librairie_online.entity.Mangaka$MangakaId@fd672da1] - no Session]
+2024-07-21T13:54:44.396+02:00 DEBUG 38729 --- [librairie-online] [http-nio-8080-exec-4] org.hibernate.SQL                        : select m1_0.nom,m1_0.prenom,m1_0.nationalite,m1_0.sexe from Mangaka m1_0
+2024-07-21T13:54:49.067+02:00 DEBUG 38729 --- [librairie-online] [http-nio-8080-exec-5] org.hibernate.SQL                        : select m1_0.nserie,m1_0.date_parution,m1_0.nomFournisseur,m1_0.nomMangaka,m1_0.prenomMangaka,m1_0.nbExemplaire,m1_0.nom,m1_0.tome from Manga m1_0
+2024-07-21T13:54:49.077+02:00  WARN 38729 --- [librairie-online] [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: could not initialize proxy [com.example.librairie_online.entity.Mangaka#com.example.librairie_online.entity.Mangaka$MangakaId@fd672da1] - no Session]
+2024-07-21T14:14:11.834+02:00  INFO 38729 --- [librairie-online] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-21T14:14:11.837+02:00  INFO 38729 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-21T14:14:11.850+02:00  INFO 38729 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-07-21T14:14:13.280+02:00  INFO 48676 --- [librairie-online] [main] c.e.l.LibrairieOnlineApplication         : Starting LibrairieOnlineApplication using Java 22.0.1 with PID 48676 (/Users/cedinacoelho/Documents/src/librairie-online-Spring/target/classes started by cedinacoelho in /Users/cedinacoelho/Documents/src/librairie-online-Spring)
+2024-07-21T14:14:13.282+02:00  INFO 48676 --- [librairie-online] [main] c.e.l.LibrairieOnlineApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-07-21T14:14:13.881+02:00  INFO 48676 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-21T14:14:13.948+02:00  INFO 48676 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 3 JPA repository interfaces.
+2024-07-21T14:14:14.479+02:00  INFO 48676 --- [librairie-online] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-07-21T14:14:14.495+02:00  INFO 48676 --- [librairie-online] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-21T14:14:14.496+02:00  INFO 48676 --- [librairie-online] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-07-21T14:14:14.573+02:00  INFO 48676 --- [librairie-online] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-21T14:14:14.573+02:00  INFO 48676 --- [librairie-online] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1240 ms
+2024-07-21T14:14:14.732+02:00  INFO 48676 --- [librairie-online] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-21T14:14:14.786+02:00  INFO 48676 --- [librairie-online] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-21T14:14:14.818+02:00  INFO 48676 --- [librairie-online] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-21T14:14:15.102+02:00  INFO 48676 --- [librairie-online] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-21T14:14:15.133+02:00  INFO 48676 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-21T14:14:15.528+02:00  INFO 48676 --- [librairie-online] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@45796b2a
+2024-07-21T14:14:15.529+02:00  INFO 48676 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-21T14:14:16.434+02:00  INFO 48676 --- [librairie-online] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-21T14:14:16.520+02:00  INFO 48676 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-21T14:14:17.102+02:00  INFO 48676 --- [librairie-online] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-07-21T14:14:17.112+02:00  INFO 48676 --- [librairie-online] [main] c.e.l.LibrairieOnlineApplication         : Started LibrairieOnlineApplication in 4.359 seconds (process running for 4.706)
+2024-07-21T14:14:23.737+02:00  INFO 48676 --- [librairie-online] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-21T14:14:23.738+02:00  INFO 48676 --- [librairie-online] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-21T14:14:23.740+02:00  INFO 48676 --- [librairie-online] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-07-21T14:14:23.933+02:00 DEBUG 48676 --- [librairie-online] [http-nio-8080-exec-2] org.hibernate.SQL                        : select m1_0.nserie,m1_0.date_parution,m1_0.nomFournisseur,m1_0.nomMangaka,m1_0.prenomMangaka,m1_0.nbExemplaire,m1_0.nom,m1_0.tome from Manga m1_0
+2024-07-21T14:14:23.950+02:00 DEBUG 48676 --- [librairie-online] [http-nio-8080-exec-2] org.hibernate.SQL                        : select f1_0.nom,f1_0.ville from Fournisseur f1_0 where f1_0.nom=?
+2024-07-21T14:14:23.960+02:00 DEBUG 48676 --- [librairie-online] [http-nio-8080-exec-2] org.hibernate.SQL                        : select m1_0.nom,m1_0.prenom,m1_0.nationalite,m1_0.sexe from Mangaka m1_0 where (m1_0.nom,m1_0.prenom) in ((?,?))
+2024-07-21T14:14:23.967+02:00 DEBUG 48676 --- [librairie-online] [http-nio-8080-exec-2] org.hibernate.SQL                        : select m1_0.nom,m1_0.prenom,m1_0.nationalite,m1_0.sexe from Mangaka m1_0 where (m1_0.nom,m1_0.prenom) in ((?,?))
+2024-07-21T14:14:23.971+02:00 DEBUG 48676 --- [librairie-online] [http-nio-8080-exec-2] org.hibernate.SQL                        : select m1_0.nom,m1_0.prenom,m1_0.nationalite,m1_0.sexe from Mangaka m1_0 where (m1_0.nom,m1_0.prenom) in ((?,?))
+2024-07-21T14:14:23.975+02:00 DEBUG 48676 --- [librairie-online] [http-nio-8080-exec-2] org.hibernate.SQL                        : select m1_0.nom,m1_0.prenom,m1_0.nationalite,m1_0.sexe from Mangaka m1_0 where (m1_0.nom,m1_0.prenom) in ((?,?))
+2024-07-21T14:14:23.981+02:00 DEBUG 48676 --- [librairie-online] [http-nio-8080-exec-2] org.hibernate.SQL                        : select m1_0.nom,m1_0.prenom,m1_0.nationalite,m1_0.sexe from Mangaka m1_0 where (m1_0.nom,m1_0.prenom) in ((?,?))
+2024-07-21T14:14:23.984+02:00 DEBUG 48676 --- [librairie-online] [http-nio-8080-exec-2] org.hibernate.SQL                        : select m1_0.nom,m1_0.prenom,m1_0.nationalite,m1_0.sexe from Mangaka m1_0 where (m1_0.nom,m1_0.prenom) in ((?,?))
+2024-07-21T14:14:23.989+02:00 DEBUG 48676 --- [librairie-online] [http-nio-8080-exec-2] org.hibernate.SQL                        : select m1_0.nom,m1_0.prenom,m1_0.nationalite,m1_0.sexe from Mangaka m1_0 where (m1_0.nom,m1_0.prenom) in ((?,?))
+2024-07-21T14:14:23.992+02:00 DEBUG 48676 --- [librairie-online] [http-nio-8080-exec-2] org.hibernate.SQL                        : select m1_0.nom,m1_0.prenom,m1_0.nationalite,m1_0.sexe from Mangaka m1_0 where (m1_0.nom,m1_0.prenom) in ((?,?))
+2024-07-21T14:14:23.999+02:00 DEBUG 48676 --- [librairie-online] [http-nio-8080-exec-2] org.hibernate.SQL                        : select m1_0.nom,m1_0.prenom,m1_0.nationalite,m1_0.sexe from Mangaka m1_0 where (m1_0.nom,m1_0.prenom) in ((?,?))

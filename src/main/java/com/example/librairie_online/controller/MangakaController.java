@@ -24,7 +24,7 @@ import com.example.librairie_online.service.MangakaService;
 @RequestMapping(path = "Mangaka")
 public class MangakaController {
     // Injection dépendance
-    MangakaService mangakaService;
+    private MangakaService mangakaService;
 
     public MangakaController(MangakaService mangakaService) {
         this.mangakaService = mangakaService;
