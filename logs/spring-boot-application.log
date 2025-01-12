@@ -1,18 +1,18 @@
-2024-11-20T10:37:52.412+01:00  INFO 27107 --- [librairie-online] [main] c.e.l.LibrairieOnlineApplication         : Starting LibrairieOnlineApplication using Java 22.0.2 with PID 27107 (/Users/cedinacoelho/Documents/src/librairie-online-Spring/target/classes started by cedinacoelho in /Users/cedinacoelho/Documents/src/librairie-online-Spring)
-2024-11-20T10:37:52.424+01:00  INFO 27107 --- [librairie-online] [main] c.e.l.LibrairieOnlineApplication         : No active profile set, falling back to 1 default profile: "default"
-2024-11-20T10:37:53.222+01:00  INFO 27107 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-11-20T10:37:53.294+01:00  INFO 27107 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 62 ms. Found 3 JPA repository interfaces.
-2024-11-20T10:37:53.965+01:00  INFO 27107 --- [librairie-online] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-11-20T10:37:53.980+01:00  INFO 27107 --- [librairie-online] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-11-20T10:37:53.981+01:00  INFO 27107 --- [librairie-online] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-11-20T10:37:54.067+01:00  INFO 27107 --- [librairie-online] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-11-20T10:37:54.067+01:00  INFO 27107 --- [librairie-online] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1578 ms
-2024-11-20T10:37:54.234+01:00  INFO 27107 --- [librairie-online] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-11-20T10:37:54.286+01:00  INFO 27107 --- [librairie-online] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-11-20T10:37:54.326+01:00  INFO 27107 --- [librairie-online] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-11-20T10:37:54.620+01:00  INFO 27107 --- [librairie-online] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-11-20T10:37:54.644+01:00  INFO 27107 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-11-20T10:37:55.765+01:00  WARN 27107 --- [librairie-online] [main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+2025-01-12T15:01:03.450+01:00  INFO 44248 --- [librairie-online] [main] c.e.l.LibrairieOnlineApplication         : Starting LibrairieOnlineApplication using Java 21.0.5 with PID 44248 (/Users/cedinacoelho/Documents/src/librairie-online-Spring/target/classes started by cedinacoelho in /Users/cedinacoelho/Documents/src/librairie-online-Spring)
+2025-01-12T15:01:03.468+01:00  INFO 44248 --- [librairie-online] [main] c.e.l.LibrairieOnlineApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-01-12T15:01:04.660+01:00  INFO 44248 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-12T15:01:04.739+01:00  INFO 44248 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 5 JPA repository interfaces.
+2025-01-12T15:01:05.385+01:00  INFO 44248 --- [librairie-online] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-12T15:01:05.401+01:00  INFO 44248 --- [librairie-online] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-12T15:01:05.402+01:00  INFO 44248 --- [librairie-online] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-01-12T15:01:05.462+01:00  INFO 44248 --- [librairie-online] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-12T15:01:05.463+01:00  INFO 44248 --- [librairie-online] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1906 ms
+2025-01-12T15:01:05.680+01:00  INFO 44248 --- [librairie-online] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-12T15:01:05.735+01:00  INFO 44248 --- [librairie-online] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-01-12T15:01:05.774+01:00  INFO 44248 --- [librairie-online] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-12T15:01:06.063+01:00  INFO 44248 --- [librairie-online] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-12T15:01:06.099+01:00  INFO 44248 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-12T15:01:07.492+01:00  WARN 44248 --- [librairie-online] [main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
 
 java.lang.NullPointerException: Cannot invoke "org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(java.sql.SQLException, String)" because the return value of "org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.sqlExceptionHelper()" is null
 	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
@@ -52,13 +52,13 @@ java.lang.NullPointerException: Cannot invoke "org.hibernate.engine.jdbc.spi.Sql
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.1.jar:3.3.1]
 	at com.example.librairie_online.LibrairieOnlineApplication.main(LibrairieOnlineApplication.java:10) ~[classes/:na]
 
-2024-11-20T10:37:55.772+01:00 ERROR 27107 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
-2024-11-20T10:37:55.773+01:00  WARN 27107 --- [librairie-online] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
-2024-11-20T10:37:55.777+01:00  INFO 27107 --- [librairie-online] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2024-11-20T10:37:55.798+01:00  INFO 27107 --- [librairie-online] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2025-01-12T15:01:07.497+01:00 ERROR 44248 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2025-01-12T15:01:07.497+01:00  WARN 44248 --- [librairie-online] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2025-01-12T15:01:07.500+01:00  INFO 44248 --- [librairie-online] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-01-12T15:01:07.510+01:00  INFO 44248 --- [librairie-online] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2024-11-20T10:37:55.820+01:00 ERROR 27107 --- [librairie-online] [main] o.s.boot.SpringApplication               : Application run failed
+2025-01-12T15:01:07.524+01:00 ERROR 44248 --- [librairie-online] [main] o.s.boot.SpringApplication               : Application run failed
 
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788) ~[spring-beans-6.1.10.jar:6.1.10]
@@ -106,49 +106,26 @@ Caused by: org.hibernate.HibernateException: Unable to determine Dialect without
 	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
 	... 30 common frames omitted
 
-2024-11-20T10:40:43.689+01:00  INFO 28188 --- [librairie-online] [main] c.e.l.LibrairieOnlineApplication         : Starting LibrairieOnlineApplication using Java 22.0.2 with PID 28188 (/Users/cedinacoelho/Documents/src/librairie-online-Spring/target/classes started by cedinacoelho in /Users/cedinacoelho/Documents/src/librairie-online-Spring)
-2024-11-20T10:40:43.691+01:00  INFO 28188 --- [librairie-online] [main] c.e.l.LibrairieOnlineApplication         : No active profile set, falling back to 1 default profile: "default"
-2024-11-20T10:40:44.299+01:00  INFO 28188 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-11-20T10:40:44.382+01:00  INFO 28188 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72 ms. Found 3 JPA repository interfaces.
-2024-11-20T10:40:44.993+01:00  INFO 28188 --- [librairie-online] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-11-20T10:40:45.009+01:00  INFO 28188 --- [librairie-online] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-11-20T10:40:45.010+01:00  INFO 28188 --- [librairie-online] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-11-20T10:40:45.096+01:00  INFO 28188 --- [librairie-online] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-11-20T10:40:45.097+01:00  INFO 28188 --- [librairie-online] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1355 ms
-2024-11-20T10:40:45.282+01:00  INFO 28188 --- [librairie-online] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-11-20T10:40:45.349+01:00  INFO 28188 --- [librairie-online] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-11-20T10:40:45.388+01:00  INFO 28188 --- [librairie-online] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-11-20T10:40:45.704+01:00  INFO 28188 --- [librairie-online] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-11-20T10:40:45.729+01:00  INFO 28188 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-11-20T10:40:46.190+01:00  INFO 28188 --- [librairie-online] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7dd3981e
-2024-11-20T10:40:46.192+01:00  INFO 28188 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-11-20T10:40:47.264+01:00  INFO 28188 --- [librairie-online] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-11-20T10:40:47.376+01:00  INFO 28188 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-11-20T10:40:48.060+01:00  INFO 28188 --- [librairie-online] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-11-20T10:40:48.069+01:00  INFO 28188 --- [librairie-online] [main] c.e.l.LibrairieOnlineApplication         : Started LibrairieOnlineApplication in 4.923 seconds (process running for 5.364)
-2024-11-20T10:42:45.673+01:00  INFO 28188 --- [librairie-online] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-11-20T10:42:45.676+01:00  INFO 28188 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-11-20T10:42:45.693+01:00  INFO 28188 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-11-20T10:43:26.014+01:00  INFO 28953 --- [librairie-online] [main] c.e.l.LibrairieOnlineApplication         : Starting LibrairieOnlineApplication using Java 22.0.2 with PID 28953 (/Users/cedinacoelho/Documents/src/librairie-online-Spring/target/classes started by cedinacoelho in /Users/cedinacoelho/Documents/src/librairie-online-Spring)
-2024-11-20T10:43:26.016+01:00  INFO 28953 --- [librairie-online] [main] c.e.l.LibrairieOnlineApplication         : No active profile set, falling back to 1 default profile: "default"
-2024-11-20T10:43:26.740+01:00  INFO 28953 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-11-20T10:43:26.830+01:00  INFO 28953 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 82 ms. Found 3 JPA repository interfaces.
-2024-11-20T10:43:27.481+01:00  INFO 28953 --- [librairie-online] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-11-20T10:43:27.494+01:00  INFO 28953 --- [librairie-online] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-11-20T10:43:27.494+01:00  INFO 28953 --- [librairie-online] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
-2024-11-20T10:43:27.551+01:00  INFO 28953 --- [librairie-online] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-11-20T10:43:27.552+01:00  INFO 28953 --- [librairie-online] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1484 ms
-2024-11-20T10:43:27.719+01:00  INFO 28953 --- [librairie-online] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-11-20T10:43:27.786+01:00  INFO 28953 --- [librairie-online] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-11-20T10:43:27.817+01:00  INFO 28953 --- [librairie-online] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-11-20T10:43:28.120+01:00  INFO 28953 --- [librairie-online] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-11-20T10:43:28.143+01:00  INFO 28953 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-11-20T10:43:28.492+01:00  INFO 28953 --- [librairie-online] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@295b07e0
-2024-11-20T10:43:28.494+01:00  INFO 28953 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-11-20T10:43:29.453+01:00  INFO 28953 --- [librairie-online] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-11-20T10:43:29.535+01:00  INFO 28953 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-11-20T10:43:30.234+01:00  INFO 28953 --- [librairie-online] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-11-20T10:43:30.245+01:00  INFO 28953 --- [librairie-online] [main] c.e.l.LibrairieOnlineApplication         : Started LibrairieOnlineApplication in 4.773 seconds (process running for 5.279)
-2024-11-20T10:47:45.222+01:00  INFO 28953 --- [librairie-online] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-11-20T10:47:45.224+01:00  INFO 28953 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-11-20T10:47:45.235+01:00  INFO 28953 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-12T15:11:35.747+01:00  INFO 46702 --- [librairie-online] [main] c.e.l.LibrairieOnlineApplication         : Starting LibrairieOnlineApplication using Java 21.0.5 with PID 46702 (/Users/cedinacoelho/Documents/src/librairie-online-Spring/target/classes started by cedinacoelho in /Users/cedinacoelho/Documents/src/librairie-online-Spring)
+2025-01-12T15:11:35.750+01:00  INFO 46702 --- [librairie-online] [main] c.e.l.LibrairieOnlineApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-01-12T15:11:36.277+01:00  INFO 46702 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-12T15:11:36.346+01:00  INFO 46702 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 5 JPA repository interfaces.
+2025-01-12T15:11:36.849+01:00  INFO 46702 --- [librairie-online] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-12T15:11:36.863+01:00  INFO 46702 --- [librairie-online] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-12T15:11:36.863+01:00  INFO 46702 --- [librairie-online] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-01-12T15:11:36.920+01:00  INFO 46702 --- [librairie-online] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-12T15:11:36.921+01:00  INFO 46702 --- [librairie-online] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1119 ms
+2025-01-12T15:11:37.100+01:00  INFO 46702 --- [librairie-online] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-12T15:11:37.155+01:00  INFO 46702 --- [librairie-online] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-01-12T15:11:37.187+01:00  INFO 46702 --- [librairie-online] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-12T15:11:37.433+01:00  INFO 46702 --- [librairie-online] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-12T15:11:37.455+01:00  INFO 46702 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-12T15:11:37.799+01:00  INFO 46702 --- [librairie-online] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5402612e
+2025-01-12T15:11:37.801+01:00  INFO 46702 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-12T15:11:38.693+01:00  INFO 46702 --- [librairie-online] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-12T15:11:38.743+01:00 DEBUG 46702 --- [librairie-online] [main] org.hibernate.SQL                        : alter table Client modify column date_adhesion datetime(6)
+2025-01-12T15:11:38.822+01:00 DEBUG 46702 --- [librairie-online] [main] org.hibernate.SQL                        : alter table Client modify column date_naissance datetime(6)
+2025-01-12T15:11:38.871+01:00 DEBUG 46702 --- [librairie-online] [main] org.hibernate.SQL                        : alter table Client modify column sexe varchar(255)
+2025-01-12T15:11:38.963+01:00  INFO 46702 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-12T15:11:39.558+01:00  INFO 46702 --- [librairie-online] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-01-12T15:11:39.567+01:00  INFO 46702 --- [librairie-online] [main] c.e.l.LibrairieOnlineApplication         : Started LibrairieOnlineApplication in 4.22 seconds (process running for 4.895)
