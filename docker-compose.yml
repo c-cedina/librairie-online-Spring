@@ -1,7 +1,6 @@
-version: '3.8'
+version: "3.8"
 
 services:
-
   db:
     image: mysql:latest
     restart: always
@@ -14,7 +13,7 @@ services:
 
   adminer:
     image: adminer
-    container_name: adminer
+    container_name: adminerLibrairie
     restart: always
     ports:
       - 8081:8080
