@@ -1,10 +1,12 @@
 # Application Crud Java Spring Boot Librairie de Manga
 
+JDK 22
+Spring boot 3.3.1
 
 ## Introduction
 
-Utilisation d'une base de donnés MySql raccorder a cette api 
-objectif pouvoir créer, lire, modifier et supprimer grace a Spring Boot
+Utilisation d'une base de donnés MySql raccorder à cette api.
+Objectif pouvoir créer, lire, modifier et supprimer grâce à Spring Boot
 
 
 ## Body en Json pour créer les Entités 
