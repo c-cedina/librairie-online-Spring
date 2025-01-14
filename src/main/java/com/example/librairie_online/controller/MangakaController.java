@@ -44,7 +44,7 @@ public class MangakaController {
     }
 
     @GetMapping(path = "{nom}/{prenom}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Mangaka> ReadById(@PathVariable String nom, @PathVariable String prenom) {
+    public ResponseEntity<Mangaka> readById(@PathVariable String nom, @PathVariable String prenom) {
         MangakaId id = new MangakaId(nom, prenom);
         Mangaka mangaka = this.mangakaService.readById(id);
         if (mangaka != null) {

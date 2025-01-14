@@ -3,13 +3,15 @@ package com.example.librairie_online.service;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.stereotype.Service;
+
 import com.example.librairie_online.entity.Client;
 import com.example.librairie_online.repository.ClientRepository;
 
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
-
+@Service
 public class ClientService {
     private ClientRepository clientRepository;
 
@@ -23,7 +25,7 @@ public class ClientService {
         return this.clientRepository.findAll();
     }
 
-    public Client read(int id) {
+    public Client readbyId(int id) {
         Optional<Client> optionalClient = this.clientRepository.findById(id);
         if (optionalClient.isPresent()) {
             return optionalClient.get();
@@ -33,7 +35,7 @@ public class ClientService {
 
     // Update
     public void update(int id, Client client) {
-        Client dbClient = this.read(id);
+        Client dbClient = this.readbyId(id);
         dbClient.setAge(client.getAge());
         dbClient.setNom(client.getNom());
         dbClient.setDate_naissance(client.getDate_naissance());
