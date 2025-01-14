@@ -1,6 +1,5 @@
 package com.example.librairie_online.controller;
 
-import com.example.librairie_online.controller.MangakaController;
 import com.example.librairie_online.entity.Mangaka;
 import com.example.librairie_online.entity.Mangaka.MangakaId;
 import com.example.librairie_online.service.MangakaService;
@@ -9,9 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
