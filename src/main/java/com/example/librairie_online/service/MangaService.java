@@ -12,19 +12,19 @@ import com.example.librairie_online.repository.MangaRepository;
 public class MangaService {
     private MangaRepository mangaRepository;
 
-    public void Create(Manga manga) {
-        this.mangaRepository.save(manga);
-    }
-
     public MangaService(MangaRepository mangaRepository) {
         this.mangaRepository = mangaRepository;
+    }
+
+    public void create(Manga manga) {
+        this.mangaRepository.save(manga);
     }
 
     public List<Manga> read() {
         return this.mangaRepository.findAll();
     }
 
-    public Manga readByID(int id) {
+    public Manga readById(int id) {
         Optional<Manga> optionalManga = this.mangaRepository.findById(id);
         if (optionalManga.isPresent()) {
             return optionalManga.get();
@@ -33,7 +33,7 @@ public class MangaService {
     }
 
     public void update(int id, Manga manga) {
-        Manga dbManga = readByID(id);
+        Manga dbManga = readById(id);
         dbManga.setDate_parution(manga.getDate_parution());
         dbManga.setFournisseur(manga.getFournisseur());
         dbManga.setMangaka(manga.getMangaka());

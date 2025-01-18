@@ -1,44 +1,64 @@
 package com.example.librairie_online.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.example.librairie_online.entity.Manga;
+import com.example.librairie_online.service.MangaService;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
-
-import com.example.librairie_online.entity.Manga;
-
-import com.example.librairie_online.service.MangaService;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController
 @RequestMapping(path = "Manga")
 public class MangaController {
 
-    private MangaService mangakaService;
+    private final MangaService mangaService;
 
-    public MangaController(MangaService mangakaService) {
-        this.mangakaService = mangakaService;
+    public MangaController(MangaService mangaService) {
+        this.mangaService = mangaService;
     }
 
-    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<Manga> read() {
-        return this.mangakaService.read();
+    @GetMapping
+    public ResponseEntity<List<Manga>> read() {
+        List<Manga> mangas = mangaService.read();
+        return new ResponseEntity<>(mangas, HttpStatus.OK);
     }
 
-    @GetMapping("id")
-    public ResponseEntity<Manga> readById(@RequestParam int id) {
-        Manga manga = this.mangakaService.readByID(id);
+    @GetMapping("/{id}")
+    public ResponseEntity<Manga> readById(@PathVariable int id) {
+        Manga manga = mangaService.readById(id);
         if (manga != null) {
             return new ResponseEntity<>(manga, HttpStatus.OK);
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
-
     }
 
+    @PostMapping(consumes = "application/json")
+    public ResponseEntity<Manga> create(@RequestBody Manga entity) {
+        mangaService.create(entity);
+        return new ResponseEntity<>(HttpStatus.CREATED);
+    }
+
+    @PutMapping(value = "/{id}", consumes = "application/json")
+    public ResponseEntity<Manga> update(@PathVariable int id, @RequestBody Manga entityDetails) {
+        Manga entity = mangaService.readById(id);
+        if (entity != null) {
+            mangaService.update(id, entityDetails);
+            return new ResponseEntity<>(entityDetails, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> delete(@PathVariable int id) {
+        Manga entity = mangaService.readById(id);
+        if (entity != null) {
+            mangaService.delete(id);
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
 }
