@@ -16,8 +16,8 @@ public class MangaService {
         this.mangaRepository = mangaRepository;
     }
 
-    public void create(Manga manga) {
-        this.mangaRepository.save(manga);
+    public Manga create(Manga manga) {
+        return this.mangaRepository.save(manga);
     }
 
     public List<Manga> read() {
@@ -32,7 +32,7 @@ public class MangaService {
         return null;
     }
 
-    public void update(int id, Manga manga) {
+    public Manga update(int id, Manga manga) {
         Manga dbManga = readById(id);
         dbManga.setDate_parution(manga.getDate_parution());
         dbManga.setFournisseur(manga.getFournisseur());
@@ -41,6 +41,7 @@ public class MangaService {
         dbManga.setNom(manga.getNom());
         dbManga.setNserie(manga.getNserie());
         dbManga.setTome(manga.getTome());
+        return this.mangaRepository.save(dbManga);
     }
 
     public void delete(int id) {

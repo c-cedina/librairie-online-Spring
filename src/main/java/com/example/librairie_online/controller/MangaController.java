@@ -36,8 +36,8 @@ public class MangaController {
 
     @PostMapping(consumes = "application/json")
     public ResponseEntity<Manga> create(@RequestBody Manga entity) {
-        mangaService.create(entity);
-        return new ResponseEntity<>(HttpStatus.CREATED);
+        Manga manga = mangaService.create(entity);
+        return new ResponseEntity<>(manga, HttpStatus.CREATED);
     }
 
     @PutMapping(value = "/{id}", consumes = "application/json")

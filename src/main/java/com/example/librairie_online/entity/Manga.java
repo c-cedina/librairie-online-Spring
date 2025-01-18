@@ -24,7 +24,7 @@ public class Manga {
     private String nom;
     private int date_parution;
     private int tome;
-    private String nbExemplaire;
+    private int nbExemplaire;
 
     @ManyToOne(cascade = { CascadeType.PERSIST, CascadeType.MERGE })
     @JoinColumn(name = "nomMangaka", referencedColumnName = "nom")
