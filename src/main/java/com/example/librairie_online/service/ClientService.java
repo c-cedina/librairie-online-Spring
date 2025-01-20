@@ -34,13 +34,15 @@ public class ClientService {
     }
 
     // Update
-    public void update(int id, Client client) {
+    public Client update(int id, Client client) {
         Client dbClient = this.readbyId(id);
         dbClient.setAge(client.getAge());
         dbClient.setNom(client.getNom());
         dbClient.setDate_naissance(client.getDate_naissance());
         dbClient.setPrenom(client.getPrenom());
         dbClient.setSexe(null);
+        dbClient.setDate_adhesion(null);
+        return this.clientRepository.save(dbClient);
 
     }
 

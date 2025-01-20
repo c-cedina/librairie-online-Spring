@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -43,6 +44,17 @@ public class ClientController {
     public ResponseEntity<Client> readById(@PathVariable int id) {
         Client client = this.clientService.readbyId(id);
         if (client != null) {
+            return new ResponseEntity<>(client, HttpStatus.OK);
+        }
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
+
+    @PutMapping(path = "{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Client> update(@PathVariable int id, @RequestBody Client client) {
+        Client existingClient = this.clientService.readbyId(id);
+        if (existingClient != null) {
+            client.setNAdherent(existingClient.getNAdherent());
+            this.clientService.update(id, client);
             return new ResponseEntity<>(client, HttpStatus.OK);
         }
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);

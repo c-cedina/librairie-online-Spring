@@ -9,6 +9,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @AllArgsConstructor
@@ -25,6 +26,6 @@ public class Client {
     private String prenom;
     private String sexe;
     private int age;
-    private Date date_naissance;
-    private Date date_adhesion;
+    private LocalDate date_naissance;
+    private LocalDate date_adhesion;
 }
