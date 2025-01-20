@@ -15,6 +15,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
@@ -44,18 +45,32 @@ public class ClasseControllerIntegrationTest {
 
     @Test
     public void testCreateClasse() throws Exception {
+        Manga manga = new Manga();
+        manga.setNom("Naruto");
+        manga.setDate_parution(1999);
+        manga.setTome(1);
+        manga.setNbExemplaire(10);
+        mangaRepository.save(manga);
+
+        Genre genre = new Genre();
+        genre.setType("Action");
+        genreRepository.save(genre);
 
         String classeJson = """
                 {
                     "nSerie": %d,
                     "type": "Action"
                 }
-                """;
+                """.formatted(manga.getNserie());
 
         mockMvc.perform(post("/Classe")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(classeJson))
                 .andExpect(status().isCreated());
+
+        // Vérifiez le nombre d'instances de Classe créées
+        long count = classeRepository.count();
+        assertThat(count).isEqualTo(1); // Changez la valeur attendue en fonction de votre configuration de test
     }
 
     @Test
@@ -74,6 +89,8 @@ public class ClasseControllerIntegrationTest {
         Classe classe = new Classe();
         classe.setNSerie(manga.getNserie());
         classe.setType("Action");
+        classe.setManga(manga);
+        classe.setGenre(genre);
         classeRepository.save(classe);
 
         mockMvc.perform(get("/Classe")
@@ -99,14 +116,16 @@ public class ClasseControllerIntegrationTest {
         Classe classe = new Classe();
         classe.setNSerie(manga.getNserie());
         classe.setType("Action");
+        classe.setManga(manga);
+        classe.setGenre(genre);
         classeRepository.save(classe);
 
         String updatedClasseJson = """
                 {
-                    "nSerie": """ + manga.getNserie() + """
-                    ,
+                    "nSerie": %d,
                     "type": "Adventure"
-                }""";
+                }
+                """.formatted(manga.getNserie());
 
         mockMvc.perform(put("/Classe/" + manga.getNserie() + "/Action")
                 .contentType(MediaType.APPLICATION_JSON)
