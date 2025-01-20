@@ -16,7 +16,7 @@ public class ClasseService {
         this.classeRepository = classeRepository;
     }
 
-    public Classe createClasse(Classe classe) {
+    public Classe create(Classe classe) {
         return classeRepository.save(classe);
     }
 
@@ -31,8 +31,6 @@ public class ClasseService {
     public Classe update(ClasseId id, Classe classe) {
         Classe classeDb = readById(id);
         if (classeDb != null) {
-            classeDb.setManga(classe.getManga());
-            classeDb.setGenre(classe.getGenre());
             return classeRepository.save(classeDb);
         }
         return null;
