@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.*;
 import com.example.librairie_online.entity.Genre;
 import com.example.librairie_online.service.GenreService;
 
+@RequestMapping(path = "/Genre")
+@RestController
 public class GenreController {
     private GenreService genreService;
 

@@ -2,6 +2,7 @@
 
 JDK 22
 Spring boot 3.3.1
+Hibernate ORM core version 6.5.2.Final
 
 ## Introduction
 
