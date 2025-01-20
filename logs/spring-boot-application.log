@@ -552,3 +552,26 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Cannot add or upda
 2025-01-20T14:39:58.081+01:00  INFO 85374 --- [librairie-online] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-01-20T14:39:58.084+01:00  INFO 85374 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-01-20T14:39:58.117+01:00  INFO 85374 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-20T14:42:46.993+01:00  INFO 86341 --- [librairie-online] [main] c.e.l.LibrairieOnlineApplication         : Starting LibrairieOnlineApplication using Java 21.0.5 with PID 86341 (/Users/cedinacoelho/Documents/src/librairie-online-Spring/target/classes started by cedinacoelho in /Users/cedinacoelho/Documents/src/librairie-online-Spring)
+2025-01-20T14:42:46.995+01:00  INFO 86341 --- [librairie-online] [main] c.e.l.LibrairieOnlineApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-01-20T14:42:47.660+01:00  INFO 86341 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-20T14:42:47.756+01:00  INFO 86341 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83 ms. Found 11 JPA repository interfaces.
+2025-01-20T14:42:48.339+01:00  INFO 86341 --- [librairie-online] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-20T14:42:48.354+01:00  INFO 86341 --- [librairie-online] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-20T14:42:48.354+01:00  INFO 86341 --- [librairie-online] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-01-20T14:42:48.414+01:00  INFO 86341 --- [librairie-online] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-20T14:42:48.415+01:00  INFO 86341 --- [librairie-online] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1349 ms
+2025-01-20T14:42:48.594+01:00  INFO 86341 --- [librairie-online] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-20T14:42:48.655+01:00  INFO 86341 --- [librairie-online] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-01-20T14:42:48.688+01:00  INFO 86341 --- [librairie-online] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-20T14:42:48.938+01:00  INFO 86341 --- [librairie-online] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-20T14:42:48.973+01:00  INFO 86341 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-20T14:42:49.431+01:00  INFO 86341 --- [librairie-online] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@714bffd5
+2025-01-20T14:42:49.433+01:00  INFO 86341 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-20T14:42:50.692+01:00  INFO 86341 --- [librairie-online] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-20T14:42:50.887+01:00  INFO 86341 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-20T14:42:51.608+01:00  INFO 86341 --- [librairie-online] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-01-20T14:42:51.618+01:00  INFO 86341 --- [librairie-online] [main] c.e.l.LibrairieOnlineApplication         : Started LibrairieOnlineApplication in 5.075 seconds (process running for 5.841)
+2025-01-20T14:43:00.459+01:00  INFO 86341 --- [librairie-online] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-20T14:43:00.462+01:00  INFO 86341 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-20T14:43:00.488+01:00  INFO 86341 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
