@@ -29,7 +29,7 @@ public class Loue {
 
     @ManyToOne
     @JoinColumn(name = "nSerie")
-    private Manga manga;
+    private Anime anime;
 
     private LocalDate dateDebut;
     private LocalDate dateFin;
