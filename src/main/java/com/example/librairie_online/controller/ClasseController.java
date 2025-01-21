@@ -49,18 +49,6 @@ public class ClasseController {
         }
     }
 
-    @PutMapping(path = "{nserie}/{type}", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Classe> update(@PathVariable int nserie, @PathVariable String type,
-            @RequestBody Classe classe) {
-        ClasseId id = new ClasseId(nserie, type);
-        Classe classeDb = this.classeService.readById(id);
-        if (classeDb != null) {
-            Classe classeDetail = this.classeService.update(id, classe);
-            return new ResponseEntity<>(classeDetail, HttpStatus.OK);
-        }
-        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-    }
-
     @DeleteMapping(path = "{nserie}/{type}")
     public ResponseEntity<Classe> delete(@PathVariable int nserie, @PathVariable String type) {
         ClasseId id = new ClasseId(nserie, type);

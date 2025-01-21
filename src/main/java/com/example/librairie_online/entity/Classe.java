@@ -27,7 +27,7 @@ public class Classe {
     private String type;
 
     @ManyToOne
-    @JoinColumn(name = "nSerie", insertable = false, updatable = false)
+    @JoinColumn(name = "nserie", insertable = false, updatable = false)
     private Manga manga;
 
     @ManyToOne
@@ -44,8 +44,10 @@ public class Classe {
 
         @Override
         public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
+            if (this == o)
+                return true;
+            if (o == null || getClass() != o.getClass())
+                return false;
             ClasseId classeId = (ClasseId) o;
             return nSerie == classeId.nSerie && Objects.equals(type, classeId.type);
         }

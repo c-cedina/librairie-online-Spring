@@ -58,11 +58,11 @@ public class ClasseControllerIntegrationTest {
 
         String classeJson = """
                 {
-                    "nSerie": %d,
+                    "nserie": %d,
                     "type": "Action"
                 }
                 """.formatted(manga.getNserie());
-
+        System.out.println("JSON envoyé = " + classeJson);
         mockMvc.perform(post("/Classe")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(classeJson))
@@ -96,42 +96,8 @@ public class ClasseControllerIntegrationTest {
         mockMvc.perform(get("/Classe")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$[0].nSerie").value(manga.getNserie()))
+                .andExpect(jsonPath("$[0].nserie").value(manga.getNserie()))
                 .andExpect(jsonPath("$[0].type").value("Action"));
-    }
-
-    @Test
-    public void testUpdateClasse() throws Exception {
-        Manga manga = new Manga();
-        manga.setNom("Naruto");
-        manga.setDate_parution(1999);
-        manga.setTome(1);
-        manga.setNbExemplaire(10);
-        mangaRepository.save(manga);
-
-        Genre genre = new Genre();
-        genre.setType("Action");
-        genreRepository.save(genre);
-
-        Classe classe = new Classe();
-        classe.setNSerie(manga.getNserie());
-        classe.setType("Action");
-        classe.setManga(manga);
-        classe.setGenre(genre);
-        classeRepository.save(classe);
-
-        String updatedClasseJson = """
-                {
-                    "nSerie": %d,
-                    "type": "Adventure"
-                }
-                """.formatted(manga.getNserie());
-
-        mockMvc.perform(put("/Classe/" + manga.getNserie() + "/Action")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(updatedClasseJson))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.type").value("Adventure"));
     }
 
     @Test
