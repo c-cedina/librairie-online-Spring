@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -39,7 +40,7 @@ public class LoueController {
     }
 
     @GetMapping(path = "/{id}", produces = "application/json")
-    public ResponseEntity<Loue> readById(int id) {
+    public ResponseEntity<Loue> readById(@PathVariable int id) {
         if (this.loueService.readById(id) != null) {
             return new ResponseEntity<>(this.loueService.readById(id), HttpStatus.OK);
         } else {
@@ -47,7 +48,7 @@ public class LoueController {
         }
     }
 
-    @PostMapping(path = "/{id}", produces = "application/json")
+    @PutMapping(path = "/{id}", produces = "application/json")
     public ResponseEntity<Loue> update(@PathVariable int id, @RequestBody Loue loue) {
         if (this.loueService.readById(id) != null) {
             return new ResponseEntity<>(this.loueService.update(id, loue), HttpStatus.OK);

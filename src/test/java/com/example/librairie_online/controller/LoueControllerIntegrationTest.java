@@ -151,4 +151,37 @@ public class LoueControllerIntegrationTest {
                 .andExpect(jsonPath("$.dateDebut").value("2023-01-05"))
                 .andExpect(jsonPath("$.dateFin").value("2023-01-15"));
     }
+
+    @Test
+    public void testDeleteLoue() throws Exception {
+        Client client = new Client();
+        client.setNom("Doe");
+        client.setPrenom("John");
+        client.setSexe("M");
+        client.setAge(30);
+        client.setDate_naissance(LocalDate.of(1991, 1, 1));
+        client.setDate_adhesion(LocalDate.of(2021, 1, 1));
+        clientRepository.save(client);
+
+        Anime anime = new Anime();
+        anime.setNom("Naruto");
+        anime.setDate(2002);
+        animeRepository.save(anime);
+
+        Loue loue = new Loue();
+        loue.setClient(client);
+        loue.setAnime(anime);
+        loue.setDateDebut(LocalDate.of(2023, 1, 1));
+        loue.setDateFin(LocalDate.of(2023, 1, 10));
+        loue = loueRepository.save(loue);
+
+        mockMvc.perform(delete("/Loue/" + loue.getId())
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isNoContent());
+
+        mockMvc.perform(get("/Loue/" + loue.getId())
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isNotFound());
+    }
+
 }
