@@ -1,0 +1,154 @@
+package com.example.librairie_online.controller;
+
+import com.example.librairie_online.entity.Anime;
+import com.example.librairie_online.entity.Client;
+import com.example.librairie_online.entity.Loue;
+import com.example.librairie_online.repository.AnimeRepository;
+import com.example.librairie_online.repository.ClientRepository;
+import com.example.librairie_online.repository.LoueRepository;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.MediaType;
+import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.web.servlet.MockMvc;
+
+import java.time.LocalDate;
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+
+@SpringBootTest
+@AutoConfigureMockMvc
+@ActiveProfiles("test")
+public class LoueControllerIntegrationTest {
+
+    @Autowired
+    private MockMvc mockMvc;
+
+    @Autowired
+    private LoueRepository loueRepository;
+
+    @Autowired
+    private ClientRepository clientRepository;
+
+    @Autowired
+    private AnimeRepository animeRepository;
+
+    @BeforeEach
+    public void setup() {
+        loueRepository.deleteAll();
+        clientRepository.deleteAll();
+        animeRepository.deleteAll();
+    }
+
+    @Test
+    public void testCreateLoue() throws Exception {
+        Client client = new Client();
+        client.setNom("Doe");
+        client.setPrenom("John");
+        client.setSexe("M");
+        client.setAge(30);
+        client.setDate_naissance(LocalDate.of(1991, 1, 1));
+        client.setDate_adhesion(LocalDate.of(2021, 1, 1));
+        Client clientDb = clientRepository.save(client);
+
+        Anime anime = new Anime();
+        anime.setNom("Naruto");
+        anime.setDate(2002);
+        Anime animeDb = animeRepository.save(anime);
+
+        String loueJson = """
+                {
+                    "client": {"nadherent": %d},
+                    "anime": {"nserie": %d},
+                    "dateDebut": "2023-01-01",
+                    "dateFin": "2023-01-10"
+                }
+                """.formatted(clientDb.getNAdherent(), animeDb.getNSerie());
+
+        mockMvc.perform(post("/Loue")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(loueJson))
+                .andExpect(status().isCreated());
+
+        // Vérifiez le nombre d'instances de Loue créées
+        long count = loueRepository.count();
+        assertThat(count).isEqualTo(1); // Changez la valeur attendue en fonction de votre configuration de test
+    }
+
+    @Test
+    public void testReadLoues() throws Exception {
+        Client client = new Client();
+        client.setNom("Doe");
+        client.setPrenom("John");
+        client.setSexe("M");
+        client.setAge(30);
+        client.setDate_naissance(LocalDate.of(1991, 1, 1));
+        client.setDate_adhesion(LocalDate.of(2021, 1, 1));
+        clientRepository.save(client);
+
+        Anime anime = new Anime();
+        anime.setNom("Naruto");
+        anime.setDate(2002);
+        animeRepository.save(anime);
+
+        Loue loue = new Loue();
+        loue.setClient(client);
+        loue.setAnime(anime);
+        loue.setDateDebut(LocalDate.of(2023, 1, 1));
+        loue.setDateFin(LocalDate.of(2023, 1, 10));
+        loueRepository.save(loue);
+
+        mockMvc.perform(get("/Loue")
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$[0].client.nadherent").value(client.getNAdherent()))
+                .andExpect(jsonPath("$[0].anime.nserie").value(anime.getNSerie()))
+                .andExpect(jsonPath("$[0].dateDebut").value("2023-01-01"))
+                .andExpect(jsonPath("$[0].dateFin").value("2023-01-10"));
+    }
+
+    @Test
+    public void testUpdateLoue() throws Exception {
+        Client client = new Client();
+        client.setNom("Doe");
+        client.setPrenom("John");
+        client.setSexe("M");
+        client.setAge(30);
+        client.setDate_naissance(LocalDate.of(1991, 1, 1));
+        client.setDate_adhesion(LocalDate.of(2021, 1, 1));
+        clientRepository.save(client);
+
+        Anime anime = new Anime();
+        anime.setNom("Naruto");
+        anime.setDate(2002);
+        animeRepository.save(anime);
+
+        Loue loue = new Loue();
+        loue.setClient(client);
+        loue.setAnime(anime);
+        loue.setDateDebut(LocalDate.of(2023, 1, 1));
+        loue.setDateFin(LocalDate.of(2023, 1, 10));
+        loue = loueRepository.save(loue);
+
+        String updatedLoueJson = """
+                {
+                    "client": {"nadherent": %d},
+                    "anime": {"nserie": %d},
+                    "dateDebut": "2023-01-05",
+                    "dateFin": "2023-01-15"
+                }
+                """.formatted(client.getNAdherent(), anime.getNSerie());
+
+        mockMvc.perform(put("/Loue/" + loue.getId())
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(updatedLoueJson))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.dateDebut").value("2023-01-05"))
+                .andExpect(jsonPath("$.dateFin").value("2023-01-15"));
+    }
+}
