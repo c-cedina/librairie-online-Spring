@@ -219,3 +219,20 @@ Caused by: java.lang.IllegalArgumentException: scale has no meaning for SQL floa
 2025-01-22T15:39:48.788+01:00  INFO 38864 --- [librairie-online] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-01-22T15:39:48.790+01:00  INFO 38864 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-01-22T15:39:48.820+01:00  INFO 38864 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-22T16:08:44.079+01:00  INFO 45498 --- [librairie-online] [main] c.e.l.DatabaseStructureTests             : Starting DatabaseStructureTests using Java 21.0.5 with PID 45498 (started by cedinacoelho in /Users/cedinacoelho/Documents/src/librairie-online-Spring)
+2025-01-22T16:08:44.081+01:00  INFO 45498 --- [librairie-online] [main] c.e.l.DatabaseStructureTests             : No active profile set, falling back to 1 default profile: "default"
+2025-01-22T16:08:44.803+01:00  INFO 45498 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-22T16:08:44.884+01:00  INFO 45498 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72 ms. Found 12 JPA repository interfaces.
+2025-01-22T16:08:45.444+01:00  INFO 45498 --- [librairie-online] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-22T16:08:45.505+01:00  INFO 45498 --- [librairie-online] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-01-22T16:08:45.540+01:00  INFO 45498 --- [librairie-online] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-22T16:08:45.870+01:00  INFO 45498 --- [librairie-online] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-22T16:08:45.895+01:00  INFO 45498 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-22T16:08:46.344+01:00  INFO 45498 --- [librairie-online] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2f9addd4
+2025-01-22T16:08:46.347+01:00  INFO 45498 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-22T16:08:47.612+01:00  INFO 45498 --- [librairie-online] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-22T16:08:47.838+01:00  INFO 45498 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-22T16:08:48.923+01:00  INFO 45498 --- [librairie-online] [main] c.e.l.DatabaseStructureTests             : Started DatabaseStructureTests in 5.234 seconds (process running for 6.407)
+2025-01-22T16:08:49.694+01:00  INFO 45498 --- [librairie-online] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-22T16:08:49.697+01:00  INFO 45498 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-22T16:08:49.726+01:00  INFO 45498 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
