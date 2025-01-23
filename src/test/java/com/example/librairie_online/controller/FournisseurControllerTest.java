@@ -36,7 +36,6 @@ public class FournisseurControllerTest {
 
     @Test
     public void testCreate() throws Exception {
-        Fournisseur fournisseur = new Fournisseur();
         doNothing().when(fournisseurService).create(any(Fournisseur.class));
 
         mockMvc.perform(post("/Fournisseur")
