@@ -129,3 +129,111 @@ Caused by: org.hibernate.HibernateException: Unable to determine Dialect without
 2025-01-23T18:00:25.019+01:00  INFO 75977 --- [librairie-online] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-01-23T18:00:25.022+01:00  INFO 75977 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-01-23T18:00:25.046+01:00  INFO 75977 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-23T19:29:41.280+01:00  INFO 3472 --- [librairie-online] [main] c.e.l.DatabaseStructureTests             : Starting DatabaseStructureTests using Java 21.0.5 with PID 3472 (started by cedinacoelho in /Users/cedinacoelho/Documents/src/librairie-online-Spring)
+2025-01-23T19:29:41.282+01:00  INFO 3472 --- [librairie-online] [main] c.e.l.DatabaseStructureTests             : No active profile set, falling back to 1 default profile: "default"
+2025-01-23T19:29:41.420+01:00  INFO 3472 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-23T19:29:41.435+01:00  INFO 3472 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 12 JPA repository interfaces.
+2025-01-23T19:29:41.510+01:00  INFO 3472 --- [librairie-online] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-23T19:29:41.512+01:00  INFO 3472 --- [librairie-online] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-23T19:29:41.520+01:00  INFO 3472 --- [librairie-online] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-23T19:29:41.521+01:00  INFO 3472 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-01-23T19:29:42.018+01:00  INFO 3472 --- [librairie-online] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@13d305e4
+2025-01-23T19:29:42.018+01:00  INFO 3472 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-01-23T19:29:42.252+01:00  INFO 3472 --- [librairie-online] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-23T19:29:42.479+01:00  INFO 3472 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-23T19:29:42.754+01:00  INFO 3472 --- [librairie-online] [main] c.e.l.DatabaseStructureTests             : Started DatabaseStructureTests in 1.512 seconds (process running for 14.632)
+2025-01-23T19:29:42.888+01:00  INFO 3472 --- [librairie-online] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.librairie_online.LibrairieOnlineApplicationTests]: LibrairieOnlineApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-01-23T19:29:42.890+01:00  INFO 3472 --- [librairie-online] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.librairie_online.LibrairieOnlineApplication for test class com.example.librairie_online.LibrairieOnlineApplicationTests
+2025-01-23T19:29:42.904+01:00  INFO 3472 --- [librairie-online] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.librairie_online.repository.FournisseurRepositoryTest]: FournisseurRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-01-23T19:29:42.924+01:00  INFO 3472 --- [librairie-online] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.librairie_online.LibrairieOnlineApplication for test class com.example.librairie_online.repository.FournisseurRepositoryTest
+2025-01-23T19:29:42.958+01:00  INFO 3472 --- [librairie-online] [main] c.e.l.r.FournisseurRepositoryTest        : Starting FournisseurRepositoryTest using Java 21.0.5 with PID 3472 (started by cedinacoelho in /Users/cedinacoelho/Documents/src/librairie-online-Spring)
+2025-01-23T19:29:42.958+01:00  INFO 3472 --- [librairie-online] [main] c.e.l.r.FournisseurRepositoryTest        : The following 1 profile is active: "test"
+2025-01-23T19:29:43.022+01:00  INFO 3472 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-23T19:29:43.046+01:00  INFO 3472 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 12 JPA repository interfaces.
+2025-01-23T19:29:43.063+01:00  INFO 3472 --- [librairie-online] [main] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2025-01-23T19:29:43.090+01:00  INFO 3472 --- [librairie-online] [main] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:b89068f2-7070-46de-86bf-e3cc8dba2e3a;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2025-01-23T19:29:43.666+01:00  INFO 3472 --- [librairie-online] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-23T19:29:43.668+01:00  INFO 3472 --- [librairie-online] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-23T19:29:43.675+01:00  INFO 3472 --- [librairie-online] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-23T19:29:43.677+01:00  WARN 3472 --- [librairie-online] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-23T19:29:43.810+01:00  INFO 3472 --- [librairie-online] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-23T19:29:43.810+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : drop table if exists Achete cascade 
+2025-01-23T19:29:43.811+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : drop table if exists Anime cascade 
+2025-01-23T19:29:43.812+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : drop table if exists Classe cascade 
+2025-01-23T19:29:43.812+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : drop table if exists Client cascade 
+2025-01-23T19:29:43.812+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : drop table if exists Fournisseur cascade 
+2025-01-23T19:29:43.813+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : drop table if exists Genre cascade 
+2025-01-23T19:29:43.813+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : drop table if exists Loue cascade 
+2025-01-23T19:29:43.814+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : drop table if exists Manga cascade 
+2025-01-23T19:29:43.814+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : drop table if exists Mangaka cascade 
+2025-01-23T19:29:43.815+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : drop table if exists NoteA cascade 
+2025-01-23T19:29:43.816+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : drop table if exists NoteM cascade 
+2025-01-23T19:29:43.816+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : drop table if exists Studio cascade 
+2025-01-23T19:29:43.817+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : create table Achete (date date, id integer generated by default as identity, nAdherent integer, nSerie integer, prix numeric(9,2), primary key (id))
+2025-01-23T19:29:43.819+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : create table Anime (date integer not null, nSerie integer generated by default as identity, nSerieM integer, nom varchar(255), nomStudio varchar(255), primary key (nSerie))
+2025-01-23T19:29:43.823+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : create table Classe (nSerie integer not null, type varchar(255) not null, primary key (nSerie, type))
+2025-01-23T19:29:43.825+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : create table Client (age integer not null, date_adhesion date, date_naissance date, nAdherent integer generated by default as identity, nom varchar(255), prenom varchar(255), sexe varchar(255), primary key (nAdherent))
+2025-01-23T19:29:43.826+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : create table Fournisseur (nom varchar(255) not null, ville varchar(255), primary key (nom))
+2025-01-23T19:29:43.828+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : create table Genre (type varchar(255) not null, primary key (type))
+2025-01-23T19:29:43.829+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : create table Loue (dateDebut date, dateFin date, id integer generated by default as identity, nAdherent integer, nSerie integer, primary key (id))
+2025-01-23T19:29:43.831+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : create table Manga (date_parution integer not null, nbExemplaire integer not null, nserie integer generated by default as identity, tome integer not null, nom varchar(255), nomFournisseur varchar(255), nomMangaka varchar(255), prenomMangaka varchar(255), primary key (nserie))
+2025-01-23T19:29:43.833+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : create table Mangaka (nationalite varchar(255), nom varchar(255) not null, prenom varchar(255) not null, sexe varchar(255), primary key (nom, prenom))
+2025-01-23T19:29:43.835+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : create table NoteA (date date, nSerie integer not null, nadherent integer not null, valeur float(53) not null, primary key (nSerie, nadherent))
+2025-01-23T19:29:43.836+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : create table NoteM (date date, nSerie integer not null, nadherent integer not null, valeur float(53) not null, primary key (nSerie, nadherent))
+2025-01-23T19:29:43.838+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : create table Studio (nom varchar(255) not null, nomDirecteur varchar(255), pays varchar(255), prenomDirecteur varchar(255), primary key (nom))
+2025-01-23T19:29:43.839+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists Achete add constraint FKqb1e2gq63l9dowoni2ercv3ia foreign key (nAdherent) references Client
+2025-01-23T19:29:43.841+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists Achete add constraint FKndbwyt78vyn2ixt20vveswpy foreign key (nSerie) references Manga
+2025-01-23T19:29:43.844+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists Anime add constraint FKiagcnb38yakykw03xitnyt3wl foreign key (nSerieM) references Manga
+2025-01-23T19:29:43.846+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists Anime add constraint FK6eecm0a8wmfpqoij85crf3m0w foreign key (nomStudio) references Studio
+2025-01-23T19:29:43.849+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists Classe add constraint FKmndai52ydfxv4egnm62drgpcs foreign key (type) references Genre
+2025-01-23T19:29:43.851+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists Classe add constraint FKpc3r5vfpoakf7vrwe8on06ux3 foreign key (nserie) references Manga
+2025-01-23T19:29:43.853+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists Loue add constraint FKk9fmioh8om4kdauf119myfy88 foreign key (nSerie) references Anime
+2025-01-23T19:29:43.855+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists Loue add constraint FK7uxy40ng4oydutr0xg99abf8n foreign key (nAdherent) references Client
+2025-01-23T19:29:43.857+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists Manga add constraint FK6jv3kix0ie77vrix41q74e9dp foreign key (nomFournisseur) references Fournisseur
+2025-01-23T19:29:43.859+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists Manga add constraint FKoxc656tng6cku1kgsbq5t1ifb foreign key (nomMangaka, prenomMangaka) references Mangaka
+2025-01-23T19:29:43.861+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists NoteA add constraint FK4se4t04m3xv4jvhufc8nhdfnx foreign key (nSerie) references Anime
+2025-01-23T19:29:43.863+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists NoteA add constraint FK4od391ruf1aqd8e0cqkw04ic5 foreign key (nadherent) references Client
+2025-01-23T19:29:43.865+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists NoteM add constraint FK3eoqdbnmssmi133k9fdsko3d3 foreign key (nadherent) references Client
+2025-01-23T19:29:43.868+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists NoteM add constraint FKqy62n647qukdbu57egrbuerj6 foreign key (nSerie) references Manga
+2025-01-23T19:29:43.870+01:00  INFO 3472 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-23T19:29:43.945+01:00  INFO 3472 --- [librairie-online] [main] c.e.l.r.FournisseurRepositoryTest        : Started FournisseurRepositoryTest in 1.017 seconds (process running for 15.823)
+2025-01-23T19:29:43.956+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : select f1_0.nom,f1_0.ville from Fournisseur f1_0 where f1_0.nom=?
+2025-01-23T19:29:44.052+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : select f1_0.nom,f1_0.ville from Fournisseur f1_0 where f1_0.nom=?
+2025-01-23T19:29:44.055+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : select f1_0.nom,f1_0.ville from Fournisseur f1_0 where f1_0.nom=?
+2025-01-23T19:29:44.059+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : insert into Fournisseur (ville,nom) values (?,?)
+2025-01-23T19:29:44.060+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : insert into Fournisseur (ville,nom) values (?,?)
+2025-01-23T19:29:44.061+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : select f1_0.nom,f1_0.ville from Fournisseur f1_0
+2025-01-23T19:29:44.070+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : select f1_0.nom,f1_0.ville from Fournisseur f1_0 where f1_0.nom=?
+2025-01-23T19:29:44.079+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : select f1_0.nom,f1_0.ville from Fournisseur f1_0 where f1_0.nom=?
+2025-01-23T19:29:44.113+01:00 DEBUG 3472 --- [librairie-online] [main] org.hibernate.SQL                        : select f1_0.nom,f1_0.ville from Fournisseur f1_0 where f1_0.nom=?
+2025-01-23T19:29:44.137+01:00  INFO 3472 --- [librairie-online] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-23T19:29:44.138+01:00 DEBUG 3472 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Achete cascade 
+2025-01-23T19:29:44.143+01:00 DEBUG 3472 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Anime cascade 
+2025-01-23T19:29:44.145+01:00 DEBUG 3472 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Classe cascade 
+2025-01-23T19:29:44.146+01:00 DEBUG 3472 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Client cascade 
+2025-01-23T19:29:44.148+01:00 DEBUG 3472 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Fournisseur cascade 
+2025-01-23T19:29:44.149+01:00 DEBUG 3472 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Genre cascade 
+2025-01-23T19:29:44.150+01:00 DEBUG 3472 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Loue cascade 
+2025-01-23T19:29:44.151+01:00 DEBUG 3472 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Manga cascade 
+2025-01-23T19:29:44.152+01:00 DEBUG 3472 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Mangaka cascade 
+2025-01-23T19:29:44.153+01:00 DEBUG 3472 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists NoteA cascade 
+2025-01-23T19:29:44.154+01:00 DEBUG 3472 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists NoteM cascade 
+2025-01-23T19:29:44.155+01:00 DEBUG 3472 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Studio cascade 
+2025-01-23T19:29:44.156+01:00  INFO 3472 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-23T19:29:44.172+01:00  INFO 3472 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-23T19:29:44.176+01:00  INFO 3472 --- [librairie-online] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-23T19:29:44.177+01:00  INFO 3472 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2025-01-23T19:29:44.256+01:00  INFO 3472 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2025-01-23T19:29:44.257+01:00  INFO 3472 --- [librairie-online] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-23T19:29:44.257+01:00 DEBUG 3472 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Achete cascade 
+2025-01-23T19:29:44.260+01:00 DEBUG 3472 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Anime cascade 
+2025-01-23T19:29:44.262+01:00 DEBUG 3472 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Classe cascade 
+2025-01-23T19:29:44.263+01:00 DEBUG 3472 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Client cascade 
+2025-01-23T19:29:44.264+01:00 DEBUG 3472 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Fournisseur cascade 
+2025-01-23T19:29:44.266+01:00 DEBUG 3472 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Genre cascade 
+2025-01-23T19:29:44.267+01:00 DEBUG 3472 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Loue cascade 
+2025-01-23T19:29:44.268+01:00 DEBUG 3472 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Manga cascade 
+2025-01-23T19:29:44.269+01:00 DEBUG 3472 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Mangaka cascade 
+2025-01-23T19:29:44.270+01:00 DEBUG 3472 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists NoteA cascade 
+2025-01-23T19:29:44.271+01:00 DEBUG 3472 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists NoteM cascade 
+2025-01-23T19:29:44.272+01:00 DEBUG 3472 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Studio cascade 

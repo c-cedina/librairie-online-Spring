@@ -6,6 +6,9 @@ import com.example.librairie_online.entity.Manga;
 import com.example.librairie_online.repository.ClasseRepository;
 import com.example.librairie_online.repository.GenreRepository;
 import com.example.librairie_online.repository.MangaRepository;
+
+import jakarta.transaction.Transactional;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,10 +39,12 @@ public class ClasseControllerIntegrationTest {
     @Autowired
     private GenreRepository genreRepository;
 
+    @Transactional
     @BeforeEach
     public void setup() {
         classeRepository.deleteAll();
-
+        mangaRepository.deleteAll();
+        genreRepository.deleteAll();
     }
 
     @Test
