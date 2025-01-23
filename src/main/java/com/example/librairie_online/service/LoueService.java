@@ -23,7 +23,7 @@ public class LoueService {
 
     public Loue create(Loue loue) {
         Anime animeDb = this.animeService.readById(loue.getAnime().getNSerie());
-        Client clientDb = this.clientService.readbyId(loue.getClient().getNAdherent());
+        Client clientDb = this.clientService.readById(loue.getClient().getNAdherent());
         if (animeDb != null && clientDb != null) {
             return this.loueRepository.save(loue);
         } else {

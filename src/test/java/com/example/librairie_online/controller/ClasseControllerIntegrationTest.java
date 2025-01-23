@@ -39,8 +39,7 @@ public class ClasseControllerIntegrationTest {
     @BeforeEach
     public void setup() {
         classeRepository.deleteAll();
-        mangaRepository.deleteAll();
-        genreRepository.deleteAll();
+
     }
 
     @Test

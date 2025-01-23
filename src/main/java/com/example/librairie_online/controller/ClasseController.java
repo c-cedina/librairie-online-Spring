@@ -30,7 +30,10 @@ public class ClasseController {
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Classe> create(@RequestBody Classe classe) {
         Classe classeCreate = this.classeService.create(classe);
-        return new ResponseEntity<Classe>(classeCreate, HttpStatus.CREATED);
+        if (classeCreate != null) {
+            return new ResponseEntity<Classe>(classeCreate, HttpStatus.CREATED);
+        }
+        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)

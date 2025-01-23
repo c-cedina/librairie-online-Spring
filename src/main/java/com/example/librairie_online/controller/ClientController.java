@@ -42,7 +42,7 @@ public class ClientController {
 
     @GetMapping(path = "{id}")
     public ResponseEntity<Client> readById(@PathVariable int id) {
-        Client client = this.clientService.readbyId(id);
+        Client client = this.clientService.readById(id);
         if (client != null) {
             return new ResponseEntity<>(client, HttpStatus.OK);
         }
@@ -51,7 +51,7 @@ public class ClientController {
 
     @PutMapping(path = "{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Client> update(@PathVariable int id, @RequestBody Client client) {
-        Client existingClient = this.clientService.readbyId(id);
+        Client existingClient = this.clientService.readById(id);
         if (existingClient != null) {
             client.setNAdherent(existingClient.getNAdherent());
             this.clientService.update(id, client);
@@ -62,7 +62,7 @@ public class ClientController {
 
     @DeleteMapping(path = "{id}")
     public ResponseEntity<Client> delete(@PathVariable int id) {
-        Client client = this.clientService.readbyId(id);
+        Client client = this.clientService.readById(id);
         if (client != null) {
             this.clientService.delete(id);
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);

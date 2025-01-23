@@ -25,7 +25,7 @@ public class ClientService {
         return this.clientRepository.findAll();
     }
 
-    public Client readbyId(int id) {
+    public Client readById(int id) {
         Optional<Client> optionalClient = this.clientRepository.findById(id);
         if (optionalClient.isPresent()) {
             return optionalClient.get();
@@ -35,7 +35,7 @@ public class ClientService {
 
     // Update
     public Client update(int id, Client client) {
-        Client dbClient = this.readbyId(id);
+        Client dbClient = this.readById(id);
         dbClient.setAge(client.getAge());
         dbClient.setNom(client.getNom());
         dbClient.setDate_naissance(client.getDate_naissance());
