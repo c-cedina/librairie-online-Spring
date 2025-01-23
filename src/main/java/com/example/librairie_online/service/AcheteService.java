@@ -8,8 +8,6 @@ import com.example.librairie_online.entity.Achete;
 import com.example.librairie_online.entity.Client;
 import com.example.librairie_online.entity.Manga;
 import com.example.librairie_online.repository.AcheteRepository;
-import com.example.librairie_online.service.ClientService;
-import com.example.librairie_online.service.MangaService;
 
 @Service
 public class AcheteService {

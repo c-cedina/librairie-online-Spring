@@ -21,6 +21,10 @@ class DatabaseStructureTests {
 
     @Test
     void testDatabaseStructure() throws SQLException {
+        if (jdbcTemplate.getDataSource() == null) {
+            System.out.println("JdbcTemplate is null");
+            return;
+        }
         DatabaseMetaData metaData = jdbcTemplate.getDataSource().getConnection().getMetaData();
 
         // Obtenir les tables

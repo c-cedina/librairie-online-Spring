@@ -7,8 +7,6 @@ import com.example.librairie_online.repository.AcheteRepository;
 import com.example.librairie_online.repository.ClientRepository;
 import com.example.librairie_online.repository.MangaRepository;
 
-import jakarta.transaction.Transactional;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

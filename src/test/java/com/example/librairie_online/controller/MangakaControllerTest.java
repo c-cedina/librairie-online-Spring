@@ -39,7 +39,7 @@ public class MangakaControllerTest {
 
         @Test
         public void testCreate() throws Exception {
-                Mangaka mangaka = new Mangaka();
+
                 doNothing().when(mangakaService).create(any(Mangaka.class));
 
                 mockMvc.perform(post("/Mangaka")

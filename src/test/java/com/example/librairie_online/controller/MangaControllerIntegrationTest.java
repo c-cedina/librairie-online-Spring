@@ -3,8 +3,6 @@ package com.example.librairie_online.controller;
 import com.example.librairie_online.entity.Manga;
 import com.example.librairie_online.repository.MangaRepository;
 
-import jakarta.transaction.Transactional;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
