@@ -16,6 +16,12 @@ public class AnimeService {
     }
 
     public Anime createAnime(Anime anime) {
+        if (animeRepository.existsByNomAndDateAndMangaAndStudio(
+                anime.getNom(), anime.getDate(), anime.getManga(), anime.getStudio())) {
+            System.err.println("Anime already exists");
+            return null;
+
+        }
         return animeRepository.save(anime);
     }
 
