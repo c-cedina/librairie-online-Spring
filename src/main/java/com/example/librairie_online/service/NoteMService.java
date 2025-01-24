@@ -27,11 +27,11 @@ public class NoteMService {
         Client client = clientService.readById(noteM.getNSerie());
         double note = noteM.getValeur();
         if (manga != null && client != null) {
+            if (note < 0 || note > 5) {
+                System.err.println("La note doit être comprise entre 0 et 5");
+                return null;
+            }
             return noteMRepository.save(noteM);
-        }
-        if (note < 0 || note > 5) {
-            System.err.println("La note doit être comprise entre 0 et 5");
-            return null;
         }
 
         return null;
