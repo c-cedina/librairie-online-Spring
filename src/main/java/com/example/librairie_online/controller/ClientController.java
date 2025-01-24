@@ -30,8 +30,12 @@ public class ClientController {
 
     @ResponseStatus(value = HttpStatus.CREATED)
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
-    public void create(@RequestBody Client client) {
+    public ResponseEntity<Client> create(@RequestBody Client client) {
         this.clientService.create(client);
+        if (client != null) {
+            return new ResponseEntity<>(client, HttpStatus.CREATED);
+        }
+        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
 
     @ResponseStatus(value = HttpStatus.OK)

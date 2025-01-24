@@ -16,8 +16,12 @@ public class ClientService {
     private ClientRepository clientRepository;
 
     // Create
-    public void create(Client client) {
-        this.clientRepository.save(client);
+    public Client create(Client client) {
+        if (this.clientRepository.existsByEmail(client.getEmail())) {
+            System.err.println("Client already exists");
+            return null;
+        }
+        return this.clientRepository.save(client);
     }
 
     // Read

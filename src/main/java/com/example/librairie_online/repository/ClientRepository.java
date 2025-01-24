@@ -6,4 +6,5 @@ import com.example.librairie_online.entity.Client;
 
 public interface ClientRepository extends JpaRepository<Client, Integer> {
 
+    boolean existsByEmail(String email);
 }
