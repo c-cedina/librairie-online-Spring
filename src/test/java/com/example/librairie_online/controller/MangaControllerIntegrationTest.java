@@ -71,7 +71,7 @@ public class MangaControllerIntegrationTest {
         manga.setNserie(12345);
         manga.setTome(1);
         manga.setNbExemplaire(10);
-        manga.setDate_parution(2023);
+        manga.setDateParution(2023);
         mangaRepository.save(manga);
 
         mockMvc.perform(get("/Manga")
@@ -88,7 +88,7 @@ public class MangaControllerIntegrationTest {
         manga.setNserie(12345);
         manga.setTome(1);
         manga.setNbExemplaire(10);
-        manga.setDate_parution(2023);
+        manga.setDateParution(2023);
         manga = mangaRepository.save(manga);
 
         mockMvc.perform(get("/Manga/" + manga.getNserie())
@@ -104,7 +104,7 @@ public class MangaControllerIntegrationTest {
         manga.setNserie(12345);
         manga.setTome(1);
         manga.setNbExemplaire(10);
-        manga.setDate_parution(2023);
+        manga.setDateParution(2023);
         manga = mangaRepository.save(manga);
         String updatedMangaJson = """
                 {
@@ -142,7 +142,7 @@ public class MangaControllerIntegrationTest {
         manga.setNserie(12345);
         manga.setTome(1);
         manga.setNbExemplaire(10);
-        manga.setDate_parution(2023);
+        manga.setDateParution(2023);
         manga = mangaRepository.save(manga);
 
         mockMvc.perform(delete("/Manga/" + manga.getNserie())

@@ -46,7 +46,7 @@ public class AnimeControllerIntegrationTest {
     public void testCreateAnime() throws Exception {
         Manga manga = new Manga();
         manga.setNom("Naruto");
-        manga.setDate_parution(1999);
+        manga.setDateParution(1999);
         manga.setTome(1);
         manga.setNbExemplaire(10);
         mangaRepository.save(manga);
@@ -79,7 +79,7 @@ public class AnimeControllerIntegrationTest {
     public void testReadAnimes() throws Exception {
         Manga manga = new Manga();
         manga.setNom("Naruto");
-        manga.setDate_parution(1999);
+        manga.setDateParution(1999);
         manga.setTome(1);
         manga.setNbExemplaire(10);
         mangaRepository.save(manga);
@@ -107,7 +107,7 @@ public class AnimeControllerIntegrationTest {
     public void testUpdateAnime() throws Exception {
         Manga manga = new Manga();
         manga.setNom("Naruto");
-        manga.setDate_parution(1999);
+        manga.setDateParution(1999);
         manga.setTome(1);
         manga.setNbExemplaire(10);
         mangaRepository.save(manga);
@@ -149,7 +149,7 @@ public class AnimeControllerIntegrationTest {
     public void testDeleteAnime() throws Exception {
         Manga manga = new Manga();
         manga.setNom("Naruto");
-        manga.setDate_parution(1999);
+        manga.setDateParution(1999);
         manga.setTome(1);
         manga.setNbExemplaire(10);
         mangaRepository.save(manga);

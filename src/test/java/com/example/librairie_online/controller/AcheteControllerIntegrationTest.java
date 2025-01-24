@@ -60,7 +60,7 @@ public class AcheteControllerIntegrationTest {
 
         Manga manga = new Manga();
         manga.setNom("Naruto");
-        manga.setDate_parution(1999);
+        manga.setDateParution(1999);
         manga.setTome(1);
         manga.setNbExemplaire(10);
         mangaRepository.save(manga);
@@ -97,7 +97,7 @@ public class AcheteControllerIntegrationTest {
 
         Manga manga = new Manga();
         manga.setNom("Naruto");
-        manga.setDate_parution(1999);
+        manga.setDateParution(1999);
         manga.setTome(1);
         manga.setNbExemplaire(10);
         mangaRepository.save(manga);
@@ -131,7 +131,7 @@ public class AcheteControllerIntegrationTest {
 
         Manga manga = new Manga();
         manga.setNom("Naruto");
-        manga.setDate_parution(1999);
+        manga.setDateParution(1999);
         manga.setTome(1);
         manga.setNbExemplaire(10);
         mangaRepository.save(manga);
@@ -173,7 +173,7 @@ public class AcheteControllerIntegrationTest {
 
         Manga manga = new Manga();
         manga.setNom("Naruto");
-        manga.setDate_parution(1999);
+        manga.setDateParution(1999);
         manga.setTome(1);
         manga.setNbExemplaire(10);
         mangaRepository.save(manga);

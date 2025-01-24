@@ -17,6 +17,11 @@ public class MangaService {
     }
 
     public Manga create(Manga manga) {
+        if (mangaRepository.existsByNomAndDateParutionAndTome(
+                manga.getNom(), manga.getDateParution(), manga.getTome())) {
+            System.err.println("Manga already exists");
+            return null;
+        }
         return this.mangaRepository.save(manga);
     }
 
@@ -34,7 +39,7 @@ public class MangaService {
 
     public Manga update(int id, Manga manga) {
         Manga dbManga = readById(id);
-        dbManga.setDate_parution(manga.getDate_parution());
+        dbManga.setDateParution(manga.getDateParution());
         dbManga.setFournisseur(manga.getFournisseur());
         dbManga.setMangaka(manga.getMangaka());
         dbManga.setNbExemplaire(manga.getNbExemplaire());

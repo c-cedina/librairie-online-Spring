@@ -120,6 +120,11 @@ create table NoteA (
     foreign key (NSerie) references Anime(NSerie)
 );
 
+ALTER TABLE Manga
+ADD CONSTRAINT unique_combination UNIQUE (Nom, Date_parution, Tome);
+
+ALTER TABLE Anime
+ADD CONSTRAINT unique_combination UNIQUE (Nom, Date, NSerieM, NomStudio);
 
 INSERT INTO Mangaka (Nom, Prenom, Sexe, Nationalite)
 value

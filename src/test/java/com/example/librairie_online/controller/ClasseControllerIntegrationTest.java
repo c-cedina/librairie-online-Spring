@@ -51,7 +51,7 @@ public class ClasseControllerIntegrationTest {
     public void testCreateClasse() throws Exception {
         Manga manga = new Manga();
         manga.setNom("Naruto");
-        manga.setDate_parution(1999);
+        manga.setDateParution(1999);
         manga.setTome(1);
         manga.setNbExemplaire(10);
         mangaRepository.save(manga);
@@ -81,7 +81,7 @@ public class ClasseControllerIntegrationTest {
     public void testReadClasses() throws Exception {
         Manga manga = new Manga();
         manga.setNom("Naruto");
-        manga.setDate_parution(1999);
+        manga.setDateParution(1999);
         manga.setTome(1);
         manga.setNbExemplaire(10);
         mangaRepository.save(manga);
@@ -108,7 +108,7 @@ public class ClasseControllerIntegrationTest {
     public void testDeleteClasse() throws Exception {
         Manga manga = new Manga();
         manga.setNom("Naruto");
-        manga.setDate_parution(1999);
+        manga.setDateParution(1999);
         manga.setTome(1);
         manga.setNbExemplaire(10);
         mangaRepository.save(manga);

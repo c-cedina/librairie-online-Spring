@@ -1,6 +1,7 @@
 package com.example.librairie_online.entity;
 
 import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -22,7 +23,8 @@ public class Manga {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int nserie;
     private String nom;
-    private int date_parution;
+    @Column(name = "date_parution", nullable = false)
+    private int dateParution;
     private int tome;
     private int nbExemplaire;
 
