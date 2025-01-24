@@ -27,4 +27,6 @@ public class Client {
     private int age;
     private LocalDate date_naissance;
     private LocalDate date_adhesion;
+    private String email;
+    private String password;
 }

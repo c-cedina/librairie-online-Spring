@@ -42,6 +42,7 @@ public class ClientService {
         dbClient.setPrenom(client.getPrenom());
         dbClient.setSexe(null);
         dbClient.setDate_adhesion(null);
+        dbClient.setEmail(client.getEmail());
         return this.clientRepository.save(dbClient);
 
     }

@@ -54,6 +54,8 @@ public class NoteMControllerIntegrationTest {
         client.setAge(30);
         client.setDate_naissance(LocalDate.of(1991, 1, 1));
         client.setDate_adhesion(LocalDate.of(2021, 1, 1));
+        client.setEmail("Doe.John@exemple.com");
+        client.setPassword("password");
         clientRepository.save(client);
 
         Manga manga = new Manga();
@@ -91,6 +93,8 @@ public class NoteMControllerIntegrationTest {
         client.setAge(30);
         client.setDate_naissance(LocalDate.of(1991, 1, 1));
         client.setDate_adhesion(LocalDate.of(2021, 1, 1));
+        client.setEmail("Doe.John@exemple.com");
+        client.setPassword("password");
         clientRepository.save(client);
 
         Manga manga = new Manga();
@@ -125,6 +129,8 @@ public class NoteMControllerIntegrationTest {
         client.setAge(30);
         client.setDate_naissance(LocalDate.of(1991, 1, 1));
         client.setDate_adhesion(LocalDate.of(2021, 1, 1));
+        client.setEmail("Doe.John@exemple.com");
+        client.setPassword("password");
         clientRepository.save(client);
 
         Manga manga = new Manga();
@@ -167,6 +173,8 @@ public class NoteMControllerIntegrationTest {
         client.setAge(30);
         client.setDate_naissance(LocalDate.of(1991, 1, 1));
         client.setDate_adhesion(LocalDate.of(2021, 1, 1));
+        client.setEmail("Doe.John@exemple.com");
+        client.setPassword("password");
         clientRepository.save(client);
 
         Manga manga = new Manga();

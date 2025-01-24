@@ -126,6 +126,9 @@ ADD CONSTRAINT unique_combination UNIQUE (Nom, Date_parution, Tome);
 ALTER TABLE Anime
 ADD CONSTRAINT unique_combination UNIQUE (Nom, Date, NSerieM, NomStudio);
 
+ALTER TABLE Client ADD Email VARCHAR(255) NOT NULL UNIQUE;
+ALTER TABLE Client ADD Password VARCHAR(255) NOT NULL;
+
 INSERT INTO Mangaka (Nom, Prenom, Sexe, Nationalite)
 value
 ('Gosho', 'Aoyama', 'M', 'Japonaise'),
@@ -162,24 +165,23 @@ INSERT INTO Manga (NSerie, Nom ,Date_parution, Tome, NBExemplaire, NomMangaka, P
 (87232, 'Koroko no Basket', 2008, 1, 30, 'Tadatoshi', 'Fujimaki', 'Manga World' )
 ;
 
-INSERT INTO  Client (Nadherent, Nom, Prenom, Sexe, Date_Naissance, Age, Date_Adhesion)
-value 
+INSERT INTO Client (Nadherent, Nom, Prenom, Sexe, Date_Naissance, Age, Date_Adhesion, Email, Password)
+VALUES
+(29453, 'Dubois', 'Léo', 'M', 20030308, 18, 20200506, 'leo.dubois@example.com', 'pass1234'),
+(23725, 'Bouaoula', 'Ahmed', 'M', 20140914, 17, 20200411, 'ahmed.bouaoula@example.com', 'ahmed123'),
+(59132, 'Shogbeni', 'Guetina', 'F', 20060828, 15, 20210422, 'guetina.shogbeni@example.com', 'guetina15'),
+(46610, 'Pierre', 'Alain', 'M', 19900102, 31, 20200519, 'alain.pierre@example.com', 'alain123'),
+(36319, 'Robert', 'Samuel', 'M', 19870227, 34, 20210721, 'samuel.robert@example.com', 'samuel34'),
+(91781, 'Ada', 'Lina', 'F', 20030517, 18, 20201111, 'lina.ada@example.com', 'lina2023'),
+(67569, 'Berger', 'Sarah', 'F', 20020601, 19, 20200929, 'sarah.berger@example.com', 'berger19'),
+(14222, 'Petit', 'Eve', 'F', 20001211, 20, 20200512, 'eve.petit@example.com', 'eve2020'),
+(17948, 'Fernandes', 'Gabriel', 'M', 20010725, 20, 20201102, 'gabriel.fernandes@example.com', 'fernandes20'),
+(61720, 'Leroy', 'Jade', 'F', 20070903, 14, 20211115, 'jade.leroy@example.com', 'jade2021'),
+(40285, 'Martin', 'Philippe', 'M', 19950407, 26, 20210706, 'philippe.martin@example.com', 'martin26'),
+(74967, 'Ali', 'Yasin', 'M', 20071105, 14, 20200624, 'yasin.ali@example.com', 'yasin123'),
+(83128, 'Dupont', 'Emeline', 'F', 20080513, 13, 20210430, 'emeline.dupont@example.com', 'emeline13'),
+(18351, 'Ledent', 'Andrea', 'F', 20001006, 21, 20210707, 'andrea.ledent@example.com', 'andrea21');
 
-(29453, 'Dubois', 'Léo', 'M', 20030308, 18, 20200506),
-(23725, 'Bouaoula', 'Ahmed', 'M', 20140914, 17, 20200411),
-(59132, 'Shogbeni', 'Guetina', 'F', 20060828, 15, 20210422),
-(46610, 'Pierre', 'Alain', 'M', 19900102, 31, 20200519),
-(36319, 'Robert', 'Samuel', 'M', 19870227, 34, 20210721),
-(91781, 'Ada', 'Lina', 'F', 20030517, 18, 20201111),
-(67569, 'Berger', 'Sarah', 'F', 20020601, 19, 20200929),
-(14222, 'Petit', 'Eve', 'F', 20001211, 20, 20200512),
-(17948, 'Fernandes', 'Gabriel', 'M', 20010725, 20, 20201102),
-(61720, 'Leroy', 'Jade', 'F', 20070903, 14, 20211115),
-(40285, 'Martin', 'Philippe', 'M', 19950407, 26, 20210706),
-(74967, 'Ali', 'Yasin', 'M', 20071105, 14, 20200624),
-(83128, 'Dupont', 'Emeline', 'F', 20080513, 13, 20210430),
-(18351, 'Ledent', 'Andrea', 'F', 20001006, 21, 20210707)
-;
 
 insert into Studio (Nom, Pays, NomDirecteur, prenomDirecteur)
 value

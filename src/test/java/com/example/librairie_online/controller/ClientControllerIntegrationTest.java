@@ -41,7 +41,9 @@ public class ClientControllerIntegrationTest {
                     "sexe": "M",
                     "age": 30,
                     "date_naissance": "1991-01-01",
-                    "date_adhesion": "2021-01-01"
+                    "date_adhesion": "2021-01-01",
+                    "email": "Doe.Jonh@exemple.com",
+                    "password": "password"
                 }
                 """;
 
@@ -60,6 +62,8 @@ public class ClientControllerIntegrationTest {
         client.setAge(30);
         client.setDate_naissance(LocalDate.of(1991, 1, 1));
         client.setDate_adhesion(LocalDate.of(2021, 1, 1));
+        client.setEmail("Doe.John@exemple.com");
+        client.setPassword("password");
         clientRepository.save(client);
 
         mockMvc.perform(get("/Client")
@@ -70,7 +74,9 @@ public class ClientControllerIntegrationTest {
                 .andExpect(jsonPath("$[0].sexe").value("M"))
                 .andExpect(jsonPath("$[0].age").value(30))
                 .andExpect(jsonPath("$[0].date_naissance").value("1991-01-01"))
-                .andExpect(jsonPath("$[0].date_adhesion").value("2021-01-01"));
+                .andExpect(jsonPath("$[0].date_adhesion").value("2021-01-01"))
+                .andExpect(jsonPath("$[0].email").value("Doe.John@exemple.com"))
+                .andExpect(jsonPath("$[0].password").value("password"));
     }
 
     @Test
@@ -82,6 +88,8 @@ public class ClientControllerIntegrationTest {
         client.setAge(30);
         client.setDate_naissance(LocalDate.of(1991, 1, 1));
         client.setDate_adhesion(LocalDate.of(2021, 1, 1));
+        client.setEmail("Doe.John@exemple.com");
+        client.setPassword("password");
         client = clientRepository.save(client);
 
         String updatedClientJson = """
@@ -91,7 +99,9 @@ public class ClientControllerIntegrationTest {
                     "sexe": "F",
                     "age": 28,
                     "date_naissance": "1993-01-01",
-                    "date_adhesion": "2021-01-01"
+                    "date_adhesion": "2021-01-01",
+                    "email": "Doe.John_93@exememple.com",
+                    "password": "pass"
                 }
                 """;
 
