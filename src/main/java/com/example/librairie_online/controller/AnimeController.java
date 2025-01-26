@@ -28,6 +28,9 @@ public class AnimeController {
     @PostMapping
     public ResponseEntity<Anime> create(@RequestBody Anime anime) {
         Anime animeCreate = this.animeService.createAnime(anime);
+        if (animeCreate == null) {
+            return new ResponseEntity<>(HttpStatus.CONFLICT);
+        }
         return new ResponseEntity<Anime>(animeCreate, HttpStatus.CREATED);
     }
 

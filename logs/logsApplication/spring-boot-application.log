@@ -1,0 +1,10 @@
+2025-01-25T05:46:30.515+01:00  WARN 82388 --- [librairie-online] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6h19s791ms).
+2025-01-25T10:55:22.571+01:00  WARN 82388 --- [librairie-online] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5h8m52s235ms).
+2025-01-25T12:17:06.013+01:00  WARN 82388 --- [librairie-online] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h21m43s453ms).
+2025-01-25T13:52:36.825+01:00  WARN 82388 --- [librairie-online] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h18m21s960ms).
+2025-01-25T14:09:27.617+01:00  WARN 82388 --- [librairie-online] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m16s904ms).
+2025-01-25T19:16:28.612+01:00  WARN 82388 --- [librairie-online] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4h7m30s640ms).
+2025-01-25T19:26:52.268+01:00  WARN 82388 --- [librairie-online] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m23s654ms).
+2025-01-25T19:36:52.867+01:00  INFO 82388 --- [librairie-online] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-25T19:36:52.890+01:00  INFO 82388 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-25T19:36:52.934+01:00  INFO 82388 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
