@@ -31,6 +31,15 @@ public class ClientService {
         client.setRole(role);
        Client NewClient =this.clientRepository.save(client);
         Validation validation =validationService.create(NewClient);
+        return NewClient;
+    }
+
+    public Client validate(int code){
+        Validation validation = validationService.readByCode(code);
+        if(validation == null){
+            return null;
+        }
+        validation.getClient().setActive(true);
         return this.clientRepository.save(validation.getClient());
     }
 

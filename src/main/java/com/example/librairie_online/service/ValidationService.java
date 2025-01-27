@@ -28,11 +28,19 @@ public class ValidationService {
         int code = random.nextInt(999999);
         validation.setCode(code);
         this.notificationServices.sendMail(validation);
-        client.setActive(true);
+
 
         return this.validationRepository.save(validation);
 
     }
 
 
+    public Validation readByCode(int code) {
+        Validation validation = this.validationRepository.findByCode(code);
+        if (validation == null) {
+            return null;
+        }
+        return validation;
+
+    }
 }

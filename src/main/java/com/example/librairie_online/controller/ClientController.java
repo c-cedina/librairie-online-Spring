@@ -2,6 +2,7 @@ package com.example.librairie_online.controller;
 
 import java.util.List;
 
+import com.example.librairie_online.entity.Validation;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -36,6 +37,15 @@ public class ClientController {
             return new ResponseEntity<>(client, HttpStatus.CREATED);
         }
         return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+    }
+    @PostMapping(path = "/Validate")
+    public ResponseEntity<Client> validate(@RequestBody Validation validation){
+        int code = validation.getCode();
+        Client client = this.clientService.validate(code);
+        if(client != null){
+            return new ResponseEntity<>(client,HttpStatus.OK);
+        }
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
     @ResponseStatus(value = HttpStatus.OK)
