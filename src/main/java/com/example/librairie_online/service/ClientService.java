@@ -47,6 +47,7 @@ public class ClientService {
         dbClient.setSexe(null);
         dbClient.setDate_adhesion(null);
         dbClient.setEmail(client.getEmail());
+        dbClient.setActive(client.isActive());
         return this.clientRepository.save(dbClient);
 
     }

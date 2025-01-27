@@ -138,6 +138,17 @@ CREATE TABLE Role (
 ALTER TABLE Client ADD RoleId INT;
 ALTER TABLE Client ADD constraint foreign key (RoleId) references Role(id);
 
+CREATE TABLE Validation (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    Code INT(6) NOT NULL,
+    Creation_Instant TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    Expire_Instant TIMESTAMP NOT NULL,
+    Activation_Instant TIMESTAMP NULL,
+    ClientId INT NOT NULL,
+    CONSTRAINT FK_Client FOREIGN KEY (ClientId) REFERENCES Client(NAdherent) ON DELETE CASCADE
+);
+
+
 INSERT INTO Mangaka (Nom, Prenom, Sexe, Nationalite)
 value
 ('Gosho', 'Aoyama', 'M', 'Japonaise'),
