@@ -3,6 +3,10 @@ package com.example.librairie_online.service;
 import java.util.List;
 import java.util.Optional;
 
+import com.example.librairie_online.entity.Role;
+import com.example.librairie_online.entity.Validation;
+import com.example.librairie_online.enumeration.TypeRole;
+import com.example.librairie_online.repository.RoleRepository;
 import org.springframework.stereotype.Service;
 
 import com.example.librairie_online.entity.Client;
@@ -14,6 +18,8 @@ import lombok.AllArgsConstructor;
 @Service
 public class ClientService {
     private ClientRepository clientRepository;
+    private ValidationService validationService;
+    private RoleRepository roleRepository;
 
     // Create
     public Client create(Client client) {
@@ -21,7 +27,11 @@ public class ClientService {
             System.err.println("Client already exists");
             return null;
         }
-        return this.clientRepository.save(client);
+       Role role = roleRepository.findByRole(TypeRole.USER);
+        client.setRole(role);
+       Client NewClient =this.clientRepository.save(client);
+        Validation validation =validationService.create(NewClient);
+        return this.clientRepository.save(validation.getClient());
     }
 
     // Read
