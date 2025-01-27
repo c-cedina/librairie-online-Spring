@@ -1,0 +1,18 @@
+2025-01-27 15:21:39 - alter table Client add column actif bit not null
+Hibernate: alter table Client add column actif bit not null
+2025-01-27 15:21:39 - alter table Client modify column sexe varchar(255)
+Hibernate: alter table Client modify column sexe varchar(255)
+2025-01-27 15:21:39 - alter table Client add column role_id integer
+Hibernate: alter table Client add column role_id integer
+2025-01-27 15:21:39 - alter table Loue add column dateDebut date
+Hibernate: alter table Loue add column dateDebut date
+2025-01-27 15:21:39 - alter table Loue add column dateFin date
+Hibernate: alter table Loue add column dateFin date
+2025-01-27 15:21:39 - alter table NoteA modify column valeur float(53) not null
+Hibernate: alter table NoteA modify column valeur float(53) not null
+2025-01-27 15:21:39 - alter table NoteM modify column valeur float(53) not null
+Hibernate: alter table NoteM modify column valeur float(53) not null
+2025-01-27 15:21:40 - alter table Client add constraint FKmax0wm3lm2q6hpy498m5tyctv foreign key (role_id) references Role (id)
+Hibernate: alter table Client add constraint FKmax0wm3lm2q6hpy498m5tyctv foreign key (role_id) references Role (id)
+2025-01-27 15:21:40 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-27 15:21:40 -
