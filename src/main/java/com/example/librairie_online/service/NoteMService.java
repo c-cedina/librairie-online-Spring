@@ -1,5 +1,6 @@
 package com.example.librairie_online.service;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -25,9 +26,9 @@ public class NoteMService {
     public NoteM create(NoteM noteM) {
         Manga manga = mangaService.readById(noteM.getNadherent());
         Client client = clientService.readById(noteM.getNSerie());
-        double note = noteM.getValeur();
+        BigDecimal note = noteM.getValeur();
         if (manga != null && client != null) {
-            if (note < 0 || note > 5) {
+            if (note.floatValue() < 0 || note.floatValue() > 5) {
                 System.err.println("La note doit être comprise entre 0 et 5");
                 return null;
             }

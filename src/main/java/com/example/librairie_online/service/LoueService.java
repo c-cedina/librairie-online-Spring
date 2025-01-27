@@ -43,9 +43,9 @@ public class LoueService {
 
     public Loue update(int id, Loue loue) {
         Loue loueDb = readById(id);
-        loueDb.setDateDebut(loue.getDateDebut());
+        loueDb.setDate(loue.getDate());
         ;
-        loueDb.setDateFin(loue.getDateFin());
+        loueDb.setDateRetour(loue.getDateRetour());
         ;
         return this.loueRepository.save(loueDb);
     }

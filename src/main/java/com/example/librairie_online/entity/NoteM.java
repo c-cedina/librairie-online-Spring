@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.Objects;
 
@@ -28,7 +29,7 @@ public class NoteM {
     private int nSerie;
 
     private LocalDate date;
-    private double valeur;
+    private BigDecimal valeur;
 
     @ManyToOne
     @JoinColumn(name = "nadherent", insertable = false, updatable = false)

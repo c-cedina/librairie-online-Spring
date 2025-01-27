@@ -31,6 +31,7 @@ public class Loue {
     @JoinColumn(name = "nSerie")
     private Anime anime;
 
-    private LocalDate dateDebut;
-    private LocalDate dateFin;
+    private LocalDate date;
+    private LocalDate dateRetour;
+    private LocalDate dateMaximale;
 }
