@@ -99,8 +99,8 @@ public class LoueControllerIntegrationTest {
         Loue loue = new Loue();
         loue.setClient(client);
         loue.setAnime(anime);
-        loue.setDateDebut(LocalDate.of(2023, 1, 1));
-        loue.setDateFin(LocalDate.of(2023, 1, 10));
+        loue.setDate(LocalDate.of(2023, 1, 1));
+        loue.setDateRetour(LocalDate.of(2023, 1, 10));
         loueRepository.save(loue);
 
         mockMvc.perform(get("/Loue")
@@ -131,8 +131,8 @@ public class LoueControllerIntegrationTest {
         Loue loue = new Loue();
         loue.setClient(client);
         loue.setAnime(anime);
-        loue.setDateDebut(LocalDate.of(2023, 1, 1));
-        loue.setDateFin(LocalDate.of(2023, 1, 10));
+        loue.setDate(LocalDate.of(2023, 1, 1));
+        loue.setDateRetour(LocalDate.of(2023, 1, 10));
         loue = loueRepository.save(loue);
 
         String updatedLoueJson = """
@@ -171,8 +171,8 @@ public class LoueControllerIntegrationTest {
         Loue loue = new Loue();
         loue.setClient(client);
         loue.setAnime(anime);
-        loue.setDateDebut(LocalDate.of(2023, 1, 1));
-        loue.setDateFin(LocalDate.of(2023, 1, 10));
+        loue.setDate(LocalDate.of(2023, 1, 1));
+        loue.setDateRetour(LocalDate.of(2023, 1, 10));
         loue = loueRepository.save(loue);
 
         mockMvc.perform(delete("/Loue/" + loue.getId())

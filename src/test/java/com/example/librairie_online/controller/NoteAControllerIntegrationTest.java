@@ -15,6 +15,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -103,7 +104,8 @@ public class NoteAControllerIntegrationTest {
         NoteA noteA = new NoteA();
         noteA.setNadherent(client.getNAdherent());
         noteA.setNSerie(anime.getNSerie());
-        noteA.setValeur(4.5);
+        BigDecimal noteValeur = new BigDecimal("4.5");
+        noteA.setValeur(noteValeur);
         noteA.setDate(LocalDate.of(2023, 1, 1));
         noteARepository.save(noteA);
 
@@ -137,7 +139,8 @@ public class NoteAControllerIntegrationTest {
         NoteA noteA = new NoteA();
         noteA.setNadherent(client.getNAdherent());
         noteA.setNSerie(anime.getNSerie());
-        noteA.setValeur(4.5);
+        BigDecimal noteValeur = new BigDecimal("4.5");
+        noteA.setValeur(noteValeur);
         noteA.setDate(LocalDate.of(2023, 1, 1));
         noteA = noteARepository.save(noteA);
 
@@ -179,7 +182,8 @@ public class NoteAControllerIntegrationTest {
         NoteA noteA = new NoteA();
         noteA.setNadherent(client.getNAdherent());
         noteA.setNSerie(anime.getNSerie());
-        noteA.setValeur(4.5);
+        BigDecimal noteValeur = new BigDecimal("4.5");
+        noteA.setValeur(noteValeur);
         noteA.setDate(LocalDate.of(2023, 1, 1));
         noteA = noteARepository.save(noteA);
 
