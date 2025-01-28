@@ -6,21 +6,25 @@ import com.example.librairie_online.entity.NoteM;
 import com.example.librairie_online.repository.ClientRepository;
 import com.example.librairie_online.repository.MangaRepository;
 import com.example.librairie_online.repository.NoteMRepository;
+import com.example.librairie_online.security.TestSecurityConfig;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.Import;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
+@Import(TestSecurityConfig.class)
 @SpringBootTest
 @AutoConfigureMockMvc
 @ActiveProfiles("testNoteM")
@@ -107,7 +111,8 @@ public class NoteMControllerIntegrationTest {
         NoteM noteM = new NoteM();
         noteM.setNadherent(client.getNAdherent());
         noteM.setNSerie(manga.getNserie());
-        noteM.setValeur(4.5);
+        BigDecimal noteValeur = new BigDecimal("4.5");
+        noteM.setValeur(noteValeur);
         noteM.setDate(LocalDate.of(2023, 1, 1));
         noteMRepository.save(noteM);
 
@@ -143,7 +148,8 @@ public class NoteMControllerIntegrationTest {
         NoteM noteM = new NoteM();
         noteM.setNadherent(client.getNAdherent());
         noteM.setNSerie(manga.getNserie());
-        noteM.setValeur(4.5);
+        BigDecimal noteValeur = new BigDecimal("4.5");
+        noteM.setValeur(noteValeur);
         noteM.setDate(LocalDate.of(2023, 1, 1));
         noteM = noteMRepository.save(noteM);
 
@@ -187,7 +193,8 @@ public class NoteMControllerIntegrationTest {
         NoteM noteM = new NoteM();
         noteM.setNadherent(client.getNAdherent());
         noteM.setNSerie(manga.getNserie());
-        noteM.setValeur(4.5);
+        BigDecimal noteValeur = new BigDecimal("4.5");
+        noteM.setValeur(noteValeur);
         noteM.setDate(LocalDate.of(2023, 1, 1));
         noteM = noteMRepository.save(noteM);
 
