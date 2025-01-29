@@ -1,5 +1,6 @@
 package com.example.librairie_online.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -33,6 +34,7 @@ public class Client implements UserDetails {
     private String email;
     private String password;
     private boolean active = false;
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "roleId")
     private Role role ;

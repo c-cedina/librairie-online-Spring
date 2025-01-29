@@ -3,11 +3,13 @@ package com.example.librairie_online.controller;
 import com.example.librairie_online.entity.Anime;
 import com.example.librairie_online.entity.Client;
 import com.example.librairie_online.entity.NoteA;
+import com.example.librairie_online.entity.Role;
+import com.example.librairie_online.enumeration.TypeRole;
 import com.example.librairie_online.repository.AnimeRepository;
 import com.example.librairie_online.repository.ClientRepository;
 import com.example.librairie_online.repository.NoteARepository;
+import com.example.librairie_online.repository.RoleRepository;
 import com.example.librairie_online.security.TestSecurityConfig;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +25,8 @@ import java.time.LocalDate;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @Import(TestSecurityConfig.class)
 @SpringBootTest
@@ -42,12 +45,15 @@ public class NoteAControllerIntegrationTest {
 
     @Autowired
     private AnimeRepository animeRepository;
+    @Autowired
+    private RoleRepository roleRepository;
 
     @BeforeEach
     public void setup() {
         noteARepository.deleteAll();
         clientRepository.deleteAll();
         animeRepository.deleteAll();
+        roleRepository.deleteAll();
     }
 
     @Test
@@ -61,7 +67,11 @@ public class NoteAControllerIntegrationTest {
         client.setDate_adhesion(LocalDate.of(2021, 1, 1));
         client.setEmail("Doe.John@exemple.com");
         client.setPassword("password");
-        clientRepository.save(client);
+        Role role = new Role();
+        role.setRole(TypeRole.USER);
+        role = roleRepository.save(role);
+        client.setRole(role);
+        client= clientRepository.save(client);
 
         Anime anime = new Anime();
         anime.setNom("Naruto");
@@ -98,6 +108,10 @@ public class NoteAControllerIntegrationTest {
         client.setDate_adhesion(LocalDate.of(2021, 1, 1));
         client.setEmail("Doe.John@exemple.com");
         client.setPassword("password");
+        Role role = new Role();
+        role.setRole(TypeRole.USER);
+        role = roleRepository.save(role);
+        client.setRole(role);
         clientRepository.save(client);
 
         Anime anime = new Anime();
@@ -133,6 +147,10 @@ public class NoteAControllerIntegrationTest {
         client.setDate_adhesion(LocalDate.of(2021, 1, 1));
         client.setEmail("Doe.John@exemple.com");
         client.setPassword("password");
+        Role role = new Role();
+        role.setRole(TypeRole.USER);
+        role = roleRepository.save(role);
+        client.setRole(role);
         clientRepository.save(client);
 
         Anime anime = new Anime();
@@ -151,7 +169,7 @@ public class NoteAControllerIntegrationTest {
         String updatedNoteAJson = """
                 {
                     "nadherent": %d,
-                    "nSerie": %d,
+                    "nserie": %d,
                     "valeur": 3.5,
                     "date": "2023-01-05"
                 }
@@ -176,6 +194,10 @@ public class NoteAControllerIntegrationTest {
         client.setDate_adhesion(LocalDate.of(2021, 1, 1));
         client.setEmail("Doe.John@exemple.com");
         client.setPassword("password");
+        Role role = new Role();
+        role.setRole(TypeRole.USER);
+        role = roleRepository.save(role);
+        client.setRole(role);
         clientRepository.save(client);
 
         Anime anime = new Anime();

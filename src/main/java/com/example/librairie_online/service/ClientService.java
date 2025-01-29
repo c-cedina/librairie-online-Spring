@@ -28,6 +28,11 @@ public class ClientService {
             return null;
         }
        Role role = roleRepository.findByRole(TypeRole.USER);
+        if(role==null){
+            role = new Role();
+            role.setRole(TypeRole.USER);
+            role = roleRepository.save(role);
+        }
         client.setRole(role);
        Client NewClient =this.clientRepository.save(client);
         Validation validation =validationService.create(NewClient);
@@ -63,8 +68,8 @@ public class ClientService {
         dbClient.setNom(client.getNom());
         dbClient.setDate_naissance(client.getDate_naissance());
         dbClient.setPrenom(client.getPrenom());
-        dbClient.setSexe(null);
-        dbClient.setDate_adhesion(null);
+        dbClient.setSexe(client.getSexe());
+        dbClient.setDate_adhesion(client.getDate_adhesion());
         dbClient.setEmail(client.getEmail());
         dbClient.setActive(client.isActive());
         return this.clientRepository.save(dbClient);

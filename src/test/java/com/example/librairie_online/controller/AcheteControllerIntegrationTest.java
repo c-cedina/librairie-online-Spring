@@ -3,15 +3,20 @@ package com.example.librairie_online.controller;
 import com.example.librairie_online.entity.Achete;
 import com.example.librairie_online.entity.Client;
 import com.example.librairie_online.entity.Manga;
+import com.example.librairie_online.entity.Role;
+import com.example.librairie_online.enumeration.TypeRole;
 import com.example.librairie_online.repository.AcheteRepository;
 import com.example.librairie_online.repository.ClientRepository;
 import com.example.librairie_online.repository.MangaRepository;
 
+import com.example.librairie_online.repository.RoleRepository;
+import com.example.librairie_online.security.TestSecurityConfig;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.Import;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
@@ -23,6 +28,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
+@Import(TestSecurityConfig.class)
 @SpringBootTest
 @AutoConfigureMockMvc
 @ActiveProfiles("testAchete")
@@ -40,11 +46,15 @@ public class AcheteControllerIntegrationTest {
     @Autowired
     private MangaRepository mangaRepository;
 
+    @Autowired
+    private RoleRepository roleRepository;
+
     @BeforeEach
     public void setup() {
         acheteRepository.deleteAll();
         clientRepository.deleteAll();
         mangaRepository.deleteAll();
+        roleRepository.deleteAll();
     }
 
     @Test
@@ -58,7 +68,11 @@ public class AcheteControllerIntegrationTest {
         client.setDate_adhesion(LocalDate.of(2021, 1, 1));
         client.setEmail("Doe.John@exemple.com");
         client.setPassword("password");
-        clientRepository.save(client);
+        Role role = new Role();
+        role.setRole(TypeRole.USER);
+        role = roleRepository.save(role);
+        client.setRole(role);
+        client = clientRepository.save(client);
 
         Manga manga = new Manga();
         manga.setNom("Naruto");
@@ -97,6 +111,10 @@ public class AcheteControllerIntegrationTest {
         client.setDate_adhesion(LocalDate.of(2021, 1, 1));
         client.setEmail("Doe.John@exemple.com");
         client.setPassword("password");
+        Role role = new Role();
+        role.setRole(TypeRole.USER);
+        role = roleRepository.save(role);
+        client.setRole(role);
         clientRepository.save(client);
 
         Manga manga = new Manga();
@@ -133,6 +151,10 @@ public class AcheteControllerIntegrationTest {
         client.setDate_adhesion(LocalDate.of(2021, 1, 1));
         client.setEmail("Doe.John@exemple.com");
         client.setPassword("password");
+        Role role = new Role();
+        role.setRole(TypeRole.USER);
+        role = roleRepository.save(role);
+        client.setRole(role);
         clientRepository.save(client);
 
         Manga manga = new Manga();
@@ -177,6 +199,10 @@ public class AcheteControllerIntegrationTest {
         client.setDate_adhesion(LocalDate.of(2021, 1, 1));
         client.setEmail("Doe.John@exemple.com");
         client.setPassword("password");
+        Role role = new Role();
+        role.setRole(TypeRole.USER);
+        role = roleRepository.save(role);
+        client.setRole(role);
         clientRepository.save(client);
 
         Manga manga = new Manga();

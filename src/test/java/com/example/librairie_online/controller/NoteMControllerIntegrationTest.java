@@ -3,9 +3,12 @@ package com.example.librairie_online.controller;
 import com.example.librairie_online.entity.Client;
 import com.example.librairie_online.entity.Manga;
 import com.example.librairie_online.entity.NoteM;
+import com.example.librairie_online.entity.Role;
+import com.example.librairie_online.enumeration.TypeRole;
 import com.example.librairie_online.repository.ClientRepository;
 import com.example.librairie_online.repository.MangaRepository;
 import com.example.librairie_online.repository.NoteMRepository;
+import com.example.librairie_online.repository.RoleRepository;
 import com.example.librairie_online.security.TestSecurityConfig;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -42,11 +45,15 @@ public class NoteMControllerIntegrationTest {
     @Autowired
     private MangaRepository mangaRepository;
 
+    @Autowired
+    private RoleRepository roleRepository;
+
     @BeforeEach
     public void setup() {
         noteMRepository.deleteAll();
         clientRepository.deleteAll();
         mangaRepository.deleteAll();
+        roleRepository.deleteAll();
     }
 
     @Test
@@ -60,6 +67,10 @@ public class NoteMControllerIntegrationTest {
         client.setDate_adhesion(LocalDate.of(2021, 1, 1));
         client.setEmail("Doe.John@exemple.com");
         client.setPassword("password");
+        Role role = new Role();
+        role.setRole(TypeRole.USER);
+        role = roleRepository.save(role);
+        client.setRole(role);
         clientRepository.save(client);
 
         Manga manga = new Manga();
@@ -99,6 +110,10 @@ public class NoteMControllerIntegrationTest {
         client.setDate_adhesion(LocalDate.of(2021, 1, 1));
         client.setEmail("Doe.John@exemple.com");
         client.setPassword("password");
+        Role role = new Role();
+        role.setRole(TypeRole.USER);
+        role = roleRepository.save(role);
+        client.setRole(role);
         clientRepository.save(client);
 
         Manga manga = new Manga();
@@ -136,6 +151,10 @@ public class NoteMControllerIntegrationTest {
         client.setDate_adhesion(LocalDate.of(2021, 1, 1));
         client.setEmail("Doe.John@exemple.com");
         client.setPassword("password");
+        Role role = new Role();
+        role.setRole(TypeRole.USER);
+        role = roleRepository.save(role);
+        client.setRole(role);
         clientRepository.save(client);
 
         Manga manga = new Manga();
@@ -181,6 +200,10 @@ public class NoteMControllerIntegrationTest {
         client.setDate_adhesion(LocalDate.of(2021, 1, 1));
         client.setEmail("Doe.John@exemple.com");
         client.setPassword("password");
+        Role role = new Role();
+        role.setRole(TypeRole.USER);
+        role = roleRepository.save(role);
+        client.setRole(role);
         clientRepository.save(client);
 
         Manga manga = new Manga();

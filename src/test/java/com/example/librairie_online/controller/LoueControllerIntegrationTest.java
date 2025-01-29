@@ -3,9 +3,12 @@ package com.example.librairie_online.controller;
 import com.example.librairie_online.entity.Anime;
 import com.example.librairie_online.entity.Client;
 import com.example.librairie_online.entity.Loue;
+import com.example.librairie_online.entity.Role;
+import com.example.librairie_online.enumeration.TypeRole;
 import com.example.librairie_online.repository.AnimeRepository;
 import com.example.librairie_online.repository.ClientRepository;
 import com.example.librairie_online.repository.LoueRepository;
+import com.example.librairie_online.repository.RoleRepository;
 import com.example.librairie_online.security.TestSecurityConfig;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -39,12 +42,15 @@ public class LoueControllerIntegrationTest {
 
     @Autowired
     private AnimeRepository animeRepository;
+    @Autowired
+    private RoleRepository roleRepository;
 
     @BeforeEach
     public void setup() {
         loueRepository.deleteAll();
         clientRepository.deleteAll();
         animeRepository.deleteAll();
+        roleRepository.deleteAll();
     }
 
     @Test
@@ -56,6 +62,10 @@ public class LoueControllerIntegrationTest {
         client.setAge(30);
         client.setDate_naissance(LocalDate.of(1991, 1, 1));
         client.setDate_adhesion(LocalDate.of(2021, 1, 1));
+        Role role = new Role();
+        role.setRole(TypeRole.USER);
+        role = roleRepository.save(role);
+        client.setRole(role);
         Client clientDb = clientRepository.save(client);
 
         Anime anime = new Anime();
@@ -91,6 +101,10 @@ public class LoueControllerIntegrationTest {
         client.setAge(30);
         client.setDate_naissance(LocalDate.of(1991, 1, 1));
         client.setDate_adhesion(LocalDate.of(2021, 1, 1));
+        Role role = new Role();
+        role.setRole(TypeRole.USER);
+        role = roleRepository.save(role);
+        client.setRole(role);
         clientRepository.save(client);
 
         Anime anime = new Anime();
@@ -110,8 +124,8 @@ public class LoueControllerIntegrationTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$[0].client.nadherent").value(client.getNAdherent()))
                 .andExpect(jsonPath("$[0].anime.nserie").value(anime.getNSerie()))
-                .andExpect(jsonPath("$[0].dateDebut").value("2023-01-01"))
-                .andExpect(jsonPath("$[0].dateFin").value("2023-01-10"));
+                .andExpect(jsonPath("$[0].date").value("2023-01-01"))
+                .andExpect(jsonPath("$[0].dateRetour").value("2023-01-10"));
     }
 
     @Test
@@ -123,6 +137,10 @@ public class LoueControllerIntegrationTest {
         client.setAge(30);
         client.setDate_naissance(LocalDate.of(1991, 1, 1));
         client.setDate_adhesion(LocalDate.of(2021, 1, 1));
+        Role role = new Role();
+        role.setRole(TypeRole.USER);
+        role = roleRepository.save(role);
+        client.setRole(role);
         clientRepository.save(client);
 
         Anime anime = new Anime();
@@ -141,8 +159,8 @@ public class LoueControllerIntegrationTest {
                 {
                     "client": {"nadherent": %d},
                     "anime": {"nserie": %d},
-                    "dateDebut": "2023-01-05",
-                    "dateFin": "2023-01-15"
+                    "date": "2023-01-05",
+                    "dateRetour": "2023-01-15"
                 }
                 """.formatted(client.getNAdherent(), anime.getNSerie());
 
@@ -150,8 +168,8 @@ public class LoueControllerIntegrationTest {
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(updatedLoueJson))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.dateDebut").value("2023-01-05"))
-                .andExpect(jsonPath("$.dateFin").value("2023-01-15"));
+                .andExpect(jsonPath("$.date").value("2023-01-05"))
+                .andExpect(jsonPath("$.dateRetour").value("2023-01-15"));
     }
 
     @Test
@@ -163,6 +181,10 @@ public class LoueControllerIntegrationTest {
         client.setAge(30);
         client.setDate_naissance(LocalDate.of(1991, 1, 1));
         client.setDate_adhesion(LocalDate.of(2021, 1, 1));
+        Role role = new Role();
+        role.setRole(TypeRole.USER);
+        role = roleRepository.save(role);
+        client.setRole(role);
         clientRepository.save(client);
 
         Anime anime = new Anime();

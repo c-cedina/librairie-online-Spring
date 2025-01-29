@@ -1,14 +1,17 @@
 package com.example.librairie_online;
 
+import com.example.librairie_online.security.TestSecurityConfig;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.Import;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.sql.DatabaseMetaData;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+@Import(TestSecurityConfig.class)
 @SpringBootTest
 class DatabaseStructureTests {
 

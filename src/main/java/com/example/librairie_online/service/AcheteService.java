@@ -24,8 +24,10 @@ public class AcheteService {
     public Achete create(Achete achete) {
         Manga manga = mangaService.readById(achete.getManga().getNserie());
         Client client = clientService.readById(achete.getClient().getNAdherent());
+
         if (client != null && manga != null) {
-            return acheteRepository.save(achete);
+            achete.setClient(client);
+            return this.acheteRepository.save(achete);
         }
         return null;
     }

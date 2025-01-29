@@ -25,6 +25,7 @@ public class LoueService {
         Anime animeDb = this.animeService.readById(loue.getAnime().getNSerie());
         Client clientDb = this.clientService.readById(loue.getClient().getNAdherent());
         if (animeDb != null && clientDb != null) {
+            loue.setClient(clientDb);
             return this.loueRepository.save(loue);
         } else {
             System.out.println("Anime or Client not found");

@@ -32,8 +32,7 @@ public class ClientController {
     @ResponseStatus(value = HttpStatus.CREATED)
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Client> create(@RequestBody Client client) {
-        this.clientService.create(client);
-        if (client != null) {
+        if (this.clientService.create(client) != null) {
             return new ResponseEntity<>(client, HttpStatus.CREATED);
         }
         return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
@@ -68,8 +67,8 @@ public class ClientController {
         Client existingClient = this.clientService.readById(id);
         if (existingClient != null) {
             client.setNAdherent(existingClient.getNAdherent());
-            this.clientService.update(id, client);
-            return new ResponseEntity<>(client, HttpStatus.OK);
+            Client clientUpdate = this.clientService.update(id, client);
+            return new ResponseEntity<>(clientUpdate, HttpStatus.OK);
         }
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }

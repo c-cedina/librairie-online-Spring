@@ -1,7 +1,10 @@
 package com.example.librairie_online.controller;
 
 import com.example.librairie_online.entity.Client;
+import com.example.librairie_online.entity.Role;
+import com.example.librairie_online.enumeration.TypeRole;
 import com.example.librairie_online.repository.ClientRepository;
+import com.example.librairie_online.repository.RoleRepository;
 import com.example.librairie_online.security.TestSecurityConfig;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -29,9 +32,13 @@ public class ClientControllerIntegrationTest {
     @Autowired
     private ClientRepository clientRepository;
 
+    @Autowired
+    private RoleRepository roleRepository;
+
     @BeforeEach
     public void setup() {
         clientRepository.deleteAll();
+        roleRepository.deleteAll();
     }
 
     @Test
@@ -66,6 +73,11 @@ public class ClientControllerIntegrationTest {
         client.setDate_adhesion(LocalDate.of(2021, 1, 1));
         client.setEmail("Doe.John@exemple.com");
         client.setPassword("password");
+        Role role = new Role();
+        role.setRole(TypeRole.USER);
+        role = roleRepository.save(role);
+        client.setRole(role);
+
         clientRepository.save(client);
 
         mockMvc.perform(get("/Client")
@@ -92,6 +104,10 @@ public class ClientControllerIntegrationTest {
         client.setDate_adhesion(LocalDate.of(2021, 1, 1));
         client.setEmail("Doe.John@exemple.com");
         client.setPassword("password");
+        Role role = new Role();
+        role.setRole(TypeRole.USER);
+        role = roleRepository.save(role);
+        client.setRole(role);
         client = clientRepository.save(client);
 
         String updatedClientJson = """
@@ -126,6 +142,10 @@ public class ClientControllerIntegrationTest {
         client.setAge(30);
         client.setDate_naissance(LocalDate.of(1991, 1, 1));
         client.setDate_adhesion(LocalDate.of(2021, 1, 1));
+        Role role = new Role();
+        role.setRole(TypeRole.USER);
+        role = roleRepository.save(role);
+        client.setRole(role);
         client = clientRepository.save(client);
 
         mockMvc.perform(delete("/Client/" + client.getNAdherent())
