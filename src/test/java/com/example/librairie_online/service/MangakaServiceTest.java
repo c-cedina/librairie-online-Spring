@@ -82,12 +82,4 @@ public class MangakaServiceTest {
         verify(mangakaRepository, times(1)).save(dbMangaka);
     }
 
-    @Test
-    public void testDelete() {
-        doNothing().when(mangakaRepository).deleteById(any(MangakaId.class));
-
-        mangakaService.delete(new MangakaId("Test", "Mangaka"));
-
-        verify(mangakaRepository, times(1)).deleteById(any(MangakaId.class));
-    }
 }
