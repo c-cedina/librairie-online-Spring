@@ -12500,3 +12500,287 @@ This generated password is for development use only. Your security configuration
 2025-01-29T16:26:15.079+01:00 DEBUG 99936 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Validation cascade 
 2025-01-29T16:26:15.081+01:00  INFO 99936 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-01-29T16:26:15.084+01:00  INFO 99936 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-29T16:29:23.363+01:00  INFO 1366 --- [librairie-online] [main] c.e.l.c.ClientControllerIntegrationTest  : Starting ClientControllerIntegrationTest using Java 21.0.5 with PID 1366 (started by cedinacoelho in /Users/cedinacoelho/Documents/src/librairie-online-Spring)
+2025-01-29T16:29:23.366+01:00  INFO 1366 --- [librairie-online] [main] c.e.l.c.ClientControllerIntegrationTest  : The following 1 profile is active: "test"
+2025-01-29T16:29:24.083+01:00  INFO 1366 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-29T16:29:24.193+01:00  INFO 1366 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 101 ms. Found 14 JPA repository interfaces.
+2025-01-29T16:29:24.811+01:00  INFO 1366 --- [librairie-online] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-29T16:29:24.872+01:00  INFO 1366 --- [librairie-online] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-01-29T16:29:24.920+01:00  INFO 1366 --- [librairie-online] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-29T16:29:25.228+01:00  INFO 1366 --- [librairie-online] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-29T16:29:25.254+01:00  INFO 1366 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-29T16:29:25.453+01:00  INFO 1366 --- [librairie-online] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-01-29T16:29:25.455+01:00  INFO 1366 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-29T16:29:25.481+01:00  WARN 1366 --- [librairie-online] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-29T16:29:26.587+01:00  INFO 1366 --- [librairie-online] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-29T16:29:26.601+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : drop table if exists Achete cascade 
+2025-01-29T16:29:26.605+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : drop table if exists Anime cascade 
+2025-01-29T16:29:26.606+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : drop table if exists Classe cascade 
+2025-01-29T16:29:26.607+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : drop table if exists Client cascade 
+2025-01-29T16:29:26.608+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : drop table if exists Fournisseur cascade 
+2025-01-29T16:29:26.608+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : drop table if exists Genre cascade 
+2025-01-29T16:29:26.609+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : drop table if exists Loue cascade 
+2025-01-29T16:29:26.610+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : drop table if exists Manga cascade 
+2025-01-29T16:29:26.610+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : drop table if exists Mangaka cascade 
+2025-01-29T16:29:26.611+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : drop table if exists NoteA cascade 
+2025-01-29T16:29:26.612+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : drop table if exists NoteM cascade 
+2025-01-29T16:29:26.612+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : drop table if exists Role cascade 
+2025-01-29T16:29:26.613+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : drop table if exists Studio cascade 
+2025-01-29T16:29:26.613+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : drop table if exists Validation cascade 
+2025-01-29T16:29:26.618+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : create table Achete (date date, id integer generated by default as identity, nAdherent integer, nSerie integer, prix numeric(9,2), primary key (id))
+2025-01-29T16:29:26.627+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : create table Anime (date integer not null, nSerie integer generated by default as identity, nSerieM integer, nom varchar(255), nomStudio varchar(255), primary key (nSerie))
+2025-01-29T16:29:26.629+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : create table Classe (nSerie integer not null, type varchar(255) not null, primary key (nSerie, type))
+2025-01-29T16:29:26.632+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : create table Client (active boolean not null, age integer not null, date_adhesion date, date_naissance date, nAdherent integer generated by default as identity, roleId integer, email varchar(255), nom varchar(255), password varchar(255), prenom varchar(255), sexe varchar(255), primary key (nAdherent))
+2025-01-29T16:29:26.634+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : create table Fournisseur (nom varchar(255) not null, ville varchar(255), primary key (nom))
+2025-01-29T16:29:26.635+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : create table Genre (type varchar(255) not null, primary key (type))
+2025-01-29T16:29:26.637+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : create table Loue (date date, dateMaximale date, dateRetour date, id integer generated by default as identity, nAdherent integer, nSerie integer, primary key (id))
+2025-01-29T16:29:26.639+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : create table Manga (date_parution integer not null, nbExemplaire integer not null, nserie integer generated by default as identity, tome integer not null, nom varchar(255), nomFournisseur varchar(255), nomMangaka varchar(255), prenomMangaka varchar(255), primary key (nserie))
+2025-01-29T16:29:26.641+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : create table Mangaka (nationalite varchar(255), nom varchar(255) not null, prenom varchar(255) not null, sexe varchar(255), primary key (nom, prenom))
+2025-01-29T16:29:26.643+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : create table NoteA (date date, nSerie integer not null, nadherent integer not null, valeur numeric(38,2), primary key (nSerie, nadherent))
+2025-01-29T16:29:26.645+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : create table NoteM (date date, nSerie integer not null, nadherent integer not null, valeur numeric(38,2), primary key (nSerie, nadherent))
+2025-01-29T16:29:26.647+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : create table Role (id integer generated by default as identity, role enum ('ADMIN','USER'), primary key (id))
+2025-01-29T16:29:26.650+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : create table Studio (nom varchar(255) not null, nomDirecteur varchar(255), pays varchar(255), prenomDirecteur varchar(255), primary key (nom))
+2025-01-29T16:29:26.652+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : create table Validation (ClientId integer unique, code integer not null, id integer not null, Activation_instant timestamp(6) with time zone, Creation_instant timestamp(6) with time zone, Expire_instant timestamp(6) with time zone, primary key (id))
+2025-01-29T16:29:26.654+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists Achete add constraint FKqb1e2gq63l9dowoni2ercv3ia foreign key (nAdherent) references Client
+2025-01-29T16:29:26.666+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists Achete add constraint FKndbwyt78vyn2ixt20vveswpy foreign key (nSerie) references Manga
+2025-01-29T16:29:26.668+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists Anime add constraint FKiagcnb38yakykw03xitnyt3wl foreign key (nSerieM) references Manga
+2025-01-29T16:29:26.670+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists Anime add constraint FK6eecm0a8wmfpqoij85crf3m0w foreign key (nomStudio) references Studio
+2025-01-29T16:29:26.672+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists Classe add constraint FKmndai52ydfxv4egnm62drgpcs foreign key (type) references Genre
+2025-01-29T16:29:26.674+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists Classe add constraint FKpc3r5vfpoakf7vrwe8on06ux3 foreign key (nserie) references Manga
+2025-01-29T16:29:26.676+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists Client add constraint FK4bpcqc78ucwdr2mk0mpv6dckv foreign key (roleId) references Role
+2025-01-29T16:29:26.682+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists Loue add constraint FKk9fmioh8om4kdauf119myfy88 foreign key (nSerie) references Anime
+2025-01-29T16:29:26.684+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists Loue add constraint FK7uxy40ng4oydutr0xg99abf8n foreign key (nAdherent) references Client
+2025-01-29T16:29:26.686+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists Manga add constraint FK6jv3kix0ie77vrix41q74e9dp foreign key (nomFournisseur) references Fournisseur
+2025-01-29T16:29:26.688+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists Manga add constraint FKoxc656tng6cku1kgsbq5t1ifb foreign key (nomMangaka, prenomMangaka) references Mangaka
+2025-01-29T16:29:26.692+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists NoteA add constraint FK4se4t04m3xv4jvhufc8nhdfnx foreign key (nSerie) references Anime
+2025-01-29T16:29:26.694+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists NoteA add constraint FK4od391ruf1aqd8e0cqkw04ic5 foreign key (nadherent) references Client
+2025-01-29T16:29:26.696+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists NoteM add constraint FK3eoqdbnmssmi133k9fdsko3d3 foreign key (nadherent) references Client
+2025-01-29T16:29:26.699+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists NoteM add constraint FKqy62n647qukdbu57egrbuerj6 foreign key (nSerie) references Manga
+2025-01-29T16:29:26.701+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists Validation add constraint FK3jm2763f48u5y9wfcnhw6yd1p foreign key (ClientId) references Client
+2025-01-29T16:29:26.706+01:00  INFO 1366 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-29T16:29:27.371+01:00  WARN 1366 --- [librairie-online] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 8e3a7810-9a33-4f05-a8c4-64e8bf426ff4
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-01-29T16:29:27.400+01:00  INFO 1366 --- [librairie-online] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-01-29T16:29:28.035+01:00  INFO 1366 --- [librairie-online] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-01-29T16:29:28.100+01:00  INFO 1366 --- [librairie-online] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-01-29T16:29:28.101+01:00  INFO 1366 --- [librairie-online] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-01-29T16:29:28.103+01:00  INFO 1366 --- [librairie-online] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2025-01-29T16:29:28.136+01:00  INFO 1366 --- [librairie-online] [main] c.e.l.c.ClientControllerIntegrationTest  : Started ClientControllerIntegrationTest in 5.157 seconds (process running for 6.216)
+2025-01-29T16:29:28.888+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : select c1_0.nAdherent,c1_0.active,c1_0.age,c1_0.date_adhesion,c1_0.date_naissance,c1_0.email,c1_0.nom,c1_0.password,c1_0.prenom,c1_0.roleId,c1_0.sexe from Client c1_0
+2025-01-29T16:29:28.914+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : select r1_0.id,r1_0.role from Role r1_0
+2025-01-29T16:29:28.937+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : insert into Role (role,id) values (?,default)
+2025-01-29T16:29:28.961+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : insert into Client (active,age,date_adhesion,date_naissance,email,nom,password,prenom,roleId,sexe,nAdherent) values (?,?,?,?,?,?,?,?,?,?,default)
+2025-01-29T16:29:29.012+01:00  INFO 1366 --- [librairie-online] [main] c.e.l.service.ClientService              : Récupération de tous les clients.
+2025-01-29T16:29:29.016+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : select c1_0.nAdherent,c1_0.active,c1_0.age,c1_0.date_adhesion,c1_0.date_naissance,c1_0.email,c1_0.nom,c1_0.password,c1_0.prenom,c1_0.roleId,c1_0.sexe from Client c1_0
+2025-01-29T16:29:29.024+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : select r1_0.id,r1_0.role from Role r1_0 where r1_0.id=?
+2025-01-29T16:29:29.028+01:00  INFO 1366 --- [librairie-online] [main] c.e.l.service.ClientService              : Nombre total de clients récupérés: 1
+2025-01-29T16:29:29.141+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : select c1_0.nAdherent,c1_0.active,c1_0.age,c1_0.date_adhesion,c1_0.date_naissance,c1_0.email,c1_0.nom,c1_0.password,c1_0.prenom,c1_0.roleId,c1_0.sexe from Client c1_0
+2025-01-29T16:29:29.143+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : select r1_0.id,r1_0.role from Role r1_0 where r1_0.id=?
+2025-01-29T16:29:29.156+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : delete from Client where nAdherent=?
+2025-01-29T16:29:29.161+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : select r1_0.id,r1_0.role from Role r1_0
+2025-01-29T16:29:29.163+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : delete from Role where id=?
+2025-01-29T16:29:29.166+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : insert into Role (role,id) values (?,default)
+2025-01-29T16:29:29.170+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : insert into Client (active,age,date_adhesion,date_naissance,email,nom,password,prenom,roleId,sexe,nAdherent) values (?,?,?,?,?,?,?,?,?,?,default)
+2025-01-29T16:29:29.224+01:00  INFO 1366 --- [librairie-online] [main] c.e.l.service.ClientService              : Recherche d'un client avec l'ID: 2
+2025-01-29T16:29:29.227+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : select c1_0.nAdherent,c1_0.active,c1_0.age,c1_0.date_adhesion,c1_0.date_naissance,c1_0.email,c1_0.nom,c1_0.password,c1_0.prenom,r1_0.id,r1_0.role,c1_0.sexe from Client c1_0 left join Role r1_0 on r1_0.id=c1_0.roleId where c1_0.nAdherent=?
+2025-01-29T16:29:29.230+01:00  INFO 1366 --- [librairie-online] [main] c.e.l.service.ClientService              : Client trouvé: com.example.librairie_online.entity.Client@1835b24b
+2025-01-29T16:29:29.230+01:00  INFO 1366 --- [librairie-online] [main] c.e.l.service.ClientService              : Mise à jour du client avec l'ID: 2
+2025-01-29T16:29:29.230+01:00  INFO 1366 --- [librairie-online] [main] c.e.l.service.ClientService              : Recherche d'un client avec l'ID: 2
+2025-01-29T16:29:29.232+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : select c1_0.nAdherent,c1_0.active,c1_0.age,c1_0.date_adhesion,c1_0.date_naissance,c1_0.email,c1_0.nom,c1_0.password,c1_0.prenom,r1_0.id,r1_0.role,c1_0.sexe from Client c1_0 left join Role r1_0 on r1_0.id=c1_0.roleId where c1_0.nAdherent=?
+2025-01-29T16:29:29.234+01:00  INFO 1366 --- [librairie-online] [main] c.e.l.service.ClientService              : Client trouvé: com.example.librairie_online.entity.Client@6717f504
+2025-01-29T16:29:29.239+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : select c1_0.nAdherent,c1_0.active,c1_0.age,c1_0.date_adhesion,c1_0.date_naissance,c1_0.email,c1_0.nom,c1_0.password,c1_0.prenom,r1_0.id,r1_0.role,c1_0.sexe from Client c1_0 left join Role r1_0 on r1_0.id=c1_0.roleId where c1_0.nAdherent=?
+2025-01-29T16:29:29.245+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : update Client set active=?,age=?,date_adhesion=?,date_naissance=?,email=?,nom=?,password=?,prenom=?,roleId=?,sexe=? where nAdherent=?
+2025-01-29T16:29:29.250+01:00  INFO 1366 --- [librairie-online] [main] c.e.l.service.ClientService              : Client mis à jour avec succès: com.example.librairie_online.entity.Client@1476e447
+2025-01-29T16:29:29.265+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : select c1_0.nAdherent,c1_0.active,c1_0.age,c1_0.date_adhesion,c1_0.date_naissance,c1_0.email,c1_0.nom,c1_0.password,c1_0.prenom,c1_0.roleId,c1_0.sexe from Client c1_0
+2025-01-29T16:29:29.267+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : select r1_0.id,r1_0.role from Role r1_0 where r1_0.id=?
+2025-01-29T16:29:29.269+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : delete from Client where nAdherent=?
+2025-01-29T16:29:29.274+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : select r1_0.id,r1_0.role from Role r1_0
+2025-01-29T16:29:29.276+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : delete from Role where id=?
+2025-01-29T16:29:29.280+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : insert into Role (role,id) values (?,default)
+2025-01-29T16:29:29.284+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : insert into Client (active,age,date_adhesion,date_naissance,email,nom,password,prenom,roleId,sexe,nAdherent) values (?,?,?,?,?,?,?,?,?,?,default)
+2025-01-29T16:29:29.289+01:00  INFO 1366 --- [librairie-online] [main] c.e.l.service.ClientService              : Recherche d'un client avec l'ID: 3
+2025-01-29T16:29:29.290+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : select c1_0.nAdherent,c1_0.active,c1_0.age,c1_0.date_adhesion,c1_0.date_naissance,c1_0.email,c1_0.nom,c1_0.password,c1_0.prenom,r1_0.id,r1_0.role,c1_0.sexe from Client c1_0 left join Role r1_0 on r1_0.id=c1_0.roleId where c1_0.nAdherent=?
+2025-01-29T16:29:29.293+01:00  INFO 1366 --- [librairie-online] [main] c.e.l.service.ClientService              : Client trouvé: com.example.librairie_online.entity.Client@5a7e0d68
+2025-01-29T16:29:29.293+01:00  INFO 1366 --- [librairie-online] [main] c.e.l.service.ClientService              : Suppression du client avec l'ID: 3
+2025-01-29T16:29:29.563+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : select count(*) from Client c1_0 where c1_0.nAdherent=?
+2025-01-29T16:29:29.568+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : select c1_0.nAdherent,c1_0.active,c1_0.age,c1_0.date_adhesion,c1_0.date_naissance,c1_0.email,c1_0.nom,c1_0.password,c1_0.prenom,r1_0.id,r1_0.role,c1_0.sexe from Client c1_0 left join Role r1_0 on r1_0.id=c1_0.roleId where c1_0.nAdherent=?
+2025-01-29T16:29:29.570+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : delete from Client where nAdherent=?
+2025-01-29T16:29:29.572+01:00  INFO 1366 --- [librairie-online] [main] c.e.l.service.ClientService              : Client supprimé avec succès.
+2025-01-29T16:29:29.575+01:00  INFO 1366 --- [librairie-online] [main] c.e.l.service.ClientService              : Recherche d'un client avec l'ID: 3
+2025-01-29T16:29:29.577+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : select c1_0.nAdherent,c1_0.active,c1_0.age,c1_0.date_adhesion,c1_0.date_naissance,c1_0.email,c1_0.nom,c1_0.password,c1_0.prenom,r1_0.id,r1_0.role,c1_0.sexe from Client c1_0 left join Role r1_0 on r1_0.id=c1_0.roleId where c1_0.nAdherent=?
+2025-01-29T16:29:29.578+01:00  WARN 1366 --- [librairie-online] [main] c.e.l.service.ClientService              : Aucun client trouvé avec l'ID: 3
+2025-01-29T16:29:29.587+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : select c1_0.nAdherent,c1_0.active,c1_0.age,c1_0.date_adhesion,c1_0.date_naissance,c1_0.email,c1_0.nom,c1_0.password,c1_0.prenom,c1_0.roleId,c1_0.sexe from Client c1_0
+2025-01-29T16:29:29.590+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : select r1_0.id,r1_0.role from Role r1_0
+2025-01-29T16:29:29.592+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : delete from Role where id=?
+2025-01-29T16:29:29.595+01:00  INFO 1366 --- [librairie-online] [main] c.e.l.service.ClientService              : Création d'un nouveau client: com.example.librairie_online.entity.Client@351623d
+2025-01-29T16:29:29.645+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : select c1_0.nAdherent from Client c1_0 where c1_0.email=? fetch first ? rows only
+2025-01-29T16:29:29.652+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : select r1_0.id,r1_0.role from Role r1_0 where r1_0.role=?
+2025-01-29T16:29:29.653+01:00  INFO 1366 --- [librairie-online] [main] c.e.l.service.ClientService              : Rôle USER introuvable, création en cours...
+2025-01-29T16:29:29.654+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : insert into Role (role,id) values (?,default)
+2025-01-29T16:29:29.656+01:00  INFO 1366 --- [librairie-online] [main] c.e.l.service.ClientService              : Rôle USER créé: com.example.librairie_online.entity.Role@591e3e5e
+2025-01-29T16:29:29.657+01:00 DEBUG 1366 --- [librairie-online] [main] org.hibernate.SQL                        : insert into Client (active,age,date_adhesion,date_naissance,email,nom,password,prenom,roleId,sexe,nAdherent) values (?,?,?,?,?,?,?,?,?,?,default)
+2025-01-29T16:29:29.660+01:00  INFO 1366 --- [librairie-online] [main] c.e.l.service.ClientService              : Client créé avec succès: com.example.librairie_online.entity.Client@351623d
+2025-01-29T16:29:29.780+01:00  INFO 1366 --- [librairie-online] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-29T16:29:29.784+01:00 DEBUG 1366 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Achete cascade 
+2025-01-29T16:29:29.788+01:00 DEBUG 1366 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Anime cascade 
+2025-01-29T16:29:29.792+01:00 DEBUG 1366 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Classe cascade 
+2025-01-29T16:29:29.794+01:00 DEBUG 1366 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Client cascade 
+2025-01-29T16:29:29.797+01:00 DEBUG 1366 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Fournisseur cascade 
+2025-01-29T16:29:29.799+01:00 DEBUG 1366 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Genre cascade 
+2025-01-29T16:29:29.801+01:00 DEBUG 1366 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Loue cascade 
+2025-01-29T16:29:29.802+01:00 DEBUG 1366 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Manga cascade 
+2025-01-29T16:29:29.805+01:00 DEBUG 1366 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Mangaka cascade 
+2025-01-29T16:29:29.807+01:00 DEBUG 1366 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists NoteA cascade 
+2025-01-29T16:29:29.809+01:00 DEBUG 1366 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists NoteM cascade 
+2025-01-29T16:29:29.811+01:00 DEBUG 1366 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Role cascade 
+2025-01-29T16:29:29.812+01:00 DEBUG 1366 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Studio cascade 
+2025-01-29T16:29:29.813+01:00 DEBUG 1366 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Validation cascade 
+2025-01-29T16:29:29.818+01:00  INFO 1366 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-29T16:29:29.883+01:00  INFO 1366 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-29T16:30:09.819+01:00  INFO 1641 --- [librairie-online] [main] c.e.l.c.ClientControllerIntegrationTest  : Starting ClientControllerIntegrationTest using Java 21.0.5 with PID 1641 (started by cedinacoelho in /Users/cedinacoelho/Documents/src/librairie-online-Spring)
+2025-01-29T16:30:09.821+01:00  INFO 1641 --- [librairie-online] [main] c.e.l.c.ClientControllerIntegrationTest  : The following 1 profile is active: "test"
+2025-01-29T16:30:10.553+01:00  INFO 1641 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-29T16:30:10.646+01:00  INFO 1641 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 85 ms. Found 14 JPA repository interfaces.
+2025-01-29T16:30:11.219+01:00  INFO 1641 --- [librairie-online] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-29T16:30:11.277+01:00  INFO 1641 --- [librairie-online] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-01-29T16:30:11.309+01:00  INFO 1641 --- [librairie-online] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-29T16:30:11.613+01:00  INFO 1641 --- [librairie-online] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-29T16:30:11.645+01:00  INFO 1641 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-29T16:30:11.906+01:00  INFO 1641 --- [librairie-online] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-01-29T16:30:11.908+01:00  INFO 1641 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-29T16:30:11.933+01:00  WARN 1641 --- [librairie-online] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-29T16:30:13.066+01:00  INFO 1641 --- [librairie-online] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-29T16:30:13.082+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : drop table if exists Achete cascade 
+2025-01-29T16:30:13.087+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : drop table if exists Anime cascade 
+2025-01-29T16:30:13.087+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : drop table if exists Classe cascade 
+2025-01-29T16:30:13.088+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : drop table if exists Client cascade 
+2025-01-29T16:30:13.088+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : drop table if exists Fournisseur cascade 
+2025-01-29T16:30:13.089+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : drop table if exists Genre cascade 
+2025-01-29T16:30:13.090+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : drop table if exists Loue cascade 
+2025-01-29T16:30:13.091+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : drop table if exists Manga cascade 
+2025-01-29T16:30:13.092+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : drop table if exists Mangaka cascade 
+2025-01-29T16:30:13.093+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : drop table if exists NoteA cascade 
+2025-01-29T16:30:13.093+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : drop table if exists NoteM cascade 
+2025-01-29T16:30:13.094+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : drop table if exists Role cascade 
+2025-01-29T16:30:13.095+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : drop table if exists Studio cascade 
+2025-01-29T16:30:13.095+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : drop table if exists Validation cascade 
+2025-01-29T16:30:13.101+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : create table Achete (date date, id integer generated by default as identity, nAdherent integer, nSerie integer, prix numeric(9,2), primary key (id))
+2025-01-29T16:30:13.110+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : create table Anime (date integer not null, nSerie integer generated by default as identity, nSerieM integer, nom varchar(255), nomStudio varchar(255), primary key (nSerie))
+2025-01-29T16:30:13.111+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : create table Classe (nSerie integer not null, type varchar(255) not null, primary key (nSerie, type))
+2025-01-29T16:30:13.114+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : create table Client (active boolean not null, age integer not null, date_adhesion date, date_naissance date, nAdherent integer generated by default as identity, roleId integer, email varchar(255), nom varchar(255), password varchar(255), prenom varchar(255), sexe varchar(255), primary key (nAdherent))
+2025-01-29T16:30:13.116+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : create table Fournisseur (nom varchar(255) not null, ville varchar(255), primary key (nom))
+2025-01-29T16:30:13.118+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : create table Genre (type varchar(255) not null, primary key (type))
+2025-01-29T16:30:13.120+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : create table Loue (date date, dateMaximale date, dateRetour date, id integer generated by default as identity, nAdherent integer, nSerie integer, primary key (id))
+2025-01-29T16:30:13.121+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : create table Manga (date_parution integer not null, nbExemplaire integer not null, nserie integer generated by default as identity, tome integer not null, nom varchar(255), nomFournisseur varchar(255), nomMangaka varchar(255), prenomMangaka varchar(255), primary key (nserie))
+2025-01-29T16:30:13.123+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : create table Mangaka (nationalite varchar(255), nom varchar(255) not null, prenom varchar(255) not null, sexe varchar(255), primary key (nom, prenom))
+2025-01-29T16:30:13.126+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : create table NoteA (date date, nSerie integer not null, nadherent integer not null, valeur numeric(38,2), primary key (nSerie, nadherent))
+2025-01-29T16:30:13.127+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : create table NoteM (date date, nSerie integer not null, nadherent integer not null, valeur numeric(38,2), primary key (nSerie, nadherent))
+2025-01-29T16:30:13.130+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : create table Role (id integer generated by default as identity, role enum ('ADMIN','USER'), primary key (id))
+2025-01-29T16:30:13.132+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : create table Studio (nom varchar(255) not null, nomDirecteur varchar(255), pays varchar(255), prenomDirecteur varchar(255), primary key (nom))
+2025-01-29T16:30:13.135+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : create table Validation (ClientId integer unique, code integer not null, id integer not null, Activation_instant timestamp(6) with time zone, Creation_instant timestamp(6) with time zone, Expire_instant timestamp(6) with time zone, primary key (id))
+2025-01-29T16:30:13.138+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists Achete add constraint FKqb1e2gq63l9dowoni2ercv3ia foreign key (nAdherent) references Client
+2025-01-29T16:30:13.156+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists Achete add constraint FKndbwyt78vyn2ixt20vveswpy foreign key (nSerie) references Manga
+2025-01-29T16:30:13.159+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists Anime add constraint FKiagcnb38yakykw03xitnyt3wl foreign key (nSerieM) references Manga
+2025-01-29T16:30:13.161+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists Anime add constraint FK6eecm0a8wmfpqoij85crf3m0w foreign key (nomStudio) references Studio
+2025-01-29T16:30:13.163+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists Classe add constraint FKmndai52ydfxv4egnm62drgpcs foreign key (type) references Genre
+2025-01-29T16:30:13.165+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists Classe add constraint FKpc3r5vfpoakf7vrwe8on06ux3 foreign key (nserie) references Manga
+2025-01-29T16:30:13.167+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists Client add constraint FK4bpcqc78ucwdr2mk0mpv6dckv foreign key (roleId) references Role
+2025-01-29T16:30:13.170+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists Loue add constraint FKk9fmioh8om4kdauf119myfy88 foreign key (nSerie) references Anime
+2025-01-29T16:30:13.172+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists Loue add constraint FK7uxy40ng4oydutr0xg99abf8n foreign key (nAdherent) references Client
+2025-01-29T16:30:13.174+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists Manga add constraint FK6jv3kix0ie77vrix41q74e9dp foreign key (nomFournisseur) references Fournisseur
+2025-01-29T16:30:13.176+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists Manga add constraint FKoxc656tng6cku1kgsbq5t1ifb foreign key (nomMangaka, prenomMangaka) references Mangaka
+2025-01-29T16:30:13.179+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists NoteA add constraint FK4se4t04m3xv4jvhufc8nhdfnx foreign key (nSerie) references Anime
+2025-01-29T16:30:13.181+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists NoteA add constraint FK4od391ruf1aqd8e0cqkw04ic5 foreign key (nadherent) references Client
+2025-01-29T16:30:13.183+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists NoteM add constraint FK3eoqdbnmssmi133k9fdsko3d3 foreign key (nadherent) references Client
+2025-01-29T16:30:13.185+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists NoteM add constraint FKqy62n647qukdbu57egrbuerj6 foreign key (nSerie) references Manga
+2025-01-29T16:30:13.187+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : alter table if exists Validation add constraint FK3jm2763f48u5y9wfcnhw6yd1p foreign key (ClientId) references Client
+2025-01-29T16:30:13.193+01:00  INFO 1641 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-29T16:30:13.764+01:00  WARN 1641 --- [librairie-online] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 9ea6f3e1-73ad-4cbe-8f4c-d751181b4b6c
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-01-29T16:30:13.795+01:00  INFO 1641 --- [librairie-online] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-01-29T16:30:14.416+01:00  INFO 1641 --- [librairie-online] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-01-29T16:30:14.479+01:00  INFO 1641 --- [librairie-online] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-01-29T16:30:14.479+01:00  INFO 1641 --- [librairie-online] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-01-29T16:30:14.481+01:00  INFO 1641 --- [librairie-online] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2025-01-29T16:30:14.525+01:00  INFO 1641 --- [librairie-online] [main] c.e.l.c.ClientControllerIntegrationTest  : Started ClientControllerIntegrationTest in 5.059 seconds (process running for 6.307)
+2025-01-29T16:30:15.264+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : select c1_0.nAdherent,c1_0.active,c1_0.age,c1_0.date_adhesion,c1_0.date_naissance,c1_0.email,c1_0.nom,c1_0.password,c1_0.prenom,c1_0.roleId,c1_0.sexe from Client c1_0
+2025-01-29T16:30:15.289+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : select r1_0.id,r1_0.role from Role r1_0
+2025-01-29T16:30:15.310+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : insert into Role (role,id) values (?,default)
+2025-01-29T16:30:15.332+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : insert into Client (active,age,date_adhesion,date_naissance,email,nom,password,prenom,roleId,sexe,nAdherent) values (?,?,?,?,?,?,?,?,?,?,default)
+2025-01-29T16:30:15.393+01:00  INFO 1641 --- [librairie-online] [main] c.e.l.service.ClientService              : Récupération de tous les clients.
+2025-01-29T16:30:15.397+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : select c1_0.nAdherent,c1_0.active,c1_0.age,c1_0.date_adhesion,c1_0.date_naissance,c1_0.email,c1_0.nom,c1_0.password,c1_0.prenom,c1_0.roleId,c1_0.sexe from Client c1_0
+2025-01-29T16:30:15.413+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : select r1_0.id,r1_0.role from Role r1_0 where r1_0.id=?
+2025-01-29T16:30:15.418+01:00  INFO 1641 --- [librairie-online] [main] c.e.l.service.ClientService              : Nombre total de clients récupérés: 1
+2025-01-29T16:30:15.528+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : select c1_0.nAdherent,c1_0.active,c1_0.age,c1_0.date_adhesion,c1_0.date_naissance,c1_0.email,c1_0.nom,c1_0.password,c1_0.prenom,c1_0.roleId,c1_0.sexe from Client c1_0
+2025-01-29T16:30:15.529+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : select r1_0.id,r1_0.role from Role r1_0 where r1_0.id=?
+2025-01-29T16:30:15.541+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : delete from Client where nAdherent=?
+2025-01-29T16:30:15.546+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : select r1_0.id,r1_0.role from Role r1_0
+2025-01-29T16:30:15.547+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : delete from Role where id=?
+2025-01-29T16:30:15.550+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : insert into Role (role,id) values (?,default)
+2025-01-29T16:30:15.553+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : insert into Client (active,age,date_adhesion,date_naissance,email,nom,password,prenom,roleId,sexe,nAdherent) values (?,?,?,?,?,?,?,?,?,?,default)
+2025-01-29T16:30:15.605+01:00  INFO 1641 --- [librairie-online] [main] c.e.l.service.ClientService              : Recherche d'un client avec l'ID: 2
+2025-01-29T16:30:15.608+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : select c1_0.nAdherent,c1_0.active,c1_0.age,c1_0.date_adhesion,c1_0.date_naissance,c1_0.email,c1_0.nom,c1_0.password,c1_0.prenom,r1_0.id,r1_0.role,c1_0.sexe from Client c1_0 left join Role r1_0 on r1_0.id=c1_0.roleId where c1_0.nAdherent=?
+2025-01-29T16:30:15.611+01:00  INFO 1641 --- [librairie-online] [main] c.e.l.service.ClientService              : Client trouvé: com.example.librairie_online.entity.Client@1835b24b
+2025-01-29T16:30:15.611+01:00  INFO 1641 --- [librairie-online] [main] c.e.l.service.ClientService              : Mise à jour du client avec l'ID: 2
+2025-01-29T16:30:15.611+01:00  INFO 1641 --- [librairie-online] [main] c.e.l.service.ClientService              : Recherche d'un client avec l'ID: 2
+2025-01-29T16:30:15.613+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : select c1_0.nAdherent,c1_0.active,c1_0.age,c1_0.date_adhesion,c1_0.date_naissance,c1_0.email,c1_0.nom,c1_0.password,c1_0.prenom,r1_0.id,r1_0.role,c1_0.sexe from Client c1_0 left join Role r1_0 on r1_0.id=c1_0.roleId where c1_0.nAdherent=?
+2025-01-29T16:30:15.614+01:00  INFO 1641 --- [librairie-online] [main] c.e.l.service.ClientService              : Client trouvé: com.example.librairie_online.entity.Client@6717f504
+2025-01-29T16:30:15.619+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : select c1_0.nAdherent,c1_0.active,c1_0.age,c1_0.date_adhesion,c1_0.date_naissance,c1_0.email,c1_0.nom,c1_0.password,c1_0.prenom,r1_0.id,r1_0.role,c1_0.sexe from Client c1_0 left join Role r1_0 on r1_0.id=c1_0.roleId where c1_0.nAdherent=?
+2025-01-29T16:30:15.626+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : update Client set active=?,age=?,date_adhesion=?,date_naissance=?,email=?,nom=?,password=?,prenom=?,roleId=?,sexe=? where nAdherent=?
+2025-01-29T16:30:15.630+01:00  INFO 1641 --- [librairie-online] [main] c.e.l.service.ClientService              : Client mis à jour avec succès: com.example.librairie_online.entity.Client@1476e447
+2025-01-29T16:30:15.644+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : select c1_0.nAdherent,c1_0.active,c1_0.age,c1_0.date_adhesion,c1_0.date_naissance,c1_0.email,c1_0.nom,c1_0.password,c1_0.prenom,c1_0.roleId,c1_0.sexe from Client c1_0
+2025-01-29T16:30:15.646+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : select r1_0.id,r1_0.role from Role r1_0 where r1_0.id=?
+2025-01-29T16:30:15.648+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : delete from Client where nAdherent=?
+2025-01-29T16:30:15.651+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : select r1_0.id,r1_0.role from Role r1_0
+2025-01-29T16:30:15.653+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : delete from Role where id=?
+2025-01-29T16:30:15.657+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : insert into Role (role,id) values (?,default)
+2025-01-29T16:30:15.660+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : insert into Client (active,age,date_adhesion,date_naissance,email,nom,password,prenom,roleId,sexe,nAdherent) values (?,?,?,?,?,?,?,?,?,?,default)
+2025-01-29T16:30:15.665+01:00  INFO 1641 --- [librairie-online] [main] c.e.l.service.ClientService              : Recherche d'un client avec l'ID: 3
+2025-01-29T16:30:15.666+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : select c1_0.nAdherent,c1_0.active,c1_0.age,c1_0.date_adhesion,c1_0.date_naissance,c1_0.email,c1_0.nom,c1_0.password,c1_0.prenom,r1_0.id,r1_0.role,c1_0.sexe from Client c1_0 left join Role r1_0 on r1_0.id=c1_0.roleId where c1_0.nAdherent=?
+2025-01-29T16:30:15.668+01:00  INFO 1641 --- [librairie-online] [main] c.e.l.service.ClientService              : Client trouvé: com.example.librairie_online.entity.Client@5a7e0d68
+2025-01-29T16:30:15.669+01:00  INFO 1641 --- [librairie-online] [main] c.e.l.service.ClientService              : Suppression du client avec l'ID: 3
+2025-01-29T16:30:15.923+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : select count(*) from Client c1_0 where c1_0.nAdherent=?
+2025-01-29T16:30:15.929+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : select c1_0.nAdherent,c1_0.active,c1_0.age,c1_0.date_adhesion,c1_0.date_naissance,c1_0.email,c1_0.nom,c1_0.password,c1_0.prenom,r1_0.id,r1_0.role,c1_0.sexe from Client c1_0 left join Role r1_0 on r1_0.id=c1_0.roleId where c1_0.nAdherent=?
+2025-01-29T16:30:15.931+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : delete from Client where nAdherent=?
+2025-01-29T16:30:15.932+01:00  INFO 1641 --- [librairie-online] [main] c.e.l.service.ClientService              : Client supprimé avec succès.
+2025-01-29T16:30:15.936+01:00  INFO 1641 --- [librairie-online] [main] c.e.l.service.ClientService              : Recherche d'un client avec l'ID: 3
+2025-01-29T16:30:15.937+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : select c1_0.nAdherent,c1_0.active,c1_0.age,c1_0.date_adhesion,c1_0.date_naissance,c1_0.email,c1_0.nom,c1_0.password,c1_0.prenom,r1_0.id,r1_0.role,c1_0.sexe from Client c1_0 left join Role r1_0 on r1_0.id=c1_0.roleId where c1_0.nAdherent=?
+2025-01-29T16:30:15.938+01:00  WARN 1641 --- [librairie-online] [main] c.e.l.service.ClientService              : Aucun client trouvé avec l'ID: 3
+2025-01-29T16:30:15.947+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : select c1_0.nAdherent,c1_0.active,c1_0.age,c1_0.date_adhesion,c1_0.date_naissance,c1_0.email,c1_0.nom,c1_0.password,c1_0.prenom,c1_0.roleId,c1_0.sexe from Client c1_0
+2025-01-29T16:30:15.949+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : select r1_0.id,r1_0.role from Role r1_0
+2025-01-29T16:30:15.951+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : delete from Role where id=?
+2025-01-29T16:30:15.955+01:00  INFO 1641 --- [librairie-online] [main] c.e.l.service.ClientService              : Création d'un nouveau client: com.example.librairie_online.entity.Client@351623d
+2025-01-29T16:30:16.004+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : select c1_0.nAdherent from Client c1_0 where c1_0.email=? fetch first ? rows only
+2025-01-29T16:30:16.011+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : select r1_0.id,r1_0.role from Role r1_0 where r1_0.role=?
+2025-01-29T16:30:16.013+01:00  INFO 1641 --- [librairie-online] [main] c.e.l.service.ClientService              : Rôle USER introuvable, création en cours...
+2025-01-29T16:30:16.014+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : insert into Role (role,id) values (?,default)
+2025-01-29T16:30:16.016+01:00  INFO 1641 --- [librairie-online] [main] c.e.l.service.ClientService              : Rôle USER créé: com.example.librairie_online.entity.Role@591e3e5e
+2025-01-29T16:30:16.017+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : insert into Client (active,age,date_adhesion,date_naissance,email,nom,password,prenom,roleId,sexe,nAdherent) values (?,?,?,?,?,?,?,?,?,?,default)
+2025-01-29T16:30:16.019+01:00  INFO 1641 --- [librairie-online] [main] c.e.l.service.ClientService              : Client créé avec succès: com.example.librairie_online.entity.Client@351623d
+2025-01-29T16:30:16.755+01:00 DEBUG 1641 --- [librairie-online] [main] org.hibernate.SQL                        : insert into Validation (Activation_instant,ClientId,code,Creation_instant,Expire_instant,id) values (?,?,?,?,?,?)
+2025-01-29T16:30:16.764+01:00  INFO 1641 --- [librairie-online] [main] c.e.l.service.ClientService              : Validation créée pour le client: com.example.librairie_online.entity.Validation@73f94f48
+2025-01-29T16:30:16.787+01:00  INFO 1641 --- [librairie-online] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-29T16:30:16.788+01:00 DEBUG 1641 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Achete cascade 
+2025-01-29T16:30:16.796+01:00 DEBUG 1641 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Anime cascade 
+2025-01-29T16:30:16.798+01:00 DEBUG 1641 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Classe cascade 
+2025-01-29T16:30:16.801+01:00 DEBUG 1641 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Client cascade 
+2025-01-29T16:30:16.803+01:00 DEBUG 1641 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Fournisseur cascade 
+2025-01-29T16:30:16.804+01:00 DEBUG 1641 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Genre cascade 
+2025-01-29T16:30:16.806+01:00 DEBUG 1641 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Loue cascade 
+2025-01-29T16:30:16.808+01:00 DEBUG 1641 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Manga cascade 
+2025-01-29T16:30:16.811+01:00 DEBUG 1641 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Mangaka cascade 
+2025-01-29T16:30:16.812+01:00 DEBUG 1641 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists NoteA cascade 
+2025-01-29T16:30:16.813+01:00 DEBUG 1641 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists NoteM cascade 
+2025-01-29T16:30:16.815+01:00 DEBUG 1641 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Role cascade 
+2025-01-29T16:30:16.816+01:00 DEBUG 1641 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Studio cascade 
+2025-01-29T16:30:16.817+01:00 DEBUG 1641 --- [librairie-online] [SpringApplicationShutdownHook] org.hibernate.SQL                        : drop table if exists Validation cascade 
+2025-01-29T16:30:16.821+01:00  INFO 1641 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-29T16:30:16.826+01:00  INFO 1641 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
