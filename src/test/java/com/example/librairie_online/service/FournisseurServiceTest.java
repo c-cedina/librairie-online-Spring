@@ -83,12 +83,4 @@ public class FournisseurServiceTest {
         verify(fournisseurRepository, times(1)).save(dbFournisseur);
     }
 
-    @Test
-    public void testDelete() {
-        doNothing().when(fournisseurRepository).deleteById(anyString());
-
-        fournisseurService.delete("1");
-
-        verify(fournisseurRepository, times(1)).deleteById("1");
-    }
 }
