@@ -18,6 +18,7 @@ public class ConfigurationSecurityApplication {
                 .authorizeHttpRequests(authorize -> authorize
                     .requestMatchers(HttpMethod.POST, "Client").permitAll()
                         .requestMatchers(HttpMethod.POST, "Client/Validate").permitAll()
+                        .requestMatchers(HttpMethod.GET, "Manga").permitAll()
                         .anyRequest().authenticated()
                 ).build();
     }

@@ -2,6 +2,7 @@ package com.example.librairie_online.service;
 
 import java.util.List;
 
+import com.example.librairie_online.dto.AcheteDTO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -26,17 +27,22 @@ public class AcheteService {
         this.clientService = clientService;
     }
 
-    public Achete create(Achete achete) {
-        logger.info("Création d'un achat: {}", achete);
+    public AcheteDTO create(AcheteDTO acheteDTO) {
+        logger.info("Création d'un achat: {}", acheteDTO);
 
-        Manga manga = mangaService.readById(achete.getManga().getNserie());
-        Client client = clientService.readById(achete.getClient().getNAdherent());
+        Manga manga = mangaService.readById(acheteDTO.getManga().getNserie());
+        Client client = clientService.readById(acheteDTO.getClient().getNAdherent());
 
         if (client != null && manga != null) {
-            achete.setClient(client);
-            Achete savedAchete = this.acheteRepository.save(achete);
+            acheteDTO.setClient(client);
+            Achete newAchete = new Achete();
+            newAchete.setClient(client);
+            newAchete.setManga(manga);
+            newAchete.setDate(acheteDTO.getDate());
+            newAchete.setPrix(acheteDTO.getPrix());
+            Achete savedAchete = this.acheteRepository.save(newAchete);
             logger.info("Achat créé avec succès: {}", savedAchete);
-            return savedAchete;
+            return acheteDTO;
         }
 
         logger.warn("Échec de la création de l'achat: Client ou Manga introuvable.");

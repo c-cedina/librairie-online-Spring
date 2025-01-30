@@ -42,7 +42,7 @@ public class MangaControllerIntegrationTest {
                 {
                     "nserie": 93497,
                     "nom": "Naruto",
-                    "date_parution": 2009,
+                    "dateParution": 2009,
                     "tome": 1,
                     "nbExemplaire": 6,
                     "mangaka": {
@@ -112,7 +112,7 @@ public class MangaControllerIntegrationTest {
                 {
                     "nserie": 12345,
                     "nom": "Naruto Shippuden",
-                    "date_parution": 2023,
+                    "dateParution": 2023,
                     "tome": 2,
                     "nbExemplaire": 15,
                     "mangaka": {

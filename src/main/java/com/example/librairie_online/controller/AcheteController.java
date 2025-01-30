@@ -1,5 +1,7 @@
 package com.example.librairie_online.controller;
 
+import com.example.librairie_online.dto.AcheteDTO;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -27,8 +29,9 @@ public class AcheteController {
     }
 
     @PostMapping
-    public ResponseEntity<Achete> create(@RequestBody Achete achete) {
-        Achete entity = this.acheteService.create(achete);
+    public ResponseEntity<AcheteDTO> create(@RequestBody AcheteDTO achete) {
+        System.out.println(achete);
+        AcheteDTO entity = this.acheteService.create(achete);
         if (entity != null) {
             return new ResponseEntity<>(entity, HttpStatus.CREATED);
         }

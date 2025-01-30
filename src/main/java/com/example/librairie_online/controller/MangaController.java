@@ -21,6 +21,7 @@ public class MangaController {
     @GetMapping
     public ResponseEntity<List<Manga>> read() {
         List<Manga> mangas = mangaService.read();
+        System.out.println(mangas);
         return new ResponseEntity<>(mangas, HttpStatus.OK);
     }
 
