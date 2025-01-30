@@ -74,3 +74,5 @@ This generated password is for development use only. Your security configuration
 2025-01-30T14:54:23.102+01:00 DEBUG 23676 --- [librairie-online] [http-nio-8080-exec-1] org.hibernate.SQL                        : select m1_0.nom,m1_0.prenom,m1_0.nationalite,m1_0.sexe from Mangaka m1_0 where (m1_0.nom,m1_0.prenom) in ((?,?))
 2025-01-30T14:54:23.108+01:00 DEBUG 23676 --- [librairie-online] [http-nio-8080-exec-1] org.hibernate.SQL                        : select m1_0.nom,m1_0.prenom,m1_0.nationalite,m1_0.sexe from Mangaka m1_0 where (m1_0.nom,m1_0.prenom) in ((?,?))
 2025-01-30T14:54:23.123+01:00  INFO 23676 --- [librairie-online] [http-nio-8080-exec-1] c.e.l.service.MangaService               : Nombre total de mangas récupérés: 12
+2025-01-30T15:44:18.410+01:00  INFO 23676 --- [librairie-online] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-30T15:44:18.419+01:00  INFO 23676 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
