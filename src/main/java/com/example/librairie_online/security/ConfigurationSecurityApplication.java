@@ -19,6 +19,7 @@ public class ConfigurationSecurityApplication {
                     .requestMatchers(HttpMethod.POST, "Client").permitAll()
                         .requestMatchers(HttpMethod.POST, "Client/Validate").permitAll()
                         .requestMatchers(HttpMethod.GET, "Manga").permitAll()
+                        .requestMatchers("/Admin/**").hasRole("ADMIN")
                         .anyRequest().authenticated()
                 ).build();
     }

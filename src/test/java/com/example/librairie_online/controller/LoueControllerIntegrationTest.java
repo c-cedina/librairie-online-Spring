@@ -10,6 +10,7 @@ import com.example.librairie_online.repository.ClientRepository;
 import com.example.librairie_online.repository.LoueRepository;
 import com.example.librairie_online.repository.RoleRepository;
 import com.example.librairie_online.security.TestSecurityConfig;
+import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +26,7 @@ import java.time.LocalDate;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+@Transactional
 @Import(TestSecurityConfig.class)
 @SpringBootTest
 @AutoConfigureMockMvc
