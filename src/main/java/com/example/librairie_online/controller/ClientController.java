@@ -7,6 +7,7 @@ import java.util.Map;
 import com.example.librairie_online.dto.AuthentificationDTO;
 import com.example.librairie_online.entity.Validation;
 
+import com.example.librairie_online.security.JwtService;
 import lombok.AllArgsConstructor;
 
 import org.slf4j.Logger;
@@ -34,8 +35,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 @RestController
 @RequestMapping(path = "Client")
 public class ClientController {
+
     private ClientService clientService;
     private AuthenticationManager authenticationManager;
+    private JwtService jwtService;
     private static final Logger logger = LoggerFactory.getLogger(ClientController.class);
 
 
@@ -98,7 +101,11 @@ public class ClientController {
       Authentication authentication = authenticationManager.authenticate(
                new UsernamePasswordAuthenticationToken(authentificationDTO.email(),authentificationDTO.password())
        );
-        logger.info("User logged in successfully{}", authentication.isAuthenticated());
+      if (authentication.isAuthenticated()){
+          logger.info("User logged in successfully{} ", authentication.isAuthenticated());
+          return jwtService.generate(authentificationDTO.email());
+      }
+        logger.info("User logged in successfully{} ", authentication.isAuthenticated());
         return null;
 
     }
