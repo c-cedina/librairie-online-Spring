@@ -37,10 +37,6 @@ public class ConfigurationSecurityApplication {
         return authenticationConfiguration.getAuthenticationManager();
     }
 
-    @Bean
-    public UserDetailsService userDetailsService() {
-        return new ClientService();
-    }
 
     @Bean
     public AuthenticationProvider authenticationProvider () {

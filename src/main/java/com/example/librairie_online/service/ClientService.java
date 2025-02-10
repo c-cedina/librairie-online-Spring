@@ -20,7 +20,7 @@ import com.example.librairie_online.repository.ClientRepository;
 
 import lombok.AllArgsConstructor;
 
-@NoArgsConstructor
+
 @AllArgsConstructor
 @Service
 public class ClientService implements UserDetailsService {

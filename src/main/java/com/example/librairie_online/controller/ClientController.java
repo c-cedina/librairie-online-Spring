@@ -5,13 +5,17 @@ import java.util.Map;
 
 import com.example.librairie_online.dto.AuthentificationDTO;
 import com.example.librairie_online.entity.Validation;
+import com.example.librairie_online.service.AcheteService;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -26,13 +30,12 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 @AllArgsConstructor
-@NoArgsConstructor
 @RestController
 @RequestMapping(path = "Client")
 public class ClientController {
     private ClientService clientService;
     private AuthenticationManager authenticationManager;
-
+    private static final Logger logger = LoggerFactory.getLogger(ClientController.class);
 
 
     @ResponseStatus(value = HttpStatus.CREATED)
@@ -91,9 +94,10 @@ public class ClientController {
 
     @PostMapping(path = "/Connection")
     public Map<String,String> Connect(@RequestBody AuthentificationDTO authentificationDTO){
-       authenticationManager.authenticate(
+      Authentication authentication = authenticationManager.authenticate(
                new UsernamePasswordAuthenticationToken(authentificationDTO.email(),authentificationDTO.password())
        );
+        logger.info("User logged in successfully{}", authentication.isAuthenticated());
         return null;
 
     }

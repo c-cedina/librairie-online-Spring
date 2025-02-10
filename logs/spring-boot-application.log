@@ -87,3 +87,28 @@ Caused by: org.hibernate.type.descriptor.java.spi.JdbcTypeRecommendationExceptio
 2025-02-10T09:21:23.228+01:00  WARN 12763 --- [librairie-online] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
 2025-02-10T09:21:23.790+01:00  INFO 12763 --- [librairie-online] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
 2025-02-10T09:21:23.798+01:00  INFO 12763 --- [librairie-online] [main] c.e.l.LibrairieOnlineApplication         : Started LibrairieOnlineApplication in 5.622 seconds (process running for 6.196)
+2025-02-10T09:37:47.338+01:00  INFO 12763 --- [librairie-online] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-10T09:37:47.341+01:00  INFO 12763 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-10T09:37:47.361+01:00  INFO 12763 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-10T09:37:51.295+01:00  INFO 13389 --- [librairie-online] [main] c.e.l.LibrairieOnlineApplication         : Starting LibrairieOnlineApplication using Java 22.0.2 with PID 13389 (/Users/cedinacoelho/Documents/src/librairie-online-Spring/target/classes started by cedinacoelho in /Users/cedinacoelho/Documents/src/librairie-online-Spring)
+2025-02-10T09:37:51.300+01:00  INFO 13389 --- [librairie-online] [main] c.e.l.LibrairieOnlineApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-02-10T09:37:52.075+01:00  INFO 13389 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-10T09:37:52.165+01:00  INFO 13389 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81 ms. Found 14 JPA repository interfaces.
+2025-02-10T09:37:52.789+01:00  INFO 13389 --- [librairie-online] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-10T09:37:52.803+01:00  INFO 13389 --- [librairie-online] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-10T09:37:52.804+01:00  INFO 13389 --- [librairie-online] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-02-10T09:37:52.857+01:00  INFO 13389 --- [librairie-online] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-10T09:37:52.858+01:00  INFO 13389 --- [librairie-online] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1487 ms
+2025-02-10T09:37:53.037+01:00  INFO 13389 --- [librairie-online] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-10T09:37:53.103+01:00  INFO 13389 --- [librairie-online] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-02-10T09:37:53.137+01:00  INFO 13389 --- [librairie-online] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-10T09:37:53.474+01:00  INFO 13389 --- [librairie-online] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-10T09:37:53.499+01:00  INFO 13389 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-10T09:37:53.873+01:00  INFO 13389 --- [librairie-online] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@74bbc273
+2025-02-10T09:37:53.875+01:00  INFO 13389 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-10T09:37:55.086+01:00  INFO 13389 --- [librairie-online] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-10T09:37:55.134+01:00  INFO 13389 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-10T09:37:55.677+01:00  INFO 13389 --- [librairie-online] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-02-10T09:37:55.678+01:00  WARN 13389 --- [librairie-online] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2025-02-10T09:37:56.273+01:00  INFO 13389 --- [librairie-online] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-10T09:37:56.283+01:00  INFO 13389 --- [librairie-online] [main] c.e.l.LibrairieOnlineApplication         : Started LibrairieOnlineApplication in 5.802 seconds (process running for 6.346)
