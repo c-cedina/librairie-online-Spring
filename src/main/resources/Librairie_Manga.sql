@@ -157,6 +157,24 @@ CREATE TABLE Admin (
     Created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (Role) REFERENCES Role(id) ON DELETE CASCADE
 );
+CREATE TABLE Directeur (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    Username VARCHAR(255) NOT NULL,
+    Password VARCHAR(255) NOT NULL,
+    Email VARCHAR(255) NOT NULL,
+    RoleId INT,
+    FOREIGN KEY (RoleId) REFERENCES Role(Id)
+);
+
+
+CREATE TABLE Jwt (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    Token VARCHAR(512) NOT NULL,
+    Desactive BOOLEAN NOT NULL,
+    Expire BOOLEAN NOT NULL,
+    NAdherent INT,
+    FOREIGN KEY (NAdherent) REFERENCES Client(NAdherent)
+);
 
 INSERT INTO Mangaka (Nom, Prenom, Sexe, Nationalite)
 value

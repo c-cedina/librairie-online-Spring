@@ -2,6 +2,8 @@ package com.example.librairie_online.security;
 
 
 import com.example.librairie_online.entity.Client;
+import com.example.librairie_online.entity.Jwt;
+import com.example.librairie_online.repository.JwtRepository;
 import com.example.librairie_online.service.ClientService;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -9,6 +11,7 @@ import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.io.Decoders;
 
 import io.jsonwebtoken.security.Keys;
+import lombok.AllArgsConstructor;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -24,20 +27,32 @@ import java.util.function.Function;
 @Service
 public class JwtService {
     private static final org.slf4j.Logger logger = LoggerFactory.getLogger(JwtService.class);
+    public static final String BEARER = "bearer";
     private final ClientService clientService;
+    private JwtRepository jwtRepository;
 
     @Value("${JWT_SECRET}")
     private String encryptionKey ;
 
-    public JwtService(ClientService clientService) {
+    public JwtService(ClientService clientService, JwtRepository jwtRepository) {
         this.clientService = clientService;
+        this.jwtRepository = jwtRepository;
     }
 
 
 
     public Map<String,String> generate (String email){
         Client client = (Client) this.clientService.loadUserByUsername(email);
-        return this.generateJwt(client);
+        final Map<String, String> jwtMap = this.generateJwt(client);
+        final Jwt jwt = Jwt
+                .builder()
+                .token(jwtMap.get(BEARER))
+                .desactive(false)
+                .expire(false)
+                .client(client)
+                .build();
+        this.jwtRepository.save(jwt);
+        return jwtMap;
     }
 
     private Map<String, String> generateJwt(Client client) {
@@ -60,7 +75,7 @@ public class JwtService {
                 .compact();
 
 
-        return Map.of("bearer", bearer);
+        return Map.of(BEARER, bearer);
     }
 
     private SecretKey getKey() {
