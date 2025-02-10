@@ -1,11 +1,17 @@
 package com.example.librairie_online.controller;
 
 import java.util.List;
+import java.util.Map;
 
+import com.example.librairie_online.dto.AuthentificationDTO;
 import com.example.librairie_online.entity.Validation;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,15 +25,15 @@ import com.example.librairie_online.service.ClientService;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-
+@AllArgsConstructor
+@NoArgsConstructor
 @RestController
 @RequestMapping(path = "Client")
 public class ClientController {
     private ClientService clientService;
+    private AuthenticationManager authenticationManager;
 
-    public ClientController(ClientService clientService) {
-        this.clientService = clientService;
-    }
+
 
     @ResponseStatus(value = HttpStatus.CREATED)
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
@@ -81,6 +87,15 @@ public class ClientController {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
+
+    @PostMapping(path = "/Connection")
+    public Map<String,String> Connect(@RequestBody AuthentificationDTO authentificationDTO){
+       authenticationManager.authenticate(
+               new UsernamePasswordAuthenticationToken(authentificationDTO.email(),authentificationDTO.password())
+       );
+        return null;
+
     }
 
 }

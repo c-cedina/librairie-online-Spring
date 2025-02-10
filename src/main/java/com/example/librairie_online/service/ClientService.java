@@ -7,8 +7,12 @@ import com.example.librairie_online.entity.Role;
 import com.example.librairie_online.entity.Validation;
 import com.example.librairie_online.enumeration.TypeRole;
 import com.example.librairie_online.repository.RoleRepository;
+import lombok.NoArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import com.example.librairie_online.entity.Client;
@@ -16,9 +20,10 @@ import com.example.librairie_online.repository.ClientRepository;
 
 import lombok.AllArgsConstructor;
 
+@NoArgsConstructor
 @AllArgsConstructor
 @Service
-public class ClientService {
+public class ClientService implements UserDetailsService {
     private static final Logger logger = LoggerFactory.getLogger(ClientService.class);
 
     private ClientRepository clientRepository;
@@ -124,5 +129,10 @@ public class ClientService {
         } else {
             logger.warn("Échec de la suppression: Aucun client trouvé avec l'ID: {}", id);
         }
+    }
+
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        return this.clientRepository.findByEmail(username).orElseThrow(() -> new UsernameNotFoundException("Aucun client trouvé avec l'email: " + username));
     }
 }
