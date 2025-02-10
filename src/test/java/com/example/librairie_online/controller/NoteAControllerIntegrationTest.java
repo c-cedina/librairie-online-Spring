@@ -80,8 +80,8 @@ public class NoteAControllerIntegrationTest {
 
         String noteAJson = """
                 {
-                    "nadherent": %d,
-                    "nserie": %d,
+                    "nadherent": 91787,
+                    "nserie": ,
                     "valeur": 4.5,
                     "date": "2023-01-01"
                 }
