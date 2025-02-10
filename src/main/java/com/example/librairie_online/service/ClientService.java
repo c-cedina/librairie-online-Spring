@@ -13,6 +13,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.example.librairie_online.entity.Client;
@@ -29,6 +31,7 @@ public class ClientService implements UserDetailsService {
     private ClientRepository clientRepository;
     private ValidationService validationService;
     private RoleRepository roleRepository;
+    private BCryptPasswordEncoder passwordEncoder;
 
     // Create
     public Client create(Client client) {
@@ -47,7 +50,7 @@ public class ClientService implements UserDetailsService {
             role = roleRepository.save(role);
             logger.info("Rôle USER créé: {}", role);
         }
-
+        client.setPassword(passwordEncoder.encode(client.getPassword()));
         client.setRole(role);
         Client newClient = this.clientRepository.save(client);
         logger.info("Client créé avec succès: {}", newClient);

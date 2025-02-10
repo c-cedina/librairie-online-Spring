@@ -13,6 +13,8 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 @AllArgsConstructor
 @Configuration
@@ -20,6 +22,7 @@ import org.springframework.security.web.SecurityFilterChain;
 public class ConfigurationSecurityApplication {
 
     private final UserDetailsService userDetailsService;
+    private final BCryptPasswordEncoder bCryptPasswordEncoder;
     @Bean
     public SecurityFilterChain SecurityFilterChain(HttpSecurity httpSecurity) throws Exception {
         return httpSecurity
@@ -27,6 +30,7 @@ public class ConfigurationSecurityApplication {
                 .authorizeHttpRequests(authorize -> authorize
                     .requestMatchers(HttpMethod.POST, "Client").permitAll()
                         .requestMatchers(HttpMethod.POST, "Client/Validate").permitAll()
+                        .requestMatchers(HttpMethod.POST, "Client/Connection").permitAll()
                         .requestMatchers(HttpMethod.GET, "Manga").permitAll()
                         .requestMatchers("/Admin/**").hasRole("ADMIN")
                         .anyRequest().authenticated()
@@ -38,11 +42,12 @@ public class ConfigurationSecurityApplication {
     }
 
 
+
     @Bean
     public AuthenticationProvider authenticationProvider () {
         DaoAuthenticationProvider daoAuthenticationProvider = new DaoAuthenticationProvider();
         daoAuthenticationProvider.setUserDetailsService(userDetailsService);
-//        daoAuthenticationProvider.setPasswordEncoder(bCryptPasswordEncoder);
+        daoAuthenticationProvider.setPasswordEncoder(bCryptPasswordEncoder);
         return daoAuthenticationProvider;
     }
 }
