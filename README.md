@@ -27,6 +27,7 @@ Cette application utilise une base de données MySQL connectée à une API Sprin
 #### Liens - Architecture du Projet
 
 [Architecture ](Architecture.md)
+
 [Architecture détaillée](Architecture-detaille.md)
 
 ## Prérequis
