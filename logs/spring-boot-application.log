@@ -2577,3 +2577,466 @@ Caused by: org.hibernate.query.sqm.PathElementException: Could not resolve attri
 2025-02-11T14:52:13.556+01:00  INFO 35200 --- [librairie-online] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-02-11T14:52:13.559+01:00  INFO 35200 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-02-11T14:52:13.579+01:00  INFO 35200 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-11T14:58:37.498+01:00  INFO 35371 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Starting JwtServiceTest using Java 22.0.2 with PID 35371 (started by cedinacoelho in /Users/cedinacoelho/Documents/src/librairie-online-Spring)
+2025-02-11T14:58:37.501+01:00  INFO 35371 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : No active profile set, falling back to 1 default profile: "default"
+2025-02-11T14:58:38.268+01:00  INFO 35371 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-11T14:58:38.361+01:00  INFO 35371 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 85 ms. Found 15 JPA repository interfaces.
+2025-02-11T14:58:38.895+01:00  INFO 35371 --- [librairie-online] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-11T14:58:38.971+01:00  INFO 35371 --- [librairie-online] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-02-11T14:58:39.012+01:00  INFO 35371 --- [librairie-online] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-11T14:58:39.354+01:00  INFO 35371 --- [librairie-online] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-11T14:58:39.380+01:00  INFO 35371 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-11T14:58:39.754+01:00  INFO 35371 --- [librairie-online] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4b336cc8
+2025-02-11T14:58:39.756+01:00  INFO 35371 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-11T14:58:41.079+01:00  INFO 35371 --- [librairie-online] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-11T14:58:41.133+01:00  INFO 35371 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T14:58:41.554+01:00  INFO 35371 --- [librairie-online] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-02-11T14:58:41.985+01:00  INFO 35371 --- [librairie-online] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-02-11T14:58:41.985+01:00  WARN 35371 --- [librairie-online] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2025-02-11T14:58:42.902+01:00  INFO 35371 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Started JwtServiceTest in 5.863 seconds (process running for 7.064)
+2025-02-11T14:58:43.911+01:00  INFO 35371 --- [librairie-online] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T14:58:43.914+01:00  INFO 35371 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-11T14:58:43.940+01:00  INFO 35371 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-11T15:00:17.682+01:00  INFO 35404 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Starting JwtServiceTest using Java 22.0.2 with PID 35404 (started by cedinacoelho in /Users/cedinacoelho/Documents/src/librairie-online-Spring)
+2025-02-11T15:00:17.683+01:00  INFO 35404 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : No active profile set, falling back to 1 default profile: "default"
+2025-02-11T15:00:18.427+01:00  INFO 35404 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-11T15:00:18.517+01:00  INFO 35404 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74 ms. Found 15 JPA repository interfaces.
+2025-02-11T15:00:19.038+01:00  INFO 35404 --- [librairie-online] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-11T15:00:19.110+01:00  INFO 35404 --- [librairie-online] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-02-11T15:00:19.147+01:00  INFO 35404 --- [librairie-online] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-11T15:00:19.545+01:00  INFO 35404 --- [librairie-online] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-11T15:00:19.578+01:00  INFO 35404 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-11T15:00:20.050+01:00  INFO 35404 --- [librairie-online] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@73385d3f
+2025-02-11T15:00:20.052+01:00  INFO 35404 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-11T15:00:21.363+01:00  INFO 35404 --- [librairie-online] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-11T15:00:21.423+01:00  INFO 35404 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T15:00:21.913+01:00  INFO 35404 --- [librairie-online] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-02-11T15:00:22.355+01:00  INFO 35404 --- [librairie-online] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-02-11T15:00:22.356+01:00  WARN 35404 --- [librairie-online] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2025-02-11T15:00:23.304+01:00  INFO 35404 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Started JwtServiceTest in 6.02 seconds (process running for 7.109)
+2025-02-11T15:00:24.299+01:00  INFO 35404 --- [librairie-online] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T15:00:24.303+01:00  INFO 35404 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-11T15:00:24.325+01:00  INFO 35404 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-11T15:01:30.905+01:00  INFO 35431 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Starting JwtServiceTest using Java 22.0.2 with PID 35431 (started by cedinacoelho in /Users/cedinacoelho/Documents/src/librairie-online-Spring)
+2025-02-11T15:01:30.906+01:00  INFO 35431 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : No active profile set, falling back to 1 default profile: "default"
+2025-02-11T15:01:31.586+01:00  INFO 35431 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-11T15:01:31.674+01:00  INFO 35431 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 15 JPA repository interfaces.
+2025-02-11T15:01:32.176+01:00  INFO 35431 --- [librairie-online] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-11T15:01:32.252+01:00  INFO 35431 --- [librairie-online] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-02-11T15:01:32.292+01:00  INFO 35431 --- [librairie-online] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-11T15:01:32.685+01:00  INFO 35431 --- [librairie-online] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-11T15:01:32.718+01:00  INFO 35431 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-11T15:01:33.173+01:00  INFO 35431 --- [librairie-online] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@18513c23
+2025-02-11T15:01:33.175+01:00  INFO 35431 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-11T15:01:34.539+01:00  INFO 35431 --- [librairie-online] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-11T15:01:34.597+01:00  INFO 35431 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T15:01:35.022+01:00  INFO 35431 --- [librairie-online] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-02-11T15:01:35.446+01:00  INFO 35431 --- [librairie-online] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-02-11T15:01:35.446+01:00  WARN 35431 --- [librairie-online] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2025-02-11T15:01:36.258+01:00  INFO 35431 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Started JwtServiceTest in 5.746 seconds (process running for 6.837)
+2025-02-11T15:01:37.223+01:00  INFO 35431 --- [librairie-online] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T15:01:37.226+01:00  INFO 35431 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-11T15:01:37.246+01:00  INFO 35431 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-11T15:03:15.131+01:00  INFO 35455 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Starting JwtServiceTest using Java 22.0.2 with PID 35455 (started by cedinacoelho in /Users/cedinacoelho/Documents/src/librairie-online-Spring)
+2025-02-11T15:03:15.133+01:00  INFO 35455 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : No active profile set, falling back to 1 default profile: "default"
+2025-02-11T15:03:15.894+01:00  INFO 35455 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-11T15:03:16.006+01:00  INFO 35455 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 103 ms. Found 15 JPA repository interfaces.
+2025-02-11T15:03:16.642+01:00  INFO 35455 --- [librairie-online] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-11T15:03:16.731+01:00  INFO 35455 --- [librairie-online] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-02-11T15:03:16.779+01:00  INFO 35455 --- [librairie-online] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-11T15:03:17.184+01:00  INFO 35455 --- [librairie-online] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-11T15:03:17.210+01:00  INFO 35455 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-11T15:03:17.629+01:00  INFO 35455 --- [librairie-online] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2abedbbd
+2025-02-11T15:03:17.632+01:00  INFO 35455 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-11T15:03:19.016+01:00  INFO 35455 --- [librairie-online] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-11T15:03:19.074+01:00  INFO 35455 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T15:03:19.552+01:00  INFO 35455 --- [librairie-online] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-02-11T15:03:20.025+01:00  INFO 35455 --- [librairie-online] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-02-11T15:03:20.025+01:00  WARN 35455 --- [librairie-online] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2025-02-11T15:03:20.930+01:00  INFO 35455 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Started JwtServiceTest in 6.204 seconds (process running for 7.33)
+2025-02-11T15:03:21.930+01:00  INFO 35455 --- [librairie-online] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T15:03:21.933+01:00  INFO 35455 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-11T15:03:21.956+01:00  INFO 35455 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-11T15:04:05.760+01:00  INFO 35469 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Starting JwtServiceTest using Java 22.0.2 with PID 35469 (started by cedinacoelho in /Users/cedinacoelho/Documents/src/librairie-online-Spring)
+2025-02-11T15:04:05.762+01:00  INFO 35469 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : No active profile set, falling back to 1 default profile: "default"
+2025-02-11T15:04:06.712+01:00  INFO 35469 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-11T15:04:06.815+01:00  INFO 35469 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 94 ms. Found 15 JPA repository interfaces.
+2025-02-11T15:04:07.594+01:00  INFO 35469 --- [librairie-online] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-11T15:04:07.664+01:00  INFO 35469 --- [librairie-online] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-02-11T15:04:07.711+01:00  INFO 35469 --- [librairie-online] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-11T15:04:08.109+01:00  INFO 35469 --- [librairie-online] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-11T15:04:08.146+01:00  INFO 35469 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-11T15:04:08.641+01:00  INFO 35469 --- [librairie-online] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7962a746
+2025-02-11T15:04:08.644+01:00  INFO 35469 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-11T15:04:10.142+01:00  INFO 35469 --- [librairie-online] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-11T15:04:10.197+01:00  INFO 35469 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T15:04:10.725+01:00  INFO 35469 --- [librairie-online] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-02-11T15:04:11.210+01:00  INFO 35469 --- [librairie-online] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-02-11T15:04:11.210+01:00  WARN 35469 --- [librairie-online] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2025-02-11T15:04:12.179+01:00  INFO 35469 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Started JwtServiceTest in 6.986 seconds (process running for 8.741)
+2025-02-11T15:04:33.736+01:00  INFO 35469 --- [librairie-online] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T15:04:33.740+01:00  INFO 35469 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-11T15:04:33.768+01:00  INFO 35469 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-11T15:05:56.007+01:00  INFO 35527 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Starting JwtServiceTest using Java 22.0.2 with PID 35527 (started by cedinacoelho in /Users/cedinacoelho/Documents/src/librairie-online-Spring)
+2025-02-11T15:05:56.009+01:00  INFO 35527 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : No active profile set, falling back to 1 default profile: "default"
+2025-02-11T15:05:56.925+01:00  INFO 35527 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-11T15:05:57.068+01:00  INFO 35527 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 131 ms. Found 15 JPA repository interfaces.
+2025-02-11T15:05:57.713+01:00  INFO 35527 --- [librairie-online] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-11T15:05:57.802+01:00  INFO 35527 --- [librairie-online] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-02-11T15:05:57.848+01:00  INFO 35527 --- [librairie-online] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-11T15:05:58.208+01:00  INFO 35527 --- [librairie-online] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-11T15:05:58.243+01:00  INFO 35527 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-11T15:05:58.764+01:00  INFO 35527 --- [librairie-online] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2166c48a
+2025-02-11T15:05:58.767+01:00  INFO 35527 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-11T15:06:00.412+01:00  INFO 35527 --- [librairie-online] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-11T15:06:00.463+01:00  INFO 35527 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T15:06:00.936+01:00  INFO 35527 --- [librairie-online] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-02-11T15:06:01.416+01:00  INFO 35527 --- [librairie-online] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-02-11T15:06:01.417+01:00  WARN 35527 --- [librairie-online] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2025-02-11T15:06:02.350+01:00  INFO 35527 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Started JwtServiceTest in 6.828 seconds (process running for 8.563)
+2025-02-11T15:06:03.571+01:00  INFO 35527 --- [librairie-online] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T15:06:03.574+01:00  INFO 35527 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-11T15:06:03.600+01:00  INFO 35527 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-11T15:06:47.746+01:00  INFO 35546 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Starting JwtServiceTest using Java 22.0.2 with PID 35546 (started by cedinacoelho in /Users/cedinacoelho/Documents/src/librairie-online-Spring)
+2025-02-11T15:06:47.748+01:00  INFO 35546 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : No active profile set, falling back to 1 default profile: "default"
+2025-02-11T15:06:48.651+01:00  INFO 35546 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-11T15:06:48.755+01:00  INFO 35546 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 95 ms. Found 15 JPA repository interfaces.
+2025-02-11T15:06:49.491+01:00  INFO 35546 --- [librairie-online] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-11T15:06:49.557+01:00  INFO 35546 --- [librairie-online] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-02-11T15:06:49.600+01:00  INFO 35546 --- [librairie-online] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-11T15:06:50.018+01:00  INFO 35546 --- [librairie-online] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-11T15:06:50.056+01:00  INFO 35546 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-11T15:06:50.567+01:00  INFO 35546 --- [librairie-online] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@772cf46b
+2025-02-11T15:06:50.570+01:00  INFO 35546 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-11T15:06:52.538+01:00  INFO 35546 --- [librairie-online] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-11T15:06:52.612+01:00  INFO 35546 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T15:06:53.328+01:00  INFO 35546 --- [librairie-online] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-02-11T15:06:54.023+01:00  INFO 35546 --- [librairie-online] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-02-11T15:06:54.024+01:00  WARN 35546 --- [librairie-online] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2025-02-11T15:06:55.317+01:00  INFO 35546 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Started JwtServiceTest in 8.031 seconds (process running for 10.525)
+2025-02-11T15:07:46.519+01:00  WARN 35546 --- [librairie-online] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=55s846ms).
+2025-02-11T15:07:51.881+01:00  INFO 35546 --- [librairie-online] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T15:07:51.888+01:00  INFO 35546 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-11T15:07:51.934+01:00  INFO 35546 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-11T15:13:04.320+01:00  INFO 35682 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Starting JwtServiceTest using Java 22.0.2 with PID 35682 (started by cedinacoelho in /Users/cedinacoelho/Documents/src/librairie-online-Spring)
+2025-02-11T15:13:04.323+01:00  INFO 35682 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : No active profile set, falling back to 1 default profile: "default"
+2025-02-11T15:13:05.149+01:00  INFO 35682 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-11T15:13:05.244+01:00  INFO 35682 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 85 ms. Found 15 JPA repository interfaces.
+2025-02-11T15:13:05.904+01:00  INFO 35682 --- [librairie-online] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-11T15:13:05.992+01:00  INFO 35682 --- [librairie-online] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-02-11T15:13:06.043+01:00  INFO 35682 --- [librairie-online] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-11T15:13:06.529+01:00  INFO 35682 --- [librairie-online] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-11T15:13:06.564+01:00  INFO 35682 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-11T15:13:07.055+01:00  INFO 35682 --- [librairie-online] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@18b04526
+2025-02-11T15:13:07.058+01:00  INFO 35682 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-11T15:13:08.751+01:00  INFO 35682 --- [librairie-online] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-11T15:13:08.824+01:00  INFO 35682 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T15:13:09.408+01:00  INFO 35682 --- [librairie-online] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-02-11T15:13:09.930+01:00  INFO 35682 --- [librairie-online] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-02-11T15:13:09.930+01:00  WARN 35682 --- [librairie-online] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2025-02-11T15:13:11.026+01:00  INFO 35682 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Started JwtServiceTest in 7.125 seconds (process running for 8.554)
+2025-02-11T15:13:12.204+01:00  INFO 35682 --- [librairie-online] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T15:13:12.207+01:00  INFO 35682 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-11T15:13:12.233+01:00  INFO 35682 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-11T15:14:12.116+01:00  INFO 35703 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Starting JwtServiceTest using Java 22.0.2 with PID 35703 (started by cedinacoelho in /Users/cedinacoelho/Documents/src/librairie-online-Spring)
+2025-02-11T15:14:12.118+01:00  INFO 35703 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : No active profile set, falling back to 1 default profile: "default"
+2025-02-11T15:14:12.963+01:00  INFO 35703 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-11T15:14:13.075+01:00  INFO 35703 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 101 ms. Found 15 JPA repository interfaces.
+2025-02-11T15:14:14.014+01:00  INFO 35703 --- [librairie-online] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-11T15:14:14.096+01:00  INFO 35703 --- [librairie-online] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-02-11T15:14:14.142+01:00  INFO 35703 --- [librairie-online] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-11T15:14:14.595+01:00  INFO 35703 --- [librairie-online] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-11T15:14:14.630+01:00  INFO 35703 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-11T15:14:15.181+01:00  INFO 35703 --- [librairie-online] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6124dda2
+2025-02-11T15:14:15.183+01:00  INFO 35703 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-11T15:14:17.006+01:00  INFO 35703 --- [librairie-online] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-11T15:14:17.068+01:00  INFO 35703 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T15:14:17.691+01:00  INFO 35703 --- [librairie-online] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-02-11T15:14:18.243+01:00  INFO 35703 --- [librairie-online] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-02-11T15:14:18.243+01:00  WARN 35703 --- [librairie-online] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2025-02-11T15:14:19.422+01:00  INFO 35703 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Started JwtServiceTest in 7.746 seconds (process running for 9.547)
+2025-02-11T15:14:33.606+01:00  INFO 35703 --- [librairie-online] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T15:14:33.610+01:00  INFO 35703 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-11T15:14:33.638+01:00  INFO 35703 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-11T15:15:39.124+01:00  INFO 35730 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Starting JwtServiceTest using Java 22.0.2 with PID 35730 (started by cedinacoelho in /Users/cedinacoelho/Documents/src/librairie-online-Spring)
+2025-02-11T15:15:39.126+01:00  INFO 35730 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : No active profile set, falling back to 1 default profile: "default"
+2025-02-11T15:15:40.014+01:00  INFO 35730 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-11T15:15:40.113+01:00  INFO 35730 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 90 ms. Found 15 JPA repository interfaces.
+2025-02-11T15:15:40.888+01:00  INFO 35730 --- [librairie-online] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-11T15:15:40.966+01:00  INFO 35730 --- [librairie-online] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-02-11T15:15:41.014+01:00  INFO 35730 --- [librairie-online] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-11T15:15:41.483+01:00  INFO 35730 --- [librairie-online] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-11T15:15:41.518+01:00  INFO 35730 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-11T15:15:42.042+01:00  INFO 35730 --- [librairie-online] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4e756867
+2025-02-11T15:15:42.044+01:00  INFO 35730 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-11T15:15:43.829+01:00  INFO 35730 --- [librairie-online] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-11T15:15:43.910+01:00  INFO 35730 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T15:15:44.566+01:00  INFO 35730 --- [librairie-online] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-02-11T15:15:45.165+01:00  INFO 35730 --- [librairie-online] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-02-11T15:15:45.166+01:00  WARN 35730 --- [librairie-online] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2025-02-11T15:15:46.743+01:00  INFO 35730 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Started JwtServiceTest in 8.061 seconds (process running for 9.661)
+2025-02-11T15:16:40.473+01:00  INFO 35730 --- [librairie-online] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T15:16:40.477+01:00  INFO 35730 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-11T15:16:40.573+01:00  INFO 35730 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-11T15:17:17.171+01:00  INFO 35776 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Starting JwtServiceTest using Java 22.0.2 with PID 35776 (started by cedinacoelho in /Users/cedinacoelho/Documents/src/librairie-online-Spring)
+2025-02-11T15:17:17.174+01:00  INFO 35776 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : No active profile set, falling back to 1 default profile: "default"
+2025-02-11T15:17:17.966+01:00  INFO 35776 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-11T15:17:18.056+01:00  INFO 35776 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 82 ms. Found 15 JPA repository interfaces.
+2025-02-11T15:17:18.834+01:00  INFO 35776 --- [librairie-online] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-11T15:17:18.894+01:00  INFO 35776 --- [librairie-online] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-02-11T15:17:18.932+01:00  INFO 35776 --- [librairie-online] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-11T15:17:19.249+01:00  INFO 35776 --- [librairie-online] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-11T15:17:19.276+01:00  INFO 35776 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-11T15:17:19.675+01:00  INFO 35776 --- [librairie-online] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@772cf46b
+2025-02-11T15:17:19.677+01:00  INFO 35776 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-11T15:17:21.064+01:00  INFO 35776 --- [librairie-online] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-11T15:17:21.118+01:00  INFO 35776 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T15:17:21.617+01:00  INFO 35776 --- [librairie-online] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-02-11T15:17:22.137+01:00  INFO 35776 --- [librairie-online] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-02-11T15:17:22.137+01:00  WARN 35776 --- [librairie-online] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2025-02-11T15:17:23.729+01:00  INFO 35776 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Started JwtServiceTest in 6.988 seconds (process running for 8.395)
+2025-02-11T15:18:07.822+01:00  INFO 35776 --- [librairie-online] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T15:18:07.826+01:00  INFO 35776 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-11T15:18:07.848+01:00  INFO 35776 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-11T15:18:38.256+01:00  INFO 35805 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Starting JwtServiceTest using Java 22.0.2 with PID 35805 (started by cedinacoelho in /Users/cedinacoelho/Documents/src/librairie-online-Spring)
+2025-02-11T15:18:38.258+01:00  INFO 35805 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : No active profile set, falling back to 1 default profile: "default"
+2025-02-11T15:18:39.136+01:00  INFO 35805 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-11T15:18:39.302+01:00  INFO 35805 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 149 ms. Found 15 JPA repository interfaces.
+2025-02-11T15:18:40.026+01:00  INFO 35805 --- [librairie-online] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-11T15:18:40.084+01:00  INFO 35805 --- [librairie-online] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-02-11T15:18:40.123+01:00  INFO 35805 --- [librairie-online] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-11T15:18:40.481+01:00  INFO 35805 --- [librairie-online] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-11T15:18:40.515+01:00  INFO 35805 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-11T15:18:40.974+01:00  INFO 35805 --- [librairie-online] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1c31de5d
+2025-02-11T15:18:40.977+01:00  INFO 35805 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-11T15:18:42.611+01:00  INFO 35805 --- [librairie-online] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-11T15:18:42.669+01:00  INFO 35805 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T15:18:43.230+01:00  INFO 35805 --- [librairie-online] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-02-11T15:18:43.780+01:00  INFO 35805 --- [librairie-online] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-02-11T15:18:43.780+01:00  WARN 35805 --- [librairie-online] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2025-02-11T15:18:44.864+01:00  INFO 35805 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Started JwtServiceTest in 7.121 seconds (process running for 9.078)
+2025-02-11T15:18:56.069+01:00  INFO 35805 --- [librairie-online] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T15:18:56.073+01:00  INFO 35805 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-11T15:18:56.094+01:00  INFO 35805 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-11T15:19:04.185+01:00  INFO 35817 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Starting JwtServiceTest using Java 22.0.2 with PID 35817 (started by cedinacoelho in /Users/cedinacoelho/Documents/src/librairie-online-Spring)
+2025-02-11T15:19:04.187+01:00  INFO 35817 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : No active profile set, falling back to 1 default profile: "default"
+2025-02-11T15:19:05.211+01:00  INFO 35817 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-11T15:19:05.314+01:00  INFO 35817 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93 ms. Found 15 JPA repository interfaces.
+2025-02-11T15:19:06.133+01:00  INFO 35817 --- [librairie-online] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-11T15:19:06.210+01:00  INFO 35817 --- [librairie-online] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-02-11T15:19:06.259+01:00  INFO 35817 --- [librairie-online] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-11T15:19:06.696+01:00  INFO 35817 --- [librairie-online] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-11T15:19:06.729+01:00  INFO 35817 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-11T15:19:07.212+01:00  INFO 35817 --- [librairie-online] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1fc5c0b2
+2025-02-11T15:19:07.215+01:00  INFO 35817 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-11T15:19:09.099+01:00  INFO 35817 --- [librairie-online] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-11T15:19:09.178+01:00  INFO 35817 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T15:19:10.037+01:00  INFO 35817 --- [librairie-online] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-02-11T15:19:10.941+01:00  INFO 35817 --- [librairie-online] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-02-11T15:19:10.942+01:00  WARN 35817 --- [librairie-online] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2025-02-11T15:19:12.398+01:00  INFO 35817 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Started JwtServiceTest in 8.777 seconds (process running for 10.65)
+2025-02-11T15:20:42.356+01:00  WARN 35817 --- [librairie-online] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=53s847ms).
+2025-02-11T15:20:42.415+01:00  INFO 35817 --- [librairie-online] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T15:20:42.419+01:00  INFO 35817 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-11T15:20:42.535+01:00  INFO 35817 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-11T15:20:48.534+01:00  INFO 35882 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Starting JwtServiceTest using Java 22.0.2 with PID 35882 (started by cedinacoelho in /Users/cedinacoelho/Documents/src/librairie-online-Spring)
+2025-02-11T15:20:48.535+01:00  INFO 35882 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : No active profile set, falling back to 1 default profile: "default"
+2025-02-11T15:20:49.354+01:00  INFO 35882 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-11T15:20:49.475+01:00  INFO 35882 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 109 ms. Found 15 JPA repository interfaces.
+2025-02-11T15:20:50.136+01:00  INFO 35882 --- [librairie-online] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-11T15:20:50.215+01:00  INFO 35882 --- [librairie-online] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-02-11T15:20:50.255+01:00  INFO 35882 --- [librairie-online] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-11T15:20:50.663+01:00  INFO 35882 --- [librairie-online] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-11T15:20:50.697+01:00  INFO 35882 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-11T15:20:51.136+01:00  INFO 35882 --- [librairie-online] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@31b6fb14
+2025-02-11T15:20:51.139+01:00  INFO 35882 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-11T15:20:52.463+01:00  INFO 35882 --- [librairie-online] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-11T15:20:52.516+01:00  INFO 35882 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T15:20:52.945+01:00  INFO 35882 --- [librairie-online] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-02-11T15:20:53.421+01:00  INFO 35882 --- [librairie-online] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-02-11T15:20:53.422+01:00  WARN 35882 --- [librairie-online] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2025-02-11T15:20:54.438+01:00  INFO 35882 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Started JwtServiceTest in 6.282 seconds (process running for 7.509)
+2025-02-11T15:20:56.061+01:00  INFO 35882 --- [librairie-online] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T15:20:56.065+01:00  INFO 35882 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-11T15:20:56.124+01:00  INFO 35882 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-11T15:24:40.322+01:00  INFO 35981 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Starting JwtServiceTest using Java 22.0.2 with PID 35981 (started by cedinacoelho in /Users/cedinacoelho/Documents/src/librairie-online-Spring)
+2025-02-11T15:24:40.324+01:00  INFO 35981 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : No active profile set, falling back to 1 default profile: "default"
+2025-02-11T15:24:41.004+01:00  INFO 35981 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-11T15:24:41.102+01:00  INFO 35981 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 88 ms. Found 15 JPA repository interfaces.
+2025-02-11T15:24:41.698+01:00  INFO 35981 --- [librairie-online] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-11T15:24:41.775+01:00  INFO 35981 --- [librairie-online] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-02-11T15:24:41.817+01:00  INFO 35981 --- [librairie-online] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-11T15:24:42.156+01:00  INFO 35981 --- [librairie-online] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-11T15:24:42.181+01:00  INFO 35981 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-11T15:24:42.529+01:00  INFO 35981 --- [librairie-online] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@18b04526
+2025-02-11T15:24:42.532+01:00  INFO 35981 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-11T15:24:43.973+01:00  INFO 35981 --- [librairie-online] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-11T15:24:44.033+01:00  INFO 35981 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T15:24:44.535+01:00  INFO 35981 --- [librairie-online] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-02-11T15:24:45.023+01:00  INFO 35981 --- [librairie-online] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-02-11T15:24:45.024+01:00  WARN 35981 --- [librairie-online] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2025-02-11T15:24:45.997+01:00  INFO 35981 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Started JwtServiceTest in 6.027 seconds (process running for 7.254)
+2025-02-11T15:24:47.009+01:00  INFO 35981 --- [librairie-online] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T15:24:47.013+01:00  INFO 35981 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-11T15:24:47.035+01:00  INFO 35981 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-11T15:25:19.802+01:00  INFO 35999 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Starting JwtServiceTest using Java 22.0.2 with PID 35999 (started by cedinacoelho in /Users/cedinacoelho/Documents/src/librairie-online-Spring)
+2025-02-11T15:25:19.804+01:00  INFO 35999 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : No active profile set, falling back to 1 default profile: "default"
+2025-02-11T15:25:20.603+01:00  INFO 35999 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-11T15:25:20.689+01:00  INFO 35999 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 79 ms. Found 15 JPA repository interfaces.
+2025-02-11T15:25:21.275+01:00  INFO 35999 --- [librairie-online] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-11T15:25:21.345+01:00  INFO 35999 --- [librairie-online] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-02-11T15:25:21.390+01:00  INFO 35999 --- [librairie-online] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-11T15:25:21.772+01:00  INFO 35999 --- [librairie-online] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-11T15:25:21.804+01:00  INFO 35999 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-11T15:25:22.221+01:00  INFO 35999 --- [librairie-online] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6ea3a513
+2025-02-11T15:25:22.223+01:00  INFO 35999 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-11T15:25:23.572+01:00  INFO 35999 --- [librairie-online] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-11T15:25:23.636+01:00  INFO 35999 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T15:25:24.157+01:00  INFO 35999 --- [librairie-online] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-02-11T15:25:24.647+01:00  INFO 35999 --- [librairie-online] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-02-11T15:25:24.648+01:00  WARN 35999 --- [librairie-online] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2025-02-11T15:25:25.603+01:00  INFO 35999 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Started JwtServiceTest in 6.2 seconds (process running for 7.409)
+2025-02-11T15:25:26.672+01:00  INFO 35999 --- [librairie-online] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T15:25:26.676+01:00  INFO 35999 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-11T15:25:26.700+01:00  INFO 35999 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-11T15:31:02.277+01:00  INFO 36118 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Starting JwtServiceTest using Java 22.0.2 with PID 36118 (started by cedinacoelho in /Users/cedinacoelho/Documents/src/librairie-online-Spring)
+2025-02-11T15:31:02.279+01:00  INFO 36118 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : No active profile set, falling back to 1 default profile: "default"
+2025-02-11T15:31:03.129+01:00  INFO 36118 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-11T15:31:03.221+01:00  INFO 36118 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 84 ms. Found 15 JPA repository interfaces.
+2025-02-11T15:31:03.947+01:00  INFO 36118 --- [librairie-online] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-11T15:31:04.010+01:00  INFO 36118 --- [librairie-online] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-02-11T15:31:04.050+01:00  INFO 36118 --- [librairie-online] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-11T15:31:04.386+01:00  INFO 36118 --- [librairie-online] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-11T15:31:04.413+01:00  INFO 36118 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-11T15:31:04.816+01:00  INFO 36118 --- [librairie-online] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@38ebc866
+2025-02-11T15:31:04.818+01:00  INFO 36118 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-11T15:31:06.181+01:00  INFO 36118 --- [librairie-online] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-11T15:31:06.248+01:00  INFO 36118 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T15:31:06.808+01:00  INFO 36118 --- [librairie-online] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-02-11T15:31:07.285+01:00  INFO 36118 --- [librairie-online] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-02-11T15:31:07.286+01:00  WARN 36118 --- [librairie-online] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2025-02-11T15:31:08.308+01:00  INFO 36118 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Started JwtServiceTest in 6.469 seconds (process running for 7.894)
+2025-02-11T15:36:01.711+01:00  WARN 36118 --- [librairie-online] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m26s51ms).
+2025-02-11T15:36:01.773+01:00  INFO 36118 --- [librairie-online] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T15:36:01.776+01:00  INFO 36118 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-11T15:36:01.798+01:00  INFO 36118 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-11T15:37:12.972+01:00  INFO 36211 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Starting JwtServiceTest using Java 22.0.2 with PID 36211 (started by cedinacoelho in /Users/cedinacoelho/Documents/src/librairie-online-Spring)
+2025-02-11T15:37:12.974+01:00  INFO 36211 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : No active profile set, falling back to 1 default profile: "default"
+2025-02-11T15:37:13.698+01:00  INFO 36211 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-11T15:37:13.788+01:00  INFO 36211 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83 ms. Found 15 JPA repository interfaces.
+2025-02-11T15:37:14.309+01:00  INFO 36211 --- [librairie-online] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-11T15:37:14.375+01:00  INFO 36211 --- [librairie-online] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-02-11T15:37:14.407+01:00  INFO 36211 --- [librairie-online] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-11T15:37:14.717+01:00  INFO 36211 --- [librairie-online] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-11T15:37:14.745+01:00  INFO 36211 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-11T15:37:15.153+01:00  INFO 36211 --- [librairie-online] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2166c48a
+2025-02-11T15:37:15.155+01:00  INFO 36211 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-11T15:37:16.424+01:00  INFO 36211 --- [librairie-online] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-11T15:37:16.488+01:00  INFO 36211 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T15:37:16.994+01:00  INFO 36211 --- [librairie-online] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-02-11T15:37:17.431+01:00  INFO 36211 --- [librairie-online] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-02-11T15:37:17.432+01:00  WARN 36211 --- [librairie-online] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2025-02-11T15:37:18.204+01:00  INFO 36211 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Started JwtServiceTest in 5.641 seconds (process running for 6.794)
+2025-02-11T15:37:19.096+01:00  INFO 36211 --- [librairie-online] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T15:37:19.098+01:00  INFO 36211 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-11T15:37:19.115+01:00  INFO 36211 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-11T15:37:25.960+01:00  INFO 36219 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Starting JwtServiceTest using Java 22.0.2 with PID 36219 (started by cedinacoelho in /Users/cedinacoelho/Documents/src/librairie-online-Spring)
+2025-02-11T15:37:25.962+01:00  INFO 36219 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : No active profile set, falling back to 1 default profile: "default"
+2025-02-11T15:37:26.794+01:00  INFO 36219 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-11T15:37:26.903+01:00  INFO 36219 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 99 ms. Found 15 JPA repository interfaces.
+2025-02-11T15:37:27.697+01:00  INFO 36219 --- [librairie-online] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-11T15:37:27.763+01:00  INFO 36219 --- [librairie-online] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-02-11T15:37:27.807+01:00  INFO 36219 --- [librairie-online] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-11T15:37:28.175+01:00  INFO 36219 --- [librairie-online] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-11T15:37:28.210+01:00  INFO 36219 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-11T15:37:28.706+01:00  INFO 36219 --- [librairie-online] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7962a746
+2025-02-11T15:37:28.709+01:00  INFO 36219 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-11T15:37:30.287+01:00  INFO 36219 --- [librairie-online] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-11T15:37:30.347+01:00  INFO 36219 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T15:37:30.896+01:00  INFO 36219 --- [librairie-online] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-02-11T15:37:31.375+01:00  INFO 36219 --- [librairie-online] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-02-11T15:37:31.376+01:00  WARN 36219 --- [librairie-online] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2025-02-11T15:37:32.437+01:00  INFO 36219 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Started JwtServiceTest in 6.971 seconds (process running for 8.353)
+2025-02-11T15:37:59.688+01:00  INFO 36219 --- [librairie-online] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T15:37:59.692+01:00  INFO 36219 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-11T15:37:59.714+01:00  INFO 36219 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-11T15:38:10.952+01:00  INFO 36230 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Starting JwtServiceTest using Java 22.0.2 with PID 36230 (started by cedinacoelho in /Users/cedinacoelho/Documents/src/librairie-online-Spring)
+2025-02-11T15:38:10.954+01:00  INFO 36230 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : No active profile set, falling back to 1 default profile: "default"
+2025-02-11T15:38:11.896+01:00  INFO 36230 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-11T15:38:12.010+01:00  INFO 36230 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 105 ms. Found 15 JPA repository interfaces.
+2025-02-11T15:38:12.852+01:00  INFO 36230 --- [librairie-online] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-11T15:38:12.925+01:00  INFO 36230 --- [librairie-online] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-02-11T15:38:12.973+01:00  INFO 36230 --- [librairie-online] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-11T15:38:13.390+01:00  INFO 36230 --- [librairie-online] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-11T15:38:13.424+01:00  INFO 36230 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-11T15:38:13.976+01:00  INFO 36230 --- [librairie-online] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7962a746
+2025-02-11T15:38:13.980+01:00  INFO 36230 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-11T15:38:15.458+01:00  INFO 36230 --- [librairie-online] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-11T15:38:15.511+01:00  INFO 36230 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T15:38:16.016+01:00  INFO 36230 --- [librairie-online] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-02-11T15:38:16.482+01:00  INFO 36230 --- [librairie-online] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-02-11T15:38:16.483+01:00  WARN 36230 --- [librairie-online] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2025-02-11T15:38:17.398+01:00  INFO 36230 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Started JwtServiceTest in 6.906 seconds (process running for 8.553)
+2025-02-11T15:38:48.784+01:00  INFO 36230 --- [librairie-online] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T15:38:48.787+01:00  INFO 36230 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-11T15:38:48.810+01:00  INFO 36230 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-11T15:39:00.094+01:00  INFO 36248 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Starting JwtServiceTest using Java 22.0.2 with PID 36248 (started by cedinacoelho in /Users/cedinacoelho/Documents/src/librairie-online-Spring)
+2025-02-11T15:39:00.096+01:00  INFO 36248 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : No active profile set, falling back to 1 default profile: "default"
+2025-02-11T15:39:00.911+01:00  INFO 36248 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-11T15:39:01.012+01:00  INFO 36248 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 92 ms. Found 15 JPA repository interfaces.
+2025-02-11T15:39:01.716+01:00  INFO 36248 --- [librairie-online] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-11T15:39:01.781+01:00  INFO 36248 --- [librairie-online] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-02-11T15:39:01.819+01:00  INFO 36248 --- [librairie-online] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-11T15:39:02.136+01:00  INFO 36248 --- [librairie-online] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-11T15:39:02.164+01:00  INFO 36248 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-11T15:39:02.574+01:00  INFO 36248 --- [librairie-online] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1b98355f
+2025-02-11T15:39:02.576+01:00  INFO 36248 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-11T15:39:03.915+01:00  INFO 36248 --- [librairie-online] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-11T15:39:03.968+01:00  INFO 36248 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T15:39:04.452+01:00  INFO 36248 --- [librairie-online] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-02-11T15:39:04.884+01:00  INFO 36248 --- [librairie-online] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-02-11T15:39:04.885+01:00  WARN 36248 --- [librairie-online] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2025-02-11T15:39:05.724+01:00  INFO 36248 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Started JwtServiceTest in 6.077 seconds (process running for 7.741)
+2025-02-11T15:39:24.867+01:00  INFO 36248 --- [librairie-online] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T15:39:24.871+01:00  INFO 36248 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-11T15:39:24.895+01:00  INFO 36248 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-11T15:40:32.725+01:00  INFO 36279 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Starting JwtServiceTest using Java 22.0.2 with PID 36279 (started by cedinacoelho in /Users/cedinacoelho/Documents/src/librairie-online-Spring)
+2025-02-11T15:40:32.727+01:00  INFO 36279 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : No active profile set, falling back to 1 default profile: "default"
+2025-02-11T15:40:33.741+01:00  INFO 36279 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-11T15:40:33.848+01:00  INFO 36279 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 100 ms. Found 15 JPA repository interfaces.
+2025-02-11T15:40:34.382+01:00  INFO 36279 --- [librairie-online] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-11T15:40:34.456+01:00  INFO 36279 --- [librairie-online] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-02-11T15:40:34.496+01:00  INFO 36279 --- [librairie-online] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-11T15:40:34.856+01:00  INFO 36279 --- [librairie-online] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-11T15:40:34.883+01:00  INFO 36279 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-11T15:40:35.311+01:00  INFO 36279 --- [librairie-online] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7fc1fd31
+2025-02-11T15:40:35.313+01:00  INFO 36279 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-11T15:40:36.822+01:00  INFO 36279 --- [librairie-online] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-11T15:40:36.881+01:00  INFO 36279 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T15:40:37.398+01:00  INFO 36279 --- [librairie-online] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-02-11T15:40:37.871+01:00  INFO 36279 --- [librairie-online] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-02-11T15:40:37.871+01:00  WARN 36279 --- [librairie-online] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2025-02-11T15:40:38.797+01:00  INFO 36279 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Started JwtServiceTest in 6.513 seconds (process running for 8.526)
+2025-02-11T15:40:39.935+01:00  INFO 36279 --- [librairie-online] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T15:40:39.938+01:00  INFO 36279 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-11T15:40:39.957+01:00  INFO 36279 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-11T15:41:24.408+01:00  INFO 36316 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Starting JwtServiceTest using Java 22.0.2 with PID 36316 (started by cedinacoelho in /Users/cedinacoelho/Documents/src/librairie-online-Spring)
+2025-02-11T15:41:24.410+01:00  INFO 36316 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : No active profile set, falling back to 1 default profile: "default"
+2025-02-11T15:41:25.216+01:00  INFO 36316 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-11T15:41:25.310+01:00  INFO 36316 --- [librairie-online] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 87 ms. Found 15 JPA repository interfaces.
+2025-02-11T15:41:25.878+01:00  INFO 36316 --- [librairie-online] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-11T15:41:25.951+01:00  INFO 36316 --- [librairie-online] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-02-11T15:41:25.988+01:00  INFO 36316 --- [librairie-online] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-11T15:41:26.352+01:00  INFO 36316 --- [librairie-online] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-11T15:41:26.383+01:00  INFO 36316 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-11T15:41:26.823+01:00  INFO 36316 --- [librairie-online] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@73385d3f
+2025-02-11T15:41:26.825+01:00  INFO 36316 --- [librairie-online] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-11T15:41:28.258+01:00  INFO 36316 --- [librairie-online] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-11T15:41:28.313+01:00  INFO 36316 --- [librairie-online] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T15:41:28.858+01:00  INFO 36316 --- [librairie-online] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-02-11T15:41:29.443+01:00  INFO 36316 --- [librairie-online] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-02-11T15:41:29.444+01:00  WARN 36316 --- [librairie-online] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2025-02-11T15:41:30.421+01:00  INFO 36316 --- [librairie-online] [main] c.e.l.security.JwtServiceTest            : Started JwtServiceTest in 6.422 seconds (process running for 7.651)
+2025-02-11T15:41:31.590+01:00  INFO 36316 --- [librairie-online] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T15:41:31.594+01:00  INFO 36316 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-11T15:41:31.614+01:00  INFO 36316 --- [librairie-online] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
