@@ -17,9 +17,17 @@ L'application utilise Spring Security pour sécuriser les endpoints avec des rô
 - **Outils de Build**: Maven
 - **Conteneurisation**: Docker
 
+
+
 ## Introduction
 
+
 Cette application utilise une base de données MySQL connectée à une API Spring Boot pour gérer une librairie de mangas. L'objectif est de pouvoir créer, lire, modifier et supprimer des entités grâce à Spring Boot.
+
+#### Liens - Architecture du Projet
+
+[Architecture ](Architecture.md)
+[Architecture détaillée](Architecture-detaille.md)
 
 ## Prérequis
 
@@ -54,7 +62,17 @@ Cette application utilise une base de données MySQL connectée à une API Sprin
     ```sh
     mvn spring-boot:run
     ```
-## Client
+## Gestion des Requêtes API - Librairie de Manga  
+
+L’API expose plusieurs **endpoints** permettant d'ajouter, modifier, lire et supprimer des ressources dans la base de données.  
+
+- **Toutes les requêtes POST, PUT et DELETE nécessitent un token JWT valide** pour être exécutées.  
+- Pour **supprimer** une ressource, il faut ajouter son **ID dans l’URL** lors de la requête DELETE.  
+- La requête **PUT (update)** utilise le **même URL que POST**, mais nécessite également **l’ID dans l’URL** et un **body identique** avec les nouvelles valeurs.  
+- La requête **GET (lecture)** est accessible **sans authentification** et permet de récupérer les données enregistrées.  
+- **Ci-dessous, toutes les requêtes POST disponibles dans l'API sont listées.**  
+
+### Client
 
 To create a `Client`, send a POST request to `/Client` with the following JSON:
 
@@ -71,7 +89,7 @@ To create a `Client`, send a POST request to `/Client` with the following JSON:
 }
 ```
 
-## Manga
+### Manga
 To create a `Manga`, send a POST request to `/Manga` with the following JSON:
 ```json
 {
@@ -94,7 +112,7 @@ To create a `Manga`, send a POST request to `/Manga` with the following JSON:
         }
 }
 ```
-## Anime
+### Anime
 To create an `Anime`, send a POST request to `/Anime` with the following JSON:
 ```json
 {
@@ -108,14 +126,14 @@ To create an `Anime`, send a POST request to `/Anime` with the following JSON:
     }
 }
 ```
-## Role
+### Role
 To create a Role, send a POST request to /Role with the following JSON:
 ```json
 {
     "role": "USER"
 }
 ```
-## Achete
+### Achete
 To create an `Achete`, send a POST request to `/Achete` with the following JSON:
 ```json
 {
@@ -125,7 +143,7 @@ To create an `Achete`, send a POST request to `/Achete` with the following JSON:
     "prix": 19.99
 }
 ```
-## Loue
+### Loue
 To create a `Loue`, send a POST request to `/Loue` with the following JSON:
 ```json
 {
@@ -135,7 +153,7 @@ To create a `Loue`, send a POST request to `/Loue` with the following JSON:
     "dateRetour": "2023-01-10"
 }
 ```
-## NoteM
+### NoteM
 To create a `NoteM`, send a POST request to `/Note/Manga` with the following JSON:
 ```json
 {
@@ -145,7 +163,7 @@ To create a `NoteM`, send a POST request to `/Note/Manga` with the following JSO
     "date": "2023-01-01"
 }
 ```
-## NoteA
+### NoteA
 To create a `NoteA`, send a POST request to `/Note/Anime` with the following JSON:
 ```json
 {
@@ -155,7 +173,7 @@ To create a `NoteA`, send a POST request to `/Note/Anime` with the following JSO
     "date": "2023-01-01"
 }
 ```
-## Classe
+### Classe
 To create a `Classe`, send a POST request to `/Classe` with the following JSON:
 ```json
 {
@@ -163,7 +181,7 @@ To create a `Classe`, send a POST request to `/Classe` with the following JSON:
     "type": "Action"
 }
 ```
-## Fournisseur
+### Fournisseur
 To create a `Fournisseur`, send a POST request to `/Fournisseur` with the following JSON:
 ```json
 {
@@ -171,7 +189,7 @@ To create a `Fournisseur`, send a POST request to `/Fournisseur` with the follow
     "ville": "Versailles"
 }
 ```
-## Mangaka
+### Mangaka
 To create a `Mangaka`, send a POST request to `/Mangaka` with the following JSON:
 ```json
 {
