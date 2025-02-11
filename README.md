@@ -24,7 +24,7 @@ L'application utilise Spring Security pour sécuriser les endpoints avec des rô
 
 Cette application utilise une base de données MySQL connectée à une API Spring Boot pour gérer une librairie de mangas. L'objectif est de pouvoir créer, lire, modifier et supprimer des entités grâce à Spring Boot.
 
-#### Liens - Architecture du Projet
+### Liens - Architecture du Projet
 
 [Architecture ](Architecture.md)
 
@@ -202,3 +202,9 @@ To create a `Mangaka`, send a POST request to `/Mangaka` with the following JSON
     "nationalite": "Japonaise"
 }
 ```
+
+## Licence  
+
+Ce projet est sous licence MIT. Vous êtes libre de l'utiliser et de le modifier.  
+Cependant, **aucune contribution externe ne sera acceptée sur ce repository officiel**.  
+Merci d'ouvrir une issue pour toute suggestion. 🚀 
