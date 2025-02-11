@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpServletResponse;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -19,12 +20,14 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
+import org.springframework.test.context.ActiveProfiles;
 
 import java.io.IOException;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.*;
-
+@SpringBootTest
+@ActiveProfiles("test")
 public class JwtFilterTest {
 
     @Mock
