@@ -1,5 +1,6 @@
 name: CI/CD - Build & Test Java with SMTP4DEV
 
+
 on:
   push:
     branches:
@@ -11,6 +12,8 @@ on:
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
+    env:
+      JWT_SECRET: ${{ secrets.JWT_SECRET }}
 
     steps:
       # 1️⃣ Récupération du code
