@@ -5,6 +5,7 @@ import java.util.Map;
 
 
 import com.example.librairie_online.dto.AuthentificationDTO;
+import com.example.librairie_online.entity.Jwt;
 import com.example.librairie_online.entity.Validation;
 
 import com.example.librairie_online.security.JwtService;
@@ -110,8 +111,25 @@ public class ClientController {
 
     }
     @PostMapping(path = "/Deconnection")
-    public void deconnect(){
+    public ResponseEntity<Jwt> deconnect(){
         this.jwtService.deconnect();
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+    @PostMapping(path = "/Password/Forget/{token}")
+    public ResponseEntity<Client> newPassword(@RequestBody Client client){
+
+        Client clientDb = this.clientService.readById(client.getNAdherent());
+        if (clientDb != null){
+            if (clientDb.getPassword().equals(client.getPassword())){
+                this.clientService.update(client.getNAdherent(),client);
+                return new ResponseEntity<>(client,HttpStatus.OK);
+            }else {
+             new RuntimeException("Password Already exist");
+             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+            }
+        }
+        new RuntimeException("Client not found");
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
 }

@@ -61,6 +61,7 @@ public class ClientService implements UserDetailsService {
         return newClient;
     }
 
+//    Validate
     public Client validate(int code) {
         logger.info("Validation du client avec le code: {}", code);
         Validation validation = validationService.readByCode(code);
