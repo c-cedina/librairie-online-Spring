@@ -71,7 +71,7 @@ public class NoteAControllerIntegrationTest {
         role.setRole(TypeRole.USER);
         role = roleRepository.save(role);
         client.setRole(role);
-        client= clientRepository.save(client);
+        client = clientRepository.save(client);
 
         Anime anime = new Anime();
         anime.setNom("Naruto");
@@ -80,8 +80,8 @@ public class NoteAControllerIntegrationTest {
 
         String noteAJson = """
                 {
-                    "nadherent": 91787,
-                    "nserie": ,
+                    "nadherent": %d,
+                    "nserie": %d,
                     "valeur": 4.5,
                     "date": "2023-01-01"
                 }
