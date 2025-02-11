@@ -109,5 +109,9 @@ public class ClientController {
         return null;
 
     }
+    @PostMapping(path = "/Deconnection")
+    public void deconnect(){
+        this.jwtService.deconnect();
+    }
 
 }

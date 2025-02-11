@@ -1,5 +1,6 @@
 package com.example.librairie_online.security;
 
+import com.example.librairie_online.entity.Jwt;
 import com.example.librairie_online.service.ClientService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -23,17 +24,19 @@ public class JwtFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         String email = null;
         String token = null;
+        Jwt jwtDb = null;
         boolean isTokenExpired = true;
         final String authorization = request.getHeader("Authorization");
 
 
         if (authorization != null && authorization.startsWith("Bearer ")) {
             token = authorization.substring(7);
+            jwtDb = this.jwtService.readByToken(token);
             isTokenExpired = jwtService.isTokenExpired(token);
             email = jwtService.extractUsername(token);
         }
 
-        if (!isTokenExpired && email != null && SecurityContextHolder.getContext().getAuthentication() == null) {
+        if (!isTokenExpired && email != null && jwtDb.getClient().getEmail().equals(email)  && SecurityContextHolder.getContext().getAuthentication() == null) {
             UserDetails userDetails = this.clientService.loadUserByUsername(email);
             UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
             SecurityContextHolder.getContext().setAuthentication(authenticationToken);

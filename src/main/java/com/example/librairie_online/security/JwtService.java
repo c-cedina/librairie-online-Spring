@@ -14,13 +14,12 @@ import io.jsonwebtoken.security.Keys;
 import lombok.AllArgsConstructor;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import javax.crypto.SecretKey;
 
-import java.util.Date;
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
 import java.util.function.Function;
 
 
@@ -43,6 +42,12 @@ public class JwtService {
 
     public Map<String,String> generate (String email){
         Client client = (Client) this.clientService.loadUserByUsername(email);
+        List<Jwt> jwtList = this.jwtRepository.findAllByEmail(email);
+
+        if (!jwtList.isEmpty()){
+        jwtList.forEach(jwt -> jwt.setDesactive(true));
+        this.jwtRepository.saveAll(jwtList);
+        }
         final Map<String, String> jwtMap = this.generateJwt(client);
         final Jwt jwt = Jwt
                 .builder()
@@ -100,5 +105,21 @@ public class JwtService {
 
     public String extractUsername(String token) {
         return this.getClaim(token, Claims::getSubject);
+    }
+
+    public Jwt readByToken(String token) {
+        return this.jwtRepository.findByToken(token).orElseThrow(()-> new RuntimeException("Token not found"));
+    }
+
+    public void deconnect() {
+        Client client = (Client) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        List<Jwt> jwtList = this.jwtRepository.findAllByEmail(client.getEmail());
+        if (!jwtList.isEmpty()){
+        jwtList.forEach(jwt -> jwt.setDesactive(true));
+        this.jwtRepository.saveAll(jwtList);
+        }else {
+            throw new RuntimeException("No token found with this user "+client.getEmail());
+        }
+
     }
 }
