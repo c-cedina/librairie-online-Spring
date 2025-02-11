@@ -1,31 +1,59 @@
-# Application Crud Java Spring Boot Librairie de Manga
+# Librairie de Manga - Développement avec Java Spring Boot
 
-JDK 22
-Spring boot 3.3.1
-Hibernate ORM core version 6.5.2.Final
+![](backend.webp)
+
+## Description du Projet
+
+Cette application est une librairie en ligne de mangas développée en utilisant Java et Spring Boot. Elle permet de gérer une base de données MySQL pour effectuer des opérations CRUD (Créer, Lire, Mettre à jour, Supprimer) sur différentes entités telles que les clients, les mangas, les animes, etc. L'application est conteneurisée avec Docker pour faciliter le déploiement et l'exécution.
+
+L'application utilise Spring Security pour sécuriser les endpoints avec des rôles et des JSON Web Tokens (JWT) pour l'authentification. Les rôles définis sont `USER` et `ADMIN`, et les JWT sont utilisés pour sécuriser les endpoints et gérer les sessions de manière stateless.
+
+## Technologies Utilisées
+
+- **JDK**: 22
+- **Spring Boot**: 3.3.1
+- **Hibernate ORM**: 6.5.2.Final
+- **Base de données**: MySQL
+- **Outils de Build**: Maven
+- **Conteneurisation**: Docker
 
 ## Introduction
 
-Utilisation d'une base de donnés MySql raccorder à cette api.
-Objectif pouvoir créer, lire, modifier et supprimer grâce à Spring Boot
+Cette application utilise une base de données MySQL connectée à une API Spring Boot pour gérer une librairie de mangas. L'objectif est de pouvoir créer, lire, modifier et supprimer des entités grâce à Spring Boot.
 
-# Librairie Online API
+## Prérequis
 
-This document explains how to create various entities in the Librairie Online API using JSON.
+- **Java**: JDK 22
+- **Maven**
+- **Docker** et **Docker Compose**
 
-## Table of Contents
-- [Client](#client)
-- [Manga](#manga)
-- [Anime](#anime)
-- [Role](#role)
-- [Achete](#achete)
-- [Loue](#loue)
-- [NoteM](#notem)
-- [NoteA](#notea)
-- [Classe](#classe)
-- [Fournisseur](#fournisseur)
-- [Mangaka](#mangaka)
+## Installation
 
+1. **Cloner le dépôt**:
+    ```sh
+    git clone <URL_DU_DEPOT>
+    cd librairie-online
+    ```
+
+2. **Configurer la base de données**:
+    - Assurez-vous que Docker est installé et en cours d'exécution.
+    - Lancer les services Docker:
+        ```sh
+        docker-compose up -d
+        ```
+
+3. **Configurer les propriétés de l'application**:
+    - Les propriétés de l'application sont définies dans `src/main/resources/application.properties` et `src/test/resources/application-test.properties`.
+
+4. **Construire le projet**:
+    ```sh
+    mvn clean install
+    ```
+
+5. **Lancer l'application**:
+    ```sh
+    mvn spring-boot:run
+    ```
 ## Client
 
 To create a `Client`, send a POST request to `/Client` with the following JSON:
